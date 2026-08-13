@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社生興運送 コーポレートTOP ワイヤーフレーム（PC / SP）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* ワイヤーフレームはグレースケール（配色はデザイン工程で決定） */
+    --ink:#26292c; --sub:#70757a; --line:#c8ccce; --box:#e6e8ea; --box2:#d9dcde;
+    --bg:#f0f1f2; --canvas:#ffffff; --label:#70757a; --dark:#26292c;
+    /* 注記（設計意図・要件メモ）だけは濃淡を強めて可読性を確保 */
+    --note:#26292c; --noteBg:#f3f4f5; --noteLine:#b9bdc0;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;}
+  .doc-w{max-width:1320px;margin:0 auto;padding:32px 20px 90px;}
+  /* doc header */
+  .dhead{background:#26292c;color:#fff;border-radius:14px;padding:26px 30px;margin-bottom:22px;}
+  .dhead .eb{font-size:11px;letter-spacing:.26em;color:#b6bbbf;font-weight:700;margin:0 0 8px;}
+  .dhead h1{margin:0 0 6px;font-size:23px;font-weight:900;}
+  .dhead p{margin:0;font-size:13px;color:#ced3d7;}
+  /* requirement memo */
+  .memo{background:var(--noteBg);border:1px solid var(--noteLine);border-left:6px solid var(--note);border-radius:12px;
+    padding:18px 22px;margin-bottom:26px;}
+  .memo h2{margin:0 0 10px;font-size:15px;color:var(--note);font-weight:900;}
+  .memo .grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 26px;font-size:12.6px;color:#3a3f44;}
+  .memo b{color:#14161a;}
+  .memo .full{grid-column:1/-1;}
+  @media(max-width:760px){.memo .grid{grid-template-columns:1fr;}}
+  /* legend */
+  .legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:12px;color:var(--sub);margin:0 4px 18px;align-items:center;}
+  .legend .sw{display:inline-block;width:26px;height:14px;border-radius:3px;vertical-align:middle;margin-right:6px;border:1px solid var(--line);}
+  .sw.box{background:var(--box);} .sw.img{background:repeating-linear-gradient(45deg,#dcdfe1 0 7px,#eceef0 7px 14px);}
+  .sw.cta{background:#26292c;border-color:#26292c;}
+  .sw.note{background:var(--noteBg);border-left:4px solid var(--note);}
+  /* device tabs label */
+  .devtag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;background:#26292c;color:#fff;
+    border-radius:20px;padding:3px 14px;margin:30px 4px 10px;}
+  /* canvas (PC) */
+  .canvas{background:var(--canvas);border:1px solid var(--line);border-radius:10px;overflow:hidden;
+    box-shadow:0 4px 20px rgba(0,0,0,.06);}
+  .cw{max-width:1180px;margin:0 auto;} /* container 1180 */
+  /* wire primitives */
+  .box{background:var(--box);border:1px solid var(--line);border-radius:6px;display:flex;align-items:center;
+    justify-content:center;color:var(--sub);font-size:12px;text-align:center;padding:10px;}
+  .imgbox{background:repeating-linear-gradient(45deg,#dcdfe1 0 9px,#eceef0 9px 18px);border:1px dashed #adb1b5;
+    border-radius:6px;display:flex;align-items:center;justify-content:center;color:#797e83;font-size:12px;font-weight:500;
+    text-align:center;padding:10px;position:relative;}
+  .imgbox::after{content:"IMG";position:absolute;top:5px;left:7px;font-size:9px;letter-spacing:.1em;color:#9a9ea2;font-weight:700;}
+  .ph{color:#8a8f94;font-size:12px;} /* placeholder text */
+  .enlab{font-family:"Noto Sans JP";font-size:11px;letter-spacing:.22em;color:var(--label);font-weight:700;text-transform:uppercase;}
+  .h2w{font-size:20px;font-weight:900;margin:2px 0 4px;color:#26292c;}
+  .btn{background:#5a5f64;color:#fff;border-radius:6px;font-size:12px;font-weight:700;padding:9px 16px;display:inline-flex;
+    align-items:center;justify-content:center;gap:6px;}
+  .btn.o{background:#fff;color:#26292c;border:1.5px solid #26292c;}
+  .btn.ac{background:#26292c;} /* 主CTA＝最も濃いトーンで優先度を表現 */
+  .chip{background:#fff;border:1px solid var(--line);border-radius:5px;font-size:11px;color:#4c5155;padding:7px 8px;text-align:center;}
+  /* section wrapper w/ intent note */
+  .sec{position:relative;border-top:1px dashed #dcdee0;}
+  .sec .inner{padding:26px 26px;}
+  .secnum{position:absolute;top:-1px;left:0;background:#5a5f64;color:#fff;font-size:11px;font-weight:700;
+    padding:3px 10px;border-radius:0 0 8px 0;letter-spacing:.05em;z-index:2;}
+  /* 注記（設計意図）＝色を使わず「濃い左罫＋ラベル＋余白」で本体と区別する */
+  .intent{background:var(--noteBg);border:1px solid var(--noteLine);border-left:5px solid var(--note);
+    border-radius:0 8px 8px 0;padding:12px 16px;font-size:12.5px;line-height:1.8;color:#33383c;margin:16px 0 0;}
+  .intent b{color:#14161a;font-weight:900;}
+  .intent b:first-of-type{background:#26292c;color:#fff;font-size:11px;font-weight:700;letter-spacing:.08em;
+    padding:2px 9px;border-radius:3px;margin-right:6px;}
+  /* header wire */
+  .whead{display:flex;align-items:center;gap:16px;padding:14px 26px;border-bottom:1px solid var(--line);}
+  .whead .logo{width:130px;height:34px;}
+  .whead nav{display:flex;gap:14px;font-size:12px;color:#4c5155;flex-wrap:wrap;}
+  .whead .cta{margin-left:auto;display:flex;gap:8px;}
+  /* hero grid (型D 非対称) */
+  .hero{display:grid;grid-template-columns:1.7fr 1fr;grid-template-rows:auto auto;gap:12px;}
+  .hero .big{grid-row:1/3;min-height:340px;flex-direction:column;gap:12px;align-items:flex-start;justify-content:flex-end;padding:22px;}
+  .hero .kpi{min-height:150px;flex-direction:column;gap:4px;background:#26292c;border-color:#26292c;color:#fff;}
+  .hero .kpi .num{font-size:38px;font-weight:900;color:#fff;line-height:1;}
+  .hero .find{display:flex;gap:10px;}
+  .hero .find .box{flex:1;min-height:66px;flex-direction:column;gap:4px;font-weight:700;color:#26292c;}
+  .strip{display:flex;gap:20px;font-size:11px;color:var(--sub);letter-spacing:.14em;padding:10px 26px;border-bottom:1px dashed #dcdee0;}
+  /* generic rows */
+  .row{display:flex;gap:14px;}
+  .cols-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .cols-6{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;}
+  .cardw{border:1px solid var(--line);border-radius:8px;padding:12px;background:#fcfcfd;}
+  .stat{border:1px solid var(--line);border-radius:8px;padding:14px;text-align:center;background:#fcfcfd;}
+  .stat .n{font-size:30px;font-weight:900;color:#26292c;}
+  .stat .n span{color:#26292c;}
+  .center{text-align:center;}
+  .mt8{margin-top:8px;}.mt12{margin-top:12px;}.mt16{margin-top:16px;}
+  .lead{font-size:13px;color:#3e4348;max-width:720px;}
+  .recruit{background:#e9eaec;border-radius:10px;padding:22px;} /* 採用特設は面積・トーン（濃度）を変える */
+  .footwire{background:#26292c;color:#b0b5b9;padding:26px;font-size:11.5px;}
+  .footwire .fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:18px;}
+  .footwire .box{background:#333639;border-color:#3d4144;color:#868b90;}
+  /* SP frame */
+  .spwrap{display:flex;gap:26px;flex-wrap:wrap;justify-content:center;}
+  .phone{width:340px;border:10px solid #26292c;border-radius:30px;overflow:hidden;background:#fff;flex:none;}
+  .phone .scr{max-height:640px;overflow:auto;}
+  .phone .p{padding:12px;}
+  .phone .sp-h{display:flex;align-items:center;padding:10px 12px;border-bottom:1px solid var(--line);}
+  .phone .sp-h .logo{width:90px;height:26px;} .phone .sp-h .burger{margin-left:auto;width:26px;height:20px;}
+  .sp-cta{position:sticky;bottom:0;display:flex;gap:6px;padding:8px;background:#fff;border-top:1px solid var(--line);}
+  .sp-cta .btn{flex:1;font-size:11px;padding:10px 4px;}
+  .caption{font-size:11px;color:var(--sub);text-align:center;margin-top:8px;}
+  h3.block{font-size:13px;color:#14161a;margin:0 0 4px;font-weight:900;letter-spacing:.03em;}
+</style>
+</head>
+<body>
+<div class="doc-w">
+
+  <div class="dhead">
+    <p class="eb">WIREFRAME ／ 情報設計図（デザイン前の骨組み）</p>
+    <h1>株式会社生興運送　コーポレートTOP ワイヤーフレーム</h1>
+    <p>ヒーロー型D＝非対称モジュラーグリッド／セクション順序は企画書準拠。<b>本書はグレースケール（無彩色）で作成しています</b>＝配色・写真・タイポは次工程（デザイン課／デザイン案A・B・C）で載せる前提の「骨組み」です。PC（1180px）＋SP（375px）</p>
+  </div>
+
+  <!-- 要件メモ -->
+  <div class="memo">
+    <h2>■ 要件メモ（制作前の前提・トンマナ参照先）</h2>
+    <div class="grid">
+      <div><b>エンド社名</b>：株式会社生興運送（岡山県井原市・総合物流／輸配送・倉庫・整備）</div>
+      <div><b>制作体制</b>：インフォネット（元請）＋ITLINE（制作パートナー）</div>
+      <div><b>現サイト</b>：https://www.seikounet.co.jp/（WordPress・青基調→脱・青で刷新）</div>
+      <div><b>Webターゲット</b>：求職者6割 ／ 新規顧客4割（採用ブロックを厚く）</div>
+      <div class="full"><b>要望</b>：かっこいい・スタイリッシュ・動きのある／落ち着いた上質さ／人間味・地域性。社内で更新しやすいCMS（プレビュー必須）。24h問い合わせ・GA4必須。写真は2026年3月の制服刷新後に差替前提（＝写真非依存の設計）。</div>
+      <div class="full"><b>最強の訴求</b>：AIドラレコで<b>事故75%減</b>／ドライバーファースト／整備・品質（採用にも営業にも効かせる）。</div>
+      <div class="full"><b>トンマナ参照</b>：全体構成=OkaSyo／採用=本田運送／営業導線=豊通物流・シモハナ物流／人間味=カワキタエクスプレス／落ち着き=嵯峨運輸。</div>
+      <div class="full"><b>デザイン方針（企画書）</b>：配色=チャコール#14161A×朱#E8532B×ｱｲﾎﾞﾘｰ#F6F3EE＋深ティール#0C5551／見出し=Murecho＋Space Grotesk＋数字Dela Gothic One／本文=IBM Plex Sans JP／モチーフ=斜めスピードストローク。</div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <span><span class="sw box"></span>要素ブロック（テキスト・ボタン等）</span>
+    <span><span class="sw img"></span>画像（IMG・未確定＝制服刷新後差替 / 生成AI / 現サイト抽出）</span>
+    <span><span class="sw cta"></span>濃いトーン＝優先度の高いCTA・強調セクション</span>
+    <span><span class="sw note"></span><b style="color:#26292c;">左に濃い縦線が付いたグレーの囲み＝注記（設計意図）。ワイヤー本体ではなく、ご説明用のコメントです。</b></span>
+    <span>プレースホルダ文言＝「テキストが入ります。」</span>
+  </div>
+
+  <!-- ================= PC ================= -->
+  <span class="devtag">PC ／ 1180px コンテナ</span>
+  <div class="canvas">
+
+    <!-- HEADER -->
+    <div class="whead cw">
+      <div class="box logo">LOGO 生興運送</div>
+      <nav><span>私たちについて</span><span>強み</span><span>サービス</span><span>お知らせ</span><span>採用</span></nav>
+      <div class="cta">
+        <span class="btn o">☎ 0866-65-0112</span>
+        <span class="btn ac">輸送のご相談・お見積り</span>
+        <span class="btn">採用エントリー</span>
+      </div>
+    </div>
+
+    <!-- SEC1 HERO 型D -->
+    <div class="sec"><span class="secnum">SEC 01 ヒーロー</span>
+      <div class="inner cw">
+        <div class="hero">
+          <div class="imgbox big">
+            <span class="enlab" style="background:rgba(255,255,255,.85);padding:2px 8px;border-radius:3px;">SEIKO UNSO / SINCE 1969</span>
+            <div class="box" style="width:78%;height:52px;background:rgba(255,255,255,.85);">見出し（Murecho900）「走る、を、科学する。」テキストが入ります。</div>
+            <div class="box" style="width:60%;height:30px;background:rgba(255,255,255,.85);">リード1行：テキストが入ります。</div>
+          </div>
+          <div class="box kpi">
+            <span class="enlab" style="color:#b6bbbf;">SAFETY</span>
+            <span class="num">75<small style="font-size:16px;">%減</small></span>
+            <span style="font-size:11px;color:#ced3d7;">AIドラレコ導入前後の事故</span>
+          </div>
+          <div class="find">
+            <div class="box">🚛<br>荷物から探す</div>
+            <div class="box">💬<br>相談内容から探す</div>
+          </div>
+        </div>
+        <div class="intent"><b>設計意図</b>型D非対称グリッドで“よくある全面スライダー”を回避し「動き」を表現。FVに<b>営業の核＝2つの探し方</b>と<b>安全KPI 75%減</b>を同時露出＝求職者にも顧客にも刺す最初の一撃。写真1枚に依存しないため制服刷新後の差替に強い。</div>
+      </div>
+    </div>
+
+    <div class="strip cw"><span>OKAYAMA(本社)</span><span>→ KANTO(群馬)</span><span>HIROSHIMA</span><span>FUKUYAMA</span><span>／ 輸配送・倉庫・整備の総合物流</span></div>
+
+    <!-- SEC2 2つの探し方 -->
+    <div class="sec"><span class="secnum">SEC 02 顧客導線</span>
+      <div class="inner cw">
+        <span class="enlab">FIND YOUR SOLUTION</span>
+        <div class="h2w">2つの入口から、あなたの物流を探す</div>
+        <p class="lead ph">事業名からではなく「運びたい荷物」「相談したいこと」から入れる導線。テキストが入ります。</p>
+        <div class="cols-2 mt16">
+          <div class="cardw">
+            <h3 class="block">🚛 荷物から探す</h3>
+            <div class="cols-3 mt8" style="gap:8px;">
+              <div class="chip">プラスチック製品</div><div class="chip">ペットボトル・飲料</div><div class="chip">精密機械</div>
+              <div class="chip">パレット貨物</div><div class="chip">長尺物</div><div class="chip">その他一般貨物</div>
+            </div>
+          </div>
+          <div class="cardw">
+            <h3 class="block">💬 相談内容から探す</h3>
+            <div class="cols-2 mt8" style="gap:8px;">
+              <div class="chip">定期配送を依頼したい</div><div class="chip">スポット便を相談したい</div>
+              <div class="chip">岡山→関東・広島へ運びたい</div><div class="chip">倉庫と配送をまとめて</div>
+              <div class="chip">安全・品質を重視したい</div><div class="chip">物流コストを見直したい</div>
+            </div>
+          </div>
+        </div>
+        <div class="intent"><b>設計意図</b>ヒアリング最重要指示（豊通・シモハナ型の“目的から探す”）。営業4割の受け皿を上位に置き、顧客が自分の荷物/課題で即自走できるようにする。荷物6品目は個別ページ、相談6は1ページ内アンカーへ（見積の55ページ根拠と一致）。</div>
+      </div>
+    </div>
+
+    <!-- SEC3 選ばれる理由＝安全の科学 -->
+    <div class="sec"><span class="secnum">SEC 03 強み（課題→解決→効果）</span>
+      <div class="inner cw">
+        <span class="enlab">WHY SEIKO — THE SCIENCE OF SAFETY</span>
+        <div class="h2w">選ばれる理由は、「安全を科学する」こと</div>
+        <div class="cols-3 mt16">
+          <div class="cardw"><div class="imgbox" style="height:120px;">AIドラレコ / 車内UI</div><h3 class="block mt8">① AIドラレコで事故75%減</h3><p class="ph" style="font-size:12px;">課題→解決→効果。テキストが入ります。</p></div>
+          <div class="cardw"><div class="imgbox" style="height:120px;">運行管理 / ドライバー</div><h3 class="block mt8">② ドライバーファースト文化</h3><p class="ph" style="font-size:12px;">現場が自ら安全に止まれる。テキストが入ります。</p></div>
+          <div class="cardw"><div class="imgbox" style="height:120px;">整備ピット</div><h3 class="block mt8">③ 自動車整備・品質</h3><p class="ph" style="font-size:12px;">自社整備で品質担保。テキストが入ります。</p></div>
+        </div>
+        <div class="intent"><b>設計意図</b>定番の「強み羅列」ではなく<b>課題→解決→効果</b>の順で1枚ずつ証明（CLAUDE.md品質基準）。最注力の75%減を先頭に。ここは営業・採用双方の信頼の土台。</div>
+      </div>
+    </div>
+
+    <!-- SEC4 数字で見る -->
+    <div class="sec"><span class="secnum">SEC 04 数字で見る</span>
+      <div class="inner cw">
+        <span class="enlab">SEIKO UNSO IN NUMBERS</span>
+        <div class="h2w">数字で見る生興運送</div>
+        <div class="cols-6 mt16">
+          <div class="stat"><div class="n">1969</div><div class="ph" style="font-size:11px;">設立</div></div>
+          <div class="stat"><div class="n">173<span>名</span></div><div class="ph" style="font-size:11px;">従業員</div></div>
+          <div class="stat"><div class="n">23<span>億</span></div><div class="ph" style="font-size:11px;">売上</div></div>
+          <div class="stat"><div class="n">4</div><div class="ph" style="font-size:11px;">拠点</div></div>
+          <div class="stat"><div class="n"><span>75%</span></div><div class="ph" style="font-size:11px;">事故減</div></div>
+          <div class="stat"><div class="n">60<span>年</span></div><div class="ph" style="font-size:11px;">歴史</div></div>
+        </div>
+        <div class="intent"><b>設計意図</b>HR診断の改善提案「数字で見るインフォグラフィック新設」を反映。企業理解を直感化し、採用の安心感＋営業の信頼を同時に補強。数字はDela Gothic Oneで強調。</div>
+      </div>
+    </div>
+
+    <!-- SEC5 事業案内 -->
+    <div class="sec"><span class="secnum">SEC 05 事業案内</span>
+      <div class="inner cw">
+        <span class="enlab">SERVICE</span>
+        <div class="h2w">事業案内</div>
+        <div class="cols-3 mt16">
+          <div class="cardw"><div class="imgbox" style="height:130px;">輸配送</div><h3 class="block mt8">輸配送事業</h3><p class="ph" style="font-size:12px;">定期・スポット・チャーター。</p></div>
+          <div class="cardw"><div class="imgbox" style="height:130px;">倉庫</div><h3 class="block mt8">倉庫管理事業</h3><p class="ph" style="font-size:12px;">保管・流通加工・センター運営。</p></div>
+          <div class="cardw"><div class="imgbox" style="height:130px;">整備</div><h3 class="block mt8">自動車整備事業</h3><p class="ph" style="font-size:12px;">車両整備・メンテナンス。</p></div>
+        </div>
+        <div class="intent"><b>設計意図</b>3本柱を対等な3タイルで。SEC02の「探し方」で興味を持った顧客が、事業の全体像を把握する導線。「倉庫＋配送の一括」は相談内容とも接続。</div>
+      </div>
+    </div>
+
+    <!-- SEC6 RECRUIT 特設 -->
+    <div class="sec"><span class="secnum">SEC 06 採用特設（面積最大・求職者6割）</span>
+      <div class="inner cw">
+        <div class="recruit">
+          <span class="enlab">RECRUIT</span>
+          <div class="h2w">人で選ばれる会社へ ― 採用特設</div>
+          <p class="lead ph">求職者が主語の共感メッセージ（現「No.1のドライバーファースト企業」を再設計）。テキストが入ります。</p>
+          <div class="cols-2 mt16">
+            <div class="imgbox" style="height:170px;">社員・現場の実写（制服刷新後差替）</div>
+            <div>
+              <div class="cols-2" style="gap:10px;">
+                <div class="chip" style="padding:12px;">人・文化を知る<br><small>座談会 / 一日の流れ</small></div>
+                <div class="chip" style="padding:12px;">教育・キャリア<br><small>免許取得支援</small></div>
+                <div class="chip" style="padding:12px;">働く環境・福利厚生<br><small>ジム/奨学金/AIで守る</small></div>
+                <div class="chip" style="padding:12px;">数字で見る<br><small>勤続・有給・車両</small></div>
+              </div>
+              <h3 class="block mt16">エリア別 募集要項</h3>
+              <div class="cols-3 mt8" style="gap:8px;">
+                <div class="chip">本社・福山</div><div class="chip">広島</div><div class="chip">関東(群馬)</div>
+              </div>
+              <div class="mt16"><span class="btn ac">採用エントリー</span> <span class="ph" style="font-size:11px;">※エンゲージ募集要項へ直接ディープリンク／内製フォームの2案</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="intent"><b>設計意図</b>求職者6割＝<b>TOP内で最大面積・背景トーンを変えた“特設化”</b>。本田運送型で「人・文化→教育→働く環境→数字→エリア別募集→エントリー」の順（人→条件の流れ）。エンゲージ動線改善の要件を明示配置。</div>
+      </div>
+    </div>
+
+    <!-- SEC7 お知らせ・社内報 -->
+    <div class="sec"><span class="secnum">SEC 07 お知らせ／社内報</span>
+      <div class="inner cw">
+        <div class="cols-2">
+          <div>
+            <span class="enlab">NEWS</span><div class="h2w">お知らせ</div>
+            <div class="box mt8" style="height:36px;justify-content:flex-start;padding-left:14px;">2026.0X.XX ｜ カテゴリ ｜ テキストが入ります。</div>
+            <div class="box mt8" style="height:36px;justify-content:flex-start;padding-left:14px;">2026.0X.XX ｜ カテゴリ ｜ テキストが入ります。</div>
+            <div class="box mt8" style="height:36px;justify-content:flex-start;padding-left:14px;">2026.0X.XX ｜ カテゴリ ｜ テキストが入ります。</div>
+          </div>
+          <div>
+            <span class="enlab">MAGAZINE</span><div class="h2w">社内報（人間味・地域性）</div>
+            <div class="cols-3 mt8">
+              <div class="imgbox" style="height:90px;">記事</div><div class="imgbox" style="height:90px;">記事</div><div class="imgbox" style="height:90px;">記事</div>
+            </div>
+          </div>
+        </div>
+        <div class="intent"><b>設計意図</b>更新が容易＝“生きているサイト”の証明（現サイトの更新課題への回答）。社内報でカワキタ型の人間味・岡山の地域性を出し、採用・営業双方の親近感を醸成。</div>
+      </div>
+    </div>
+
+    <!-- SEC8 ネットワーク -->
+    <div class="sec"><span class="secnum">SEC 08 ネットワーク</span>
+      <div class="inner cw">
+        <span class="enlab">NETWORK</span><div class="h2w">拠点ネットワーク（岡山〜関東）</div>
+        <div class="row mt16">
+          <div class="imgbox" style="flex:1.4;height:200px;">地図（本社=井原 / 福山 / 広島 / 関東=群馬・板倉町）</div>
+          <div style="flex:1;">
+            <div class="box mt8" style="height:44px;justify-content:flex-start;padding-left:12px;">本社：岡山県井原市木之子町3395</div>
+            <div class="box mt8" style="height:44px;justify-content:flex-start;padding-left:12px;">福山営業所</div>
+            <div class="box mt8" style="height:44px;justify-content:flex-start;padding-left:12px;">広島</div>
+            <div class="box mt8" style="height:44px;justify-content:flex-start;padding-left:12px;">関東拠点（群馬・板倉町／2024開設・ドライバー拡充）</div>
+          </div>
+        </div>
+        <div class="intent"><b>設計意図</b>「岡山→関東・広島へ運びたい」という相談導線の裏付け＝広域対応の可視化。関東拠点の採用拡充ニーズとも接続。</div>
+      </div>
+    </div>
+
+    <!-- SEC9 二方向CTA -->
+    <div class="sec"><span class="secnum">SEC 09 二方向CTA</span>
+      <div class="inner cw">
+        <div class="box" style="background:#26292c;border-color:#26292c;color:#fff;min-height:130px;flex-direction:column;gap:14px;">
+          <div style="font-size:16px;font-weight:900;">お問い合わせは、目的から。</div>
+          <div class="row"><span class="btn ac" style="background:#fff;color:#26292c;">🚛 輸送のご相談・お見積り（24h受付）</span><span class="btn" style="background:transparent;border:1.5px solid #fff;color:#fff;">🧑‍🔧 採用エントリー</span></div>
+        </div>
+        <div class="intent"><b>設計意図</b>新規顧客と求職者の2導線を最後に明確分岐（1つに混ぜない）。24時間受付を明記し現行課題（導線が弱い・24h非対応）を解消。thanksページでCV計測（GA4）。</div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footwire">
+      <div class="cw fg">
+        <div>
+          <div class="box logo" style="width:120px;height:30px;">LOGO</div>
+          <p style="margin:10px 0 0;">株式会社生興運送／岡山県井原市木之子町3395／☎0866-65-0112</p>
+          <p>SNS：YouTube ｜ Instagram ｜ note（採用連携）</p>
+        </div>
+        <div><b style="color:#fff;">会社案内</b><div class="box" style="height:70px;margin-top:6px;">会社概要/沿革/理念/拠点/SDGs</div></div>
+        <div><b style="color:#fff;">サービス</b><div class="box" style="height:70px;margin-top:6px;">輸配送/倉庫/整備/荷物から/相談から</div></div>
+        <div><b style="color:#fff;">採用</b><div class="box" style="height:70px;margin-top:6px;">職種/募集要項/エントリー/FAQ</div></div>
+      </div>
+      <div class="cw" style="margin-top:14px;border-top:1px solid #3d4144;padding-top:10px;">© SEIKO UNSO Co., Ltd. ｜ プライバシーポリシー ｜ サイトマップ ｜ GA4計測（全ページ）</div>
+    </div>
+
+  </div><!--/canvas PC-->
+
+  <div class="intent" style="margin-top:20px;"><b>設計意図</b>フッターは<b>サイトマップ全展開型</b>。会社案内・サービス・採用・お知らせの主要リンクを全て展開します。ヘッダーの2大CTA（輸送相談／採用）は全ページ固定。</div>
+
+  <!-- ================= SP ================= -->
+  <span class="devtag">SP ／ 375px（縦積み・固定CTAバー）</span>
+  <div class="spwrap">
+
+    <!-- SP1 -->
+    <div class="phone"><div class="scr">
+      <div class="sp-h"><div class="box logo">LOGO</div><div class="box burger">≡</div></div>
+      <div class="p">
+        <div class="imgbox" style="height:150px;">ヒーロー画像</div>
+        <div class="box mt8" style="height:40px;">見出し「走る、を、科学する。」</div>
+        <div class="box kpi mt8" style="min-height:70px;background:#26292c;border-color:#26292c;color:#fff;flex-direction:column;">
+          <span class="num" style="font-size:30px;">75<small style="font-size:14px;">%減</small></span><span style="font-size:10px;color:#ced3d7;">AIドラレコ 事故</span>
+        </div>
+        <div class="row mt8"><div class="box" style="flex:1;height:50px;">荷物から探す</div><div class="box" style="flex:1;height:50px;">相談から探す</div></div>
+      </div>
+      <div class="sp-cta"><span class="btn ac">輸送相談</span><span class="btn">採用</span></div>
+    </div></div>
+    <div style="flex:none;width:340px;"><p class="caption">SP-1：ヒーロー（型Dを縦積み。75%減と2入口をFV内に維持）＋固定CTAバー</p></div>
+
+    <!-- SP2 -->
+    <div class="phone"><div class="scr p">
+      <span class="enlab">FIND</span><div class="box" style="height:26px;margin:4px 0 8px;">2つの探し方</div>
+      <div class="box" style="height:30px;">🚛 荷物から探す ＞</div>
+      <div class="cols-2 mt8" style="gap:6px;"><div class="chip">プラ製品</div><div class="chip">飲料</div><div class="chip">精密機械</div><div class="chip">パレット</div><div class="chip">長尺物</div><div class="chip">一般貨物</div></div>
+      <div class="box mt12" style="height:30px;">💬 相談内容から探す ＞</div>
+      <div class="mt8"><div class="chip mt8">定期配送を依頼したい</div><div class="chip mt8">岡山→関東・広島へ</div><div class="chip mt8">倉庫と配送をまとめて</div></div>
+      <div class="mt12"><span class="enlab">WHY</span><div class="box" style="height:26px;margin-top:4px;">安全を科学する</div>
+        <div class="cardw mt8"><div class="imgbox" style="height:80px;">AIドラレコ</div><h3 class="block mt8">事故75%減</h3></div>
+      </div>
+    </div></div>
+    <div style="flex:none;width:340px;"><p class="caption">SP-2：探し方（縦積み）→強み。営業導線を上部に確保</p></div>
+
+    <!-- SP3 -->
+    <div class="phone"><div class="scr p">
+      <div class="recruit" style="padding:12px;">
+        <span class="enlab">RECRUIT</span><div class="box" style="height:26px;margin-top:4px;">採用特設</div>
+        <div class="imgbox mt8" style="height:110px;">社員・現場</div>
+        <div class="chip mt8">人・文化 / 座談会・一日の流れ</div>
+        <div class="chip mt8">教育・キャリア / 免許支援</div>
+        <div class="chip mt8">働く環境・福利厚生</div>
+        <h3 class="block mt12">エリア別 募集要項</h3>
+        <div class="cols-3 mt8" style="gap:6px;"><div class="chip">本社福山</div><div class="chip">広島</div><div class="chip">関東</div></div>
+        <div class="mt12 center"><span class="btn ac">採用エントリー</span></div>
+      </div>
+      <div class="mt12"><span class="enlab">NEWS</span><div class="box mt8" style="height:30px;">お知らせ一覧 ＞</div></div>
+    </div></div>
+    <div style="flex:none;width:340px;"><p class="caption">SP-3：採用特設（トーンを変え面積確保）→お知らせ。求職者6割を反映</p></div>
+
+  </div>
+
+  <div class="intent" style="margin-top:22px;">
+    <b>まとめ</b><b>ワイヤー全体の設計意図</b>：定番レシピ（ヒーロー→強み→数値→ニュース→CTA）に流さず、<b>①まず顧客/求職者を「探し方」で振り分け → ②安全(75%減)を証明 → ③数字で信頼 → ④事業 → ⑤採用を最大面積で特設化 → ⑥人間味 → ⑦拠点 → ⑧二方向CTA</b>の順。求職者6割:新規顧客4割の比重を「採用特設の面積」と「探し方の上位配置」で物理的に表現。写真は全て仮（IMG＝制服刷新後差替/生成AI/現サイト抽出）で、写真非依存でも成立する型Dを採用。<b>このワイヤーを土台に、デザイン課が企画書の配色・フォント・スピードストロークを載せて仕上げる。</b>
+  </div>
+
+</div>
+</body>
+</html>

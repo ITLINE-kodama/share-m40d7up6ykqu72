@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社生興運送 ｜ 走り続ける、信頼のために。― 岡山の総合物流</title>
+<meta name="description" content="岡山県井原市の総合物流。AIドラレコで事故75%減。輸配送・倉庫管理・自動車整備。荷物から・相談内容から探せる、採用にも強いコーポレートサイト。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,500;125,600;125,700;125,800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   デザイン案B ／ 参考サイト＝日産自動車 キャリア採用サイト
+   （https://www.nissanmotor.jobs/japan/MC/ の CSS実測値を踏襲）
+   - 黒背景 × 生興運送のロゴカラー（ブルー #26499D ／ ライム #D5E382）
+   - 寸法  : html{font-size:calc(var(--vw)/144)} ＝1rem がアートボード上の10px
+             （PC=1440基準 / SP=375基準。参考サイトの --liquid-*DesignRatio と同じ思想）
+   - 英字  : Archivo Expanded（参考サイトの NissanProExtd＝幅広グロテスクの代替）
+   ============================================================ */
+:root{
+  --dw:37.5;                 /* SP: 1rem = 100vw/37.5 = 10px @375 */
+  --vw:100vw;
+  --c-bg:#05070a;
+  --c-bg2:#0c1017;
+  --c-panel:#12171f;
+  --c-text:#f4f4f4;
+  --c-mute:#98a3b3;
+  --c-sub:#c2ccd8;           /* 本文（説明文）の色 */
+  --c-line:rgba(244,244,244,.24);
+  --c-line2:rgba(244,244,244,.12);
+  --c-blue:#3e7be8;          /* ロゴのコーポレートブルーを黒地用に持ち上げた色 */
+  --c-blue-d:#26499d;        /* ロゴ原色 */
+  --c-lime:#c7e36b;          /* ロゴのライムグリーン */
+  --f-en:"Archivo",sans-serif;
+  --f-jp:"Noto Sans JP",sans-serif;
+  --ease:cubic-bezier(.165,.84,.44,1);
+  --ease2:cubic-bezier(.39,.575,.565,1);
+}
+@media screen and (min-width:768px){ :root{ --dw:144; } }   /* PC: 1rem = 100vw/144 = 10px @1440 */
+html{font-size:calc(var(--vw) / var(--dw));scroll-behavior:smooth;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:var(--f-jp);font-size:1.5rem;font-weight:400;
+  color:var(--c-text);background-color:var(--c-bg);
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  text-size-adjust:none;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+li{list-style:none;}
+button{font-family:inherit;border:none;background:none;cursor:pointer;color:inherit;}
+::selection{background:var(--c-blue);color:#fff;}
+
+/* 共通 ------------------------------------------------------ */
+.wrap{padding:0 2.4rem;}
+@media screen and (min-width:768px){ .wrap{padding:0 6.4rem;} }
+.sec{padding:8rem 0;position:relative;}
+@media screen and (min-width:768px){ .sec{padding:16rem 0;} }
+.sec--alt{background-color:var(--c-bg2);}
+/* 参考サイトと同じく、黒のベースの中に「明るいコンテンツエリア」を挟む。
+   セクション単位でトークンを差し替えるだけで、中の部品はすべて自動で明色に反転する。 */
+.sec--light,.sec--paper{
+  --c-bg:#eceff2; --c-bg2:#eceff2; --c-panel:#ffffff;
+  --c-text:#0d1117; --c-mute:#66717e; --c-sub:#39434f;
+  --c-line:rgba(0,0,0,.28); --c-line2:rgba(0,0,0,.13);
+  --c-blue:#1f4fb0; --c-lime:#5c8a1e;
+  background-color:var(--c-bg);color:var(--c-text);
+}
+.sec--paper{ --c-bg:#ffffff; --c-bg2:#ffffff; --c-panel:#f2f4f7; }
+
+/* 参考サイトの作法: 小さな英字ラベルの先頭に「·」 */
+.tag{display:inline-flex;align-items:center;font-family:var(--f-en);font-weight:600;
+  font-size:1.1rem;letter-spacing:.12em;color:var(--c-blue);text-transform:uppercase;}
+.tag::before{content:"·";margin-right:.6rem;}
+.tag--lime{color:var(--c-lime);}
+
+/* セクション見出し（英字が主役＋和文を添える／参考サイトの el_headingTopBlock） */
+.hd{display:flex;flex-direction:column;gap:1.2rem;margin-bottom:4.8rem;}
+.hd__en{font-family:var(--f-en);font-weight:700;font-size:3.6rem;line-height:1.05;
+  letter-spacing:-.02em;text-transform:uppercase;}
+.hd__en em{font-style:normal;color:var(--c-blue);}
+.hd__jp{font-size:1.3rem;font-weight:500;letter-spacing:.14em;color:var(--c-mute);}
+.hd__lead{margin-top:1.6rem;font-size:1.4rem;line-height:2;letter-spacing:.04em;color:var(--c-sub);max-width:64rem;}
+@media screen and (min-width:768px){
+  .hd{margin-bottom:8rem;}
+  .hd__en{font-size:7.2rem;}
+  .hd__jp{font-size:1.6rem;}
+  .hd__lead{margin-top:2.4rem;font-size:1.5rem;}
+  .hd--row{flex-direction:row;justify-content:space-between;align-items:flex-end;}
+}
+
+.btn{display:inline-flex;align-items:center;justify-content:space-between;gap:3.2rem;
+  min-width:22rem;padding:1.6rem 2rem 1.6rem 2.4rem;border:.1rem solid var(--c-line);
+  font-size:1.3rem;letter-spacing:.06em;position:relative;overflow:hidden;
+  transition:color .4s var(--ease),border-color .4s var(--ease);}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;background-color:var(--c-blue);
+  transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease);}
+.btn:hover{border-color:var(--c-blue);}
+.btn:hover::before{transform:scaleX(1);}
+.btn--fill{background-color:var(--c-blue);border-color:var(--c-blue);}
+.btn--fill::before{background-color:#5a92f0;}
+.arw{position:relative;flex:none;width:2.4rem;height:.1rem;background-color:currentColor;
+  transition:transform .4s var(--ease);}
+.arw::after{content:"";position:absolute;top:-.3rem;right:0;width:.7rem;height:.7rem;
+  border-top:.1rem solid currentColor;border-right:.1rem solid currentColor;transform:rotate(45deg);}
+.btn:hover .arw,a:hover > .arw{transform:translateX(.6rem);}
+
+/* ── 参考サイトの文字アニメーション（適用先まで実測どおり） ──────────────
+   ① flickerIn : @keyframes animationNewgradsMvItem と同じ 0→1→0→1→0→1（.2〜.25s）の“蛍光灯”点灯
+   ② charBlink : .js_textAnimation ＝1文字ずつ #000⇄#F4F4F4 をランダムな順で無限ループ。
+                 参考サイトで付いているのは **MVの巨大英字2行** と **MESSAGE見出し** の3箇所だけ。
+   ③ rv-ch    : .js_top_message_text ＝**日本語本文**。全文字を opacity:.2 で置き、
+                 スクロールに応じて頭から1文字ずつ 1.0 に光らせる（点滅ではない）
+   ④ marquee   : .pg_top_message_slider_text（16rem・一部を -webkit-text-stroke の中空文字）が流れる */
+@keyframes flickerIn{0%{opacity:0}20%{opacity:1}40%{opacity:0}60%{opacity:1}80%{opacity:0}100%{opacity:1}}
+@keyframes flickerInHalf{0%{opacity:0}20%{opacity:1}40%{opacity:0}60%{opacity:1}80%{opacity:0}100%{opacity:.85}}
+/* 消灯は一瞬だけ（同時に消えるのは全体の1割程度＝読みやすさを保つ） */
+@keyframes charBlink{0%,76%{color:inherit}81%,86%{color:var(--blink-off,#000)}91%,100%{color:inherit}}
+@keyframes mvCharGlow{
+  0%,64%,100%{filter:brightness(1);text-shadow:0 0 0 transparent;}
+  69%{filter:brightness(2.35);text-shadow:0 0 .05em rgba(255,255,255,.98),0 0 .18em currentColor,0 0 .52em currentColor;}
+  73%{filter:brightness(1.35);text-shadow:0 0 .03em rgba(255,255,255,.75),0 0 .12em currentColor,0 0 .30em currentColor;}
+  78%{filter:brightness(2);text-shadow:0 0 .04em rgba(255,255,255,.9),0 0 .15em currentColor,0 0 .42em currentColor;}
+  84%{filter:brightness(1);text-shadow:0 0 0 transparent;}
+}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+.ch{display:inline-block;font-style:normal;white-space:pre;animation:charBlink 4.4s var(--ease2) infinite;}
+.mv__en .ch{animation-name:mvCharGlow;animation-duration:5.2s;animation-timing-function:var(--ease2);}
+.mv__en.is-glow .ch{will-change:filter,text-shadow;}
+/* 1文字ずつに分解するとカーニング／合字が無効になり字幅が変わる＝見出しが一瞬ズレる。
+   分解前後で字幅が変わらないよう、対象要素はあらかじめカーニングを切っておく */
+.js-chars{font-kerning:none;font-variant-ligatures:none;}
+/* MV見出しは「分解＝初期表示前」「点滅＝スライドイン後」に分離（表示中に分解しない） */
+.mv__en:not(.is-glow) .ch{animation:none;}
+.rv-ch{display:inline-block;font-style:normal;white-space:pre;opacity:.2;transition:opacity .55s var(--ease2);}
+.rv-ch.is-lit{opacity:1;}
+@media (prefers-reduced-motion:reduce){
+  .ch{animation:none!important;}
+  .rv-ch{opacity:1!important;transition:none;}
+  [style*="flicker"],.msg__photos figure{animation:none!important;opacity:1!important;}
+}
+
+/* fade-up（JSが動かなくても必ず見える） */
+.fu{opacity:1;transform:none;transition:opacity 1s var(--ease),transform 1s var(--ease);}
+.js .fu{opacity:0;transform:translateY(3rem);}
+.js .fu.is-in{opacity:1;transform:none;}
+
+/* ヘッダー -------------------------------------------------- */
+.hdr{position:fixed;top:0;left:0;z-index:100;width:100%;height:6.4rem;display:flex;align-items:center;
+  transition:background-color .4s var(--ease),transform .45s var(--ease);}
+.hdr.is-solid{background-color:rgba(5,7,10,.86);backdrop-filter:blur(10px);}
+.hdr.is-hide{transform:translateY(-110%);}
+.hdr__in{display:flex;align-items:center;width:100%;padding:0 2rem;gap:2rem;}
+.hdr__logo{display:flex;align-items:center;gap:1.2rem;}
+.hdr__logo img{width:14rem;filter:brightness(0) invert(1);}
+.hdr__logo span{display:none;font-family:var(--f-en);font-weight:600;font-size:1.1rem;letter-spacing:.1em;color:var(--c-mute);}
+.hdr__nav{display:none;}
+.hdr__right{margin-left:auto;display:flex;align-items:center;gap:1.6rem;}
+.hdr__menu{display:flex;flex-direction:column;align-items:flex-end;gap:.5rem;padding:.6rem 0;}
+.hdr__menu i{display:block;width:2.6rem;height:.1rem;background-color:var(--c-text);transition:.4s var(--ease);}
+.hdr__menu em{font-family:var(--f-en);font-style:normal;font-weight:600;font-size:1rem;letter-spacing:.1em;}
+.hdr__cta{min-width:auto;gap:1.2rem;padding:1.1rem 1.4rem;font-size:1.15rem;white-space:nowrap;}
+.hdr__cta .arw{width:1.6rem;}
+@media screen and (min-width:768px){
+  .hdr{height:9.6rem;}
+  .hdr__in{padding:0 3.2rem;gap:3.2rem;}
+  .hdr__logo img{width:19rem;}
+  .hdr__logo span{display:block;}
+  .hdr__nav{display:flex;gap:3.2rem;margin-left:2.4rem;}
+  .hdr__nav a{position:relative;font-size:1.3rem;letter-spacing:.06em;padding:.6rem 0;}
+  .hdr__nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:.1rem;background-color:var(--c-blue);transition:width .4s var(--ease);}
+  .hdr__nav a:hover::after{width:100%;}
+  .hdr__right{gap:2.4rem;}
+  .hdr__cta{gap:2.4rem;padding:1.4rem 1.8rem 1.4rem 2.2rem;font-size:1.3rem;}
+  .hdr__cta .arw{width:2.4rem;}
+}
+/* メニュー（全画面） */
+.menu{position:fixed;inset:0;z-index:110;background-color:var(--c-bg);opacity:0;visibility:hidden;
+  transition:opacity .5s var(--ease),visibility .5s;display:flex;align-items:center;padding:0 2.4rem;}
+.menu.is-open{opacity:1;visibility:visible;}
+.menu__close{position:absolute;top:2rem;right:2.4rem;font-family:var(--f-en);font-weight:600;font-size:1.1rem;letter-spacing:.1em;}
+.menu__list{width:100%;}
+.menu__list li{border-top:.1rem solid var(--c-line2);}
+.menu__list li:last-child{border-bottom:.1rem solid var(--c-line2);}
+.menu__list a{display:flex;align-items:baseline;gap:1.6rem;padding:2rem .4rem;transition:color .3s var(--ease);}
+.menu__list a:hover{color:var(--c-blue);}
+.menu__list .en{font-family:var(--f-en);font-weight:700;font-size:2.4rem;letter-spacing:-.01em;text-transform:uppercase;width:16rem;}
+.menu__list .jp{font-size:1.3rem;letter-spacing:.08em;color:var(--c-mute);}
+@media screen and (min-width:768px){
+  .menu{padding:0 6.4rem;}
+  .menu__close{top:3.2rem;right:3.2rem;font-size:1.2rem;}
+  .menu__list a{padding:2.8rem .8rem;}
+  .menu__list .en{font-size:4.8rem;width:34rem;}
+  .menu__list .jp{font-size:1.5rem;}
+}
+
+/* MV -------------------------------------------------------- */
+.mv{position:relative;height:100svh;min-height:56rem;overflow:hidden;--blink-off:#05070a;}
+.mv__bg{position:absolute;inset:0;z-index:0;
+  background:#05070a url("./images/design-b-start-v3.jpg") center/cover no-repeat;}
+.mv__bg video{display:block;width:100%;height:100%;object-fit:cover;object-position:center;
+  opacity:0;transition:opacity .65s var(--ease2);will-change:opacity;backface-visibility:hidden;}
+.mv__bg video.is-ready{opacity:1;}
+/* 参考サイトは映像に黒72%(#000000b8)。本案は静止画で元が暗いため61%に調整し車両を残す */
+.mv__bg::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.82) 100%);}
+.mv__frame{position:absolute;inset:1.6rem;z-index:2;border:.1rem solid var(--c-line);pointer-events:none;}
+.mv__tags{position:absolute;top:50%;left:50%;z-index:3;display:flex;justify-content:space-between;
+  width:calc(100% - 4.8rem);transform:translate(-50%,-50%);}
+.mv__tags .tag{opacity:0;transform:translateY(1rem);transition:opacity .5s var(--ease2),transform .5s var(--ease2);
+  text-shadow:0 0 1.2rem rgba(0,0,0,.95),0 0 .4rem rgba(0,0,0,.9);} /* 明るい光跡の上でも読めるように */
+.mv.is-in .mv__tags .tag{opacity:1;transform:none;animation:flickerIn .25s var(--ease2) both;}
+.mv.is-in .mv__tags .tag:nth-child(1){animation-delay:.1s;}
+.mv.is-in .mv__tags .tag:nth-child(2){animation-delay:.3s;}
+.mv.is-in .mv__tags .tag:nth-child(3){animation-delay:.2s;}
+.mv__tags .tag:nth-child(2){display:none;}
+.mv__body{position:absolute;left:2.4rem;bottom:6.4rem;z-index:3;}
+.mv__en{font-family:var(--f-en);font-weight:800;line-height:1.02;letter-spacing:-.035em;text-transform:uppercase;}
+.mv__en > span{display:block;overflow:hidden;}
+/* 直接の子だけに限定（1文字ずつ分解した .ch にこの display:block が当たらないように） */
+.mv__en > span > i{display:block;font-style:normal;font-size:5.6rem;transform:translateY(105%);
+  transition:transform 1s var(--ease);}
+.mv.is-in .mv__en > span > i{transform:none;}
+.mv.is-in .mv__en > span:nth-child(2) > i{transition-delay:.12s;}
+.mv__en em{font-style:normal;color:var(--c-blue);}
+.mv__jp{display:flex;align-items:center;gap:1.6rem;margin-top:2rem;font-size:1.3rem;font-weight:500;
+  letter-spacing:.1em;opacity:0;transition:opacity .8s .5s var(--ease);}
+.mv.is-in .mv__jp{opacity:1;}
+.mv__jp i{display:block;width:6rem;height:.1rem;background-color:var(--c-line);}
+.mv__scroll{position:absolute;right:2.8rem;bottom:6.4rem;z-index:3;display:flex;flex-direction:column;
+  align-items:center;gap:1.2rem;font-family:var(--f-en);font-weight:600;font-size:1.1rem;letter-spacing:.14em;
+  writing-mode:vertical-rl;opacity:0;transition:opacity .8s .8s var(--ease);}
+.mv.is-in .mv__scroll{opacity:1;}
+.mv__scroll b{position:relative;display:block;width:.1rem;height:6rem;background-color:var(--c-line2);}
+.mv__scroll b::before{content:"";position:absolute;top:0;left:0;width:100%;height:2rem;
+  background-color:var(--c-blue);animation:scrollBar 2.4s var(--ease2) infinite;}
+@keyframes scrollBar{0%{transform:translateY(-100%);}60%,100%{transform:translateY(300%);}}
+@media screen and (min-width:768px){
+  .mv__frame{inset:2.4rem;}
+  .mv__tags .tag:nth-child(2){display:inline-flex;}
+  .mv__body{left:6.4rem;bottom:9.6rem;}
+  .mv__en > span > i{font-size:10.8rem;}
+  .mv__jp{margin-top:2.8rem;font-size:1.6rem;gap:2.4rem;}
+  .mv__jp i{width:12rem;}
+  .mv__scroll{right:4rem;bottom:9.6rem;font-size:1.2rem;}
+}
+
+/* MESSAGE（参考サイト .pg_top_message の実測値をそのまま適用）----------------
+   見出し 5rem(50px) ／ 本文 2rem(20px)・line-height2.4・letter-spacing3.2px(=.16em)・段落gap2.8rem
+   写真は10点・**すべて3:4の縦位置**・幅8.8〜17.2rem・左右5点ずつを絶対配置
+   背景は黒に #5796bc の光を上から差す（参考サイトも単なる黒ではなく青みのある暗さ） */
+.msg{position:relative;overflow:hidden;padding:16rem 0 6.4rem;--blink-off:#02040a;
+  background:radial-gradient(120% 68% at 50% 0%,rgba(87,150,188,.30) 0%,rgba(87,150,188,0) 62%);}
+/* 流れる巨大英字（参考サイト .pg_top_message_slider）。一部を中空文字に */
+.msg__slider{display:flex;margin:8rem -2.4rem 0;overflow:hidden;}
+.msg__slider_text{flex:none;font-family:var(--f-en);font-weight:800;font-size:4.8rem;line-height:1;
+  letter-spacing:-.02em;white-space:nowrap;padding-right:3rem;animation:marquee 26s linear infinite;}
+.msg__slider_text .hollow{color:transparent;-webkit-text-stroke:.01em var(--c-text);}
+.msg__ttl{position:relative;z-index:2;text-align:center;font-family:var(--f-en);font-weight:800;
+  font-size:3.2rem;line-height:1;letter-spacing:-.02em;}
+.msg__body{position:relative;z-index:2;display:flex;flex-direction:column;gap:2.4rem;
+  margin-top:4.8rem;padding:0 4rem;text-align:center;} /* SPは左右の写真に文字が重ならないよう内側に寄せる */
+.msg__body p{font-size:1.4rem;font-weight:500;line-height:2;letter-spacing:.16em;}
+.msg__body b{font-weight:500;color:var(--c-blue);}
+.msg__body span{display:block;}
+.msg__photos{position:absolute;inset:0;z-index:1;}
+.msg__photos figure{position:absolute;aspect-ratio:3/4;overflow:hidden;}
+.js .msg__photos figure{transform:none;}
+.js .msg__photos figure.is-in{animation:flickerIn .22s var(--ease2) both;}
+.js .msg__photos figure:nth-child(1).is-in{animation-delay:.4s;}
+.js .msg__photos figure:nth-child(2).is-in{animation-delay:.1s;}
+.js .msg__photos figure:nth-child(3).is-in{animation-delay:.3s;}
+.js .msg__photos figure:nth-child(5).is-in{animation-delay:.4s;}
+.js .msg__photos figure:nth-child(6).is-in{animation-delay:.2s;}
+.js .msg__photos figure:nth-child(7).is-in{animation-delay:.15s;}
+.js .msg__photos figure:nth-child(8).is-in{animation-delay:.35s;}
+.js .msg__photos figure:nth-child(9).is-in{animation-delay:.05s;}
+.js .msg__photos figure:nth-child(10).is-in{animation-delay:.25s;}
+.msg__photos img{width:100%;height:100%;object-fit:cover;}
+/* 元写真が横長のため、3:4に切り出しても人物が切れないよう1枚ずつ寄せる */
+.msg__photos figure:nth-child(1) img{object-position:64% 38%;}
+.msg__photos figure:nth-child(2) img{object-position:72% 45%;}
+.msg__photos figure:nth-child(3) img{object-position:46% 38%;}
+.msg__photos figure:nth-child(4) img{object-position:52% 45%;}
+.msg__photos figure:nth-child(5) img{object-position:62% 38%;}
+.msg__photos figure:nth-child(6) img{object-position:38% 50%;}
+.msg__photos figure:nth-child(7) img{object-position:60% 38%;}
+.msg__photos figure:nth-child(8) img{object-position:62% 45%;}
+.msg__photos figure:nth-child(9) img{object-position:58% 38%;}
+.msg__photos figure:nth-child(10) img{object-position:60% 45%;}
+/* SP実測値（参考サイトはSPでも散らし配置） */
+.msg__photos figure:nth-child(1){top:8rem;left:4.8rem;width:4.4rem;}
+.msg__photos figure:nth-child(2){top:20rem;left:1.2rem;width:4rem;}
+.msg__photos figure:nth-child(3){top:32rem;left:2rem;width:3.2rem;}
+.msg__photos figure:nth-child(4){top:44.4rem;left:0;width:3.8rem;}
+.msg__photos figure:nth-child(5){top:62.8rem;left:10.6rem;width:3.2rem;}
+.msg__photos figure:nth-child(6){top:7.2rem;right:5.6rem;width:6.4rem;}
+.msg__photos figure:nth-child(7){top:18.4rem;right:2rem;width:4rem;}
+.msg__photos figure:nth-child(8){top:40rem;right:1rem;width:4.2rem;}
+.msg__photos figure:nth-child(9){top:53.6rem;right:1.2rem;width:4.2rem;}
+.msg__photos figure:nth-child(10){top:62.8rem;right:9.6rem;width:4rem;}
+@media screen and (min-width:768px){
+  .msg{padding:20rem 0 9.6rem;min-height:118rem;}
+  .msg__slider{margin:38rem -6.4rem 0;}
+  .msg__slider_text{font-size:16rem;padding-right:6rem;}
+  .msg__ttl{font-size:5rem;}
+  .msg__body{margin-top:9.6rem;padding:0;gap:2.8rem;}
+  .msg__body p{font-size:2rem;line-height:2.4;}
+  /* PC実測値 */
+  .msg__photos figure:nth-child(1){top:17.6rem;left:26.4rem;width:14.4rem;}
+  .msg__photos figure:nth-child(2){top:34.4rem;left:2rem;width:14rem;}
+  .msg__photos figure:nth-child(3){top:54.2rem;left:26.4rem;width:10.6rem;}
+  .msg__photos figure:nth-child(4){top:67.2rem;left:5.6rem;width:10.2rem;}
+  .msg__photos figure:nth-child(5){top:86.8rem;left:22.8rem;width:12.8rem;}
+  .msg__photos figure:nth-child(6){top:16rem;right:20rem;width:17.2rem;}
+  .msg__photos figure:nth-child(7){top:45.2rem;right:11.2rem;width:8.8rem;}
+  .msg__photos figure:nth-child(8){top:61.2rem;right:28.4rem;width:11.6rem;}
+  .msg__photos figure:nth-child(9){top:67.2rem;right:5.6rem;width:11.6rem;}
+  .msg__photos figure:nth-child(10){top:90rem;right:21.6rem;width:12.8rem;}
+}
+
+/* 2枚看板パネル（参考サイトの For ENGINEER / For BUSINESS の作法）---------- */
+/* 2枚看板は参考サイト .pg_top_messageLink の実測値（padding 4rem/1.6rem・1px枠・和文2rem・英字4.4rem） */
+.entry{display:grid;grid-template-columns:1fr;gap:1.6rem;}
+.entry a{display:block;padding:3.2rem 1.6rem 1.6rem;border:.1rem solid #595959;transition:transform .5s var(--ease);}
+.entry a:hover{transform:translateY(-.6rem);}
+.entry .lead{font-size:1.4rem;font-weight:500;letter-spacing:.02em;}
+.entry .en{margin-top:1.2rem;font-family:var(--f-en);font-weight:700;font-size:3.2rem;line-height:1;letter-spacing:-.02em;}
+.entry p{margin-top:2.4rem;font-size:1.4rem;line-height:1.8;letter-spacing:.04em;color:#f4f4f4cc;}
+.entry .go{display:flex;align-items:center;justify-content:flex-end;gap:1.6rem;margin-top:2.8rem;
+  font-family:var(--f-en);font-weight:700;font-size:1.4rem;letter-spacing:.06em;}
+.entry .go i{display:flex;align-items:center;justify-content:center;width:4.4rem;height:4.4rem;
+  background-color:#fff;transition:transform .4s var(--ease);}
+.entry .go i::before{content:"";width:.8rem;height:.8rem;border-top:.15rem solid #12263f;border-right:.15rem solid #12263f;transform:rotate(45deg) translate(-.15rem,.15rem);}
+.entry a:hover .go i{transform:translateX(.6rem);}
+.entry .is-c1{background-color:#12395f;}
+.entry .is-c2{background-color:#4b83bd;}
+@media screen and (min-width:768px){
+  .entry{grid-template-columns:1fr 1fr;gap:2.4rem;}
+  .entry a{padding:4rem 1.6rem 1.6rem 4rem;}
+  .entry .lead{font-size:2rem;}
+  .entry .en{font-size:4.4rem;white-space:nowrap;}
+  .entry p{padding-right:5.6rem;}
+  .entry .go{margin-top:4rem;}
+}
+
+/* 数字 ------------------------------------------------------ */
+.nums{display:grid;grid-template-columns:repeat(2,1fr);gap:.1rem;background-color:var(--c-line2);
+  border:.1rem solid var(--c-line2);}
+.nums li{background-color:var(--c-bg);padding:2.8rem 1.6rem;text-align:center;}
+.nums li:last-child{grid-column:1 / 3;} /* SPで5つ目が半端に空かないよう横いっぱいに */
+.nums .v{font-family:var(--f-en);font-weight:700;font-size:4rem;line-height:1;letter-spacing:-.03em;}
+.nums .v em{font-style:normal;font-family:var(--f-jp);font-size:1.4rem;font-weight:500;margin-left:.4rem;}
+.nums .v.is-blue{color:var(--c-blue);}
+.nums .l{margin-top:1.2rem;font-size:1.1rem;letter-spacing:.1em;color:var(--c-mute);}
+@media screen and (min-width:768px){
+  .nums{grid-template-columns:repeat(5,1fr);}
+  .nums li{padding:4.8rem 1.6rem;}
+  .nums li:last-child{grid-column:auto;}
+  .nums .v{font-size:6.4rem;}
+  .nums .v em{font-size:1.8rem;}
+  .nums .l{margin-top:1.6rem;font-size:1.2rem;}
+}
+
+/* STRENGTH -------------------------------------------------- */
+.st{display:grid;grid-template-columns:1fr;gap:4rem;}
+/* 写真は暗くしない（黒地でも明るく見せる＝参考サイトの作法） */
+.st__item_media{position:relative;overflow:hidden;aspect-ratio:16/10;background-color:var(--c-panel);}
+.st__item_media img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease);}
+.st__item:hover .st__item_media img{transform:scale(1.05);}
+.st__item_no{position:absolute;top:0;left:0;z-index:2;display:flex;align-items:center;justify-content:center;
+  min-width:4.8rem;height:2.8rem;padding:0 1.2rem;background-color:var(--c-blue);color:#fff;
+  font-family:var(--f-en);font-weight:700;font-size:1.2rem;letter-spacing:.12em;}
+.st__item_ttl{margin-top:2rem;font-size:2rem;font-weight:700;line-height:1.5;letter-spacing:-.01em;}
+.st__item_txt{margin-top:1.2rem;font-size:1.3rem;line-height:2;letter-spacing:.04em;color:var(--c-sub);}
+.st__item_kpi{display:flex;align-items:flex-end;gap:1.2rem;margin-top:2rem;padding-top:1.6rem;
+  border-top:.1rem solid var(--c-line2);}
+.st__item_kpi b{font-family:var(--f-en);font-weight:800;font-size:4.8rem;line-height:.85;letter-spacing:-.03em;color:var(--c-blue);}
+.st__item_kpi span{font-size:1.1rem;line-height:1.7;color:var(--c-mute);}
+@media screen and (min-width:768px){
+  .st{grid-template-columns:repeat(3,1fr);gap:4.8rem;}
+  .st__item_ttl{margin-top:2.8rem;font-size:2.4rem;}
+  .st__item_txt{font-size:1.4rem;}
+  .st__item_kpi b{font-size:6.4rem;}
+  .st__item_kpi span{font-size:1.2rem;}
+}
+
+/* 探し方（荷物／相談内容） ----------------------------------- */
+.find{display:grid;grid-template-columns:1fr;gap:2.4rem;}
+.find__panel{padding:3.2rem 2.4rem 3.6rem;border:.1rem solid var(--c-line2);background-color:var(--c-panel);}
+.find__panel_en{font-family:var(--f-en);font-weight:700;font-size:1.3rem;letter-spacing:.1em;color:var(--c-blue);text-transform:uppercase;}
+.find__panel_ttl{margin-top:.8rem;font-size:2.2rem;font-weight:700;letter-spacing:-.01em;}
+.find__panel_desc{margin-top:.8rem;font-size:1.2rem;letter-spacing:.06em;color:var(--c-mute);}
+.find__list{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.4rem;}
+.find__list a{display:inline-flex;align-items:center;gap:.8rem;padding:1.1rem 1.6rem;
+  border:.1rem solid var(--c-line2);font-size:1.25rem;letter-spacing:.04em;
+  transition:background-color .35s var(--ease),border-color .35s var(--ease),color .35s var(--ease);}
+.find__list a:hover{background-color:var(--c-blue);border-color:var(--c-blue);color:#fff;}
+.find__list .no{font-family:var(--f-en);font-weight:700;font-size:1.05rem;color:var(--c-lime);}
+.find__list a:hover .no{color:#fff;}
+@media screen and (min-width:768px){
+  .find{grid-template-columns:1fr 1fr;gap:3.2rem;}
+  .find__panel{padding:5.6rem 4.8rem 6rem;}
+  .find__panel_ttl{font-size:3rem;}
+  .find__panel_desc{font-size:1.3rem;}
+  .find__list a{padding:1.3rem 1.8rem;font-size:1.35rem;}
+}
+
+/* SERVICE --------------------------------------------------- */
+.svc{display:grid;grid-template-columns:1fr;gap:.1rem;background-color:var(--c-line2);border-top:.1rem solid var(--c-line2);border-bottom:.1rem solid var(--c-line2);}
+.svc a{position:relative;display:grid;grid-template-columns:1fr;background-color:var(--c-bg);
+  padding:3.2rem 2.4rem;transition:background-color .5s var(--ease);}
+.svc a:hover{background-color:var(--c-panel);}
+.svc .en{font-family:var(--f-en);font-weight:700;font-size:1.2rem;letter-spacing:.12em;color:var(--c-blue);text-transform:uppercase;}
+.svc .jp{margin-top:.8rem;font-size:2.2rem;font-weight:700;letter-spacing:-.01em;}
+.svc p{margin-top:1.2rem;font-size:1.3rem;line-height:2;letter-spacing:.04em;color:var(--c-sub);}
+.svc .go{display:flex;justify-content:flex-end;margin-top:2rem;}
+.svc__media{margin:-3.2rem -2.4rem 2.4rem;aspect-ratio:16/9;overflow:hidden;}
+.svc__media img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease);}
+.svc a:hover .svc__media img{transform:scale(1.05);}
+@media screen and (min-width:768px){
+  .svc{grid-template-columns:repeat(3,1fr);}
+  .svc a{padding:4.8rem 4rem 4.4rem;}
+  .svc .jp{font-size:2.6rem;}
+  .svc p{font-size:1.4rem;}
+  .svc__media{margin:-4.8rem -4rem 3.2rem;}
+}
+
+/* NETWORK --------------------------------------------------- */
+.net{position:relative;display:grid;grid-template-columns:1fr;gap:0;}
+.net::before{content:"";position:absolute;top:1rem;bottom:1rem;left:.5rem;width:.1rem;background-color:var(--c-line2);}
+.net li{position:relative;padding:0 0 3.2rem 2.8rem;}
+.net li:last-child{padding-bottom:0;}
+.net__dot{position:absolute;top:.6rem;left:0;width:1.1rem;height:1.1rem;border-radius:50%;
+  border:.2rem solid var(--c-blue);background-color:var(--c-bg);}
+.net li.is-key .net__dot{background-color:var(--c-blue);box-shadow:0 0 0 .5rem rgba(62,123,232,.18);}
+.net__en{font-family:var(--f-en);font-weight:700;font-size:1.15rem;letter-spacing:.12em;color:var(--c-blue);text-transform:uppercase;}
+.net__jp{margin-top:.4rem;font-size:1.8rem;font-weight:700;letter-spacing:-.01em;}
+.net__t{margin-top:.8rem;font-size:1.25rem;line-height:1.9;letter-spacing:.04em;color:var(--c-sub);}
+.net__tag{display:inline-block;margin-top:1rem;padding:.4rem 1rem;border:.1rem solid var(--c-line2);
+  font-family:var(--f-en);font-weight:600;font-size:1rem;letter-spacing:.1em;color:var(--c-lime);}
+@media screen and (min-width:768px){
+  .net{grid-template-columns:repeat(4,1fr);gap:3.2rem;}
+  .net::before{top:.5rem;bottom:auto;left:6%;right:6%;width:auto;height:.1rem;}
+  .net li{padding:3.6rem 0 0 0;}
+  .net__dot{top:0;left:0;}
+  .net__jp{font-size:2.2rem;}
+  .net__t{font-size:1.3rem;}
+}
+
+/* RECRUIT --------------------------------------------------- */
+/* 参考サイトの「明るい実写を左に置き、右にリスト」の型（写真は暗くしない） */
+.rec{position:relative;background-color:var(--c-bg2);}
+.rec__grid{display:grid;grid-template-columns:1fr;gap:3.2rem;}
+.rec__photo{overflow:hidden;aspect-ratio:4/3;}
+.rec__photo img{width:100%;height:100%;object-fit:cover;}
+.rec__in{position:relative;z-index:1;}
+@media screen and (min-width:768px){
+  .rec__grid{grid-template-columns:44rem 1fr;gap:6.4rem;align-items:start;}
+  .rec__photo{aspect-ratio:3/4;position:sticky;top:12rem;}
+}
+.rec__big{font-family:var(--f-en);font-weight:800;font-size:4.8rem;line-height:1;letter-spacing:-.035em;text-transform:uppercase;}
+.rec__big em{font-style:normal;color:var(--c-blue);}
+.rec__jobs{display:grid;grid-template-columns:1fr 1fr;gap:.1rem;margin-top:3.2rem;background-color:var(--c-line2);border:.1rem solid var(--c-line2);}
+.rec__jobs a{background-color:rgba(5,7,10,.72);padding:2rem 1.6rem;transition:background-color .4s var(--ease);}
+.rec__jobs a:hover{background-color:var(--c-blue);}
+.rec__jobs .en{font-family:var(--f-en);font-weight:700;font-size:1rem;letter-spacing:.1em;color:var(--c-lime);text-transform:uppercase;}
+.rec__jobs a:hover .en{color:#fff;}
+.rec__jobs .jp{margin-top:.6rem;font-size:1.5rem;font-weight:700;}
+.rec__jobs small{display:block;margin-top:.6rem;font-size:1.05rem;color:var(--c-mute);}
+.rec__jobs a:hover small{color:rgba(255,255,255,.85);}
+.rec__area{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.4rem;}
+.rec__area span{padding:.7rem 1.4rem;border:.1rem solid var(--c-line);font-size:1.2rem;letter-spacing:.06em;}
+@media screen and (min-width:768px){
+  .rec__big{font-size:7.2rem;white-space:nowrap;}
+  .rec__jobs{grid-template-columns:repeat(4,1fr);margin-top:5.6rem;}
+  .rec__jobs a{padding:3.2rem 2.4rem;}
+  .rec__jobs .jp{font-size:1.8rem;}
+  .rec__jobs small{font-size:1.15rem;}
+}
+
+/* NEWS ------------------------------------------------------ */
+.news li a{display:grid;grid-template-columns:auto 1fr;gap:.6rem 1.6rem;align-items:center;
+  padding:2rem .4rem;border-top:.1rem solid var(--c-line2);transition:padding .4s var(--ease),color .3s var(--ease);}
+.news li:last-child a{border-bottom:.1rem solid var(--c-line2);}
+.news li a:hover{padding-left:1.2rem;color:var(--c-blue);}
+.news .d{font-family:var(--f-en);font-weight:600;font-size:1.2rem;letter-spacing:.06em;color:var(--c-mute);}
+.news .c{justify-self:start;padding:.3rem 1rem;border:.1rem solid var(--c-line2);font-size:1rem;letter-spacing:.08em;color:var(--c-mute);}
+.news .c.is-blue{border-color:var(--c-blue);color:var(--c-blue);}
+.news .t{grid-column:1 / 3;font-size:1.35rem;line-height:1.7;letter-spacing:.04em;}
+@media screen and (min-width:768px){
+  .news li a{grid-template-columns:11rem 10rem 1fr auto;gap:2.4rem;padding:2.8rem .8rem;}
+  .news .t{grid-column:auto;font-size:1.5rem;}
+  .news .d{font-size:1.3rem;}
+}
+
+/* CTA ------------------------------------------------------- */
+.cta{position:relative;text-align:center;background-color:var(--c-bg2);overflow:hidden;}
+.cta::before{content:"";position:absolute;top:-30%;left:50%;width:80rem;height:80rem;transform:translateX(-50%);
+  background:radial-gradient(circle,rgba(62,123,232,.18) 0%,rgba(62,123,232,0) 65%);pointer-events:none;}
+.cta__in{position:relative;z-index:1;}
+.cta__en{font-family:var(--f-en);font-weight:800;font-size:4rem;line-height:1.05;letter-spacing:-.035em;text-transform:uppercase;}
+.cta__en em{font-style:normal;color:var(--c-blue);}
+.cta__jp{margin-top:1.6rem;font-size:1.3rem;line-height:2;letter-spacing:.06em;color:var(--c-sub);}
+.cta__btns{display:flex;flex-direction:column;align-items:center;gap:1.2rem;margin-top:3.2rem;}
+.cta__tel{margin-top:3.2rem;font-family:var(--f-en);font-weight:700;font-size:2.8rem;letter-spacing:.02em;}
+.cta__tel small{display:block;margin-top:.6rem;font-family:var(--f-jp);font-size:1.1rem;font-weight:400;color:var(--c-mute);letter-spacing:.06em;}
+@media screen and (min-width:768px){
+  .cta__en{font-size:8rem;}
+  .cta__jp{font-size:1.5rem;}
+  .cta__btns{flex-direction:row;justify-content:center;gap:1.6rem;margin-top:4.8rem;}
+  .cta__btns .btn{min-width:28rem;padding:2rem 2.4rem 2rem 2.8rem;font-size:1.4rem;}
+  .cta__tel{font-size:4rem;}
+}
+
+/* フッター --------------------------------------------------- */
+.ftr{border-top:.1rem solid var(--c-line2);padding:6.4rem 0 3.2rem;}
+.ftr__logo img{width:16rem;filter:brightness(0) invert(1);}
+.ftr__addr{margin-top:1.6rem;font-size:1.2rem;line-height:2;letter-spacing:.04em;color:var(--c-mute);}
+.ftr__map{display:grid;grid-template-columns:1fr 1fr;gap:2.4rem;margin-top:4rem;}
+.ftr__map h4{font-family:var(--f-en);font-weight:700;font-size:1.1rem;letter-spacing:.12em;color:var(--c-blue);text-transform:uppercase;}
+.ftr__map li{margin-top:1rem;font-size:1.2rem;letter-spacing:.04em;}
+.ftr__map a{color:#c8d0da;transition:color .3s var(--ease);}
+.ftr__map a:hover{color:var(--c-text);}
+.ftr__btm{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:space-between;margin-top:4.8rem;padding-top:2rem;
+  border-top:.1rem solid var(--c-line2);font-family:var(--f-en);font-weight:500;font-size:1rem;letter-spacing:.08em;color:#66707d;}
+@media screen and (min-width:768px){
+  .ftr{padding:9.6rem 0 4rem;}
+  .ftr__top{display:flex;justify-content:space-between;align-items:flex-start;gap:6.4rem;}
+  .ftr__map{grid-template-columns:repeat(4,1fr);gap:4rem;margin-top:0;flex:1;}
+  .ftr__btm{margin-top:8rem;font-size:1.1rem;}
+}
+
+/* SP固定CTA */
+.mbar{position:fixed;bottom:0;left:0;right:0;z-index:90;display:grid;grid-template-columns:1fr 1fr;gap:.1rem;
+  background-color:var(--c-line2);border-top:.1rem solid var(--c-line2);}
+.mbar a{display:flex;align-items:center;justify-content:center;height:4.8rem;font-size:1.25rem;letter-spacing:.04em;
+  background-color:rgba(5,7,10,.95);}
+.mbar a.is-fill{background-color:var(--c-blue);}
+@media screen and (min-width:768px){ .mbar{display:none;} }
+@media screen and (max-width:767px){ body{padding-bottom:4.9rem;} }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr" id="hdr">
+  <div class="hdr__in">
+    <a href="./生興運送_デザイン案B.html" class="hdr__logo">
+      <img src="./images/logo-seikou.png" alt="株式会社生興運送">
+      <span>Corporate Site</span>
+    </a>
+    <nav class="hdr__nav">
+      <a href="./生興運送_デザイン案B_会社概要.html">私たちについて</a>
+      <a href="./生興運送_デザイン案B_荷物から探す.html#safety">強み・安全</a>
+      <a href="./生興運送_デザイン案B_荷物から探す.html">事業</a>
+      <a href="./生興運送_デザイン案B_採用TOP.html">採用</a>
+    </nav>
+    <div class="hdr__right">
+      <a href="./生興運送_デザイン案B_お問い合わせ.html" class="btn btn--fill hdr__cta">お問い合わせ<span class="arw"></span></a>
+      <button class="hdr__menu" id="menuOpen" aria-label="メニューを開く"><i></i><i style="width:1.8rem"></i><em>MENU</em></button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu">
+  <button class="menu__close" id="menuClose">CLOSE ×</button>
+  <ul class="menu__list">
+    <li><a href="./生興運送_デザイン案B_会社概要.html"><span class="en">About</span><span class="jp">私たちについて</span></a></li>
+    <li><a href="./生興運送_デザイン案B_荷物から探す.html#safety"><span class="en">Strength</span><span class="jp">強み・安全への取り組み</span></a></li>
+    <li><a href="./生興運送_デザイン案B_荷物から探す.html"><span class="en">Service</span><span class="jp">事業・サービス</span></a></li>
+    <li><a href="./生興運送_デザイン案B_採用TOP.html"><span class="en">Recruit</span><span class="jp">採用情報</span></a></li>
+    <li><a href="#news"><span class="en">News</span><span class="jp">お知らせ・社内報</span></a></li>
+    <li><a href="./生興運送_デザイン案B_お問い合わせ.html"><span class="en">Contact</span><span class="jp">お問い合わせ</span></a></li>
+  </ul>
+</div>
+
+<!-- ============ MV ============ -->
+<section class="mv" id="mv">
+  <div class="mv__bg">
+    <video muted loop playsinline preload="auto" poster="./images/design-b-start-v3.jpg" aria-hidden="true" disablepictureinpicture>
+      <source src="./video/design-b-mv-background-mobile-v3.mp4" type="video/mp4" media="(max-width: 767px)">
+      <source src="./video/design-b-mv-background-v3.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="mv__frame"></div>
+  <div class="mv__tags">
+    <span class="tag">SINCE 1964</span>
+    <span class="tag tag--lime">SAFETY BY AI</span>
+    <span class="tag">OKAYAMA → KANTO</span>
+  </div>
+  <div class="mv__body">
+    <h1 class="mv__en js-chars">
+      <span><i>ROAD TO</i></span>
+      <span><i><em>TRUST</em></i></span>
+    </h1>
+    <p class="mv__jp">走り続ける、<i></i>信頼のために。</p>
+  </div>
+  <div class="mv__scroll">SCROLL<b></b></div>
+</section>
+
+<!-- ============ MESSAGE（黒地に明るい実写を散らす） ============ -->
+<section class="msg" id="message">
+  <div class="msg__photos">
+    <figure class="fu"><img src="./images/seikou-driver.jpg" alt="トラックを運転する生興運送のドライバー"></figure>
+    <figure class="fu"><img src="./images/seikou-forklift.jpg" alt="倉庫でフォークリフトを操作する社員"></figure>
+    <figure class="fu"><img src="./images/seikou-worker-a.jpg" alt="運転席の生興運送のドライバー"></figure>
+    <figure class="fu"><img src="./images/seikou-warehouse-work.jpg" alt="倉庫で長尺物を扱う社員"></figure>
+    <figure class="fu"><img src="./images/seikou-office-staff.jpg" alt="事務所で業務にあたる社員"></figure>
+    <figure class="fu"><img src="./images/seikou-mechanic.jpg" alt="車両のホイールを点検する整備士"></figure>
+    <figure class="fu"><img src="./images/seikou-worker-b.jpg" alt="配送先へ向かうドライバー"></figure>
+    <figure class="fu"><img src="./images/seikou-under-maintenance.jpg" alt="自社整備工場で車両を整備する様子"></figure>
+    <figure class="fu"><img src="./images/seikou-forklift-man.jpg" alt="フォークリフトを操作する社員"></figure>
+    <figure class="fu"><img src="./images/seikou-mechanic-person.jpg" alt="車体の下で整備する社員"></figure>
+  </div>
+  <div class="wrap">
+    <h2 class="msg__ttl js-chars">MESSAGE</h2>
+    <div class="msg__body js-reveal">
+      <p><span>岡山から、運びつづけて60年。</span></p>
+      <p><span>私たちが運んでいるのは、荷物であり、</span><span>荷主さまの事業であり、その先にある暮らしです。</span></p>
+      <p><span>だから、<b>安全を仕組みにする</b>。</span><span>だから、<b>働く仲間を守る</b>。</span></p>
+      <p><span>止めない物流が、</span><span>地域の「あたりまえ」を支えている。</span></p>
+    </div>
+    <div class="msg__slider" aria-hidden="true">
+      <div class="msg__slider_text">SEIKO UNSO&ensp;<span class="hollow">SINCE 1964</span>&ensp;SEIKO UNSO&ensp;<span class="hollow">SINCE 1964</span>&ensp;</div>
+      <div class="msg__slider_text">SEIKO UNSO&ensp;<span class="hollow">SINCE 1964</span>&ensp;SEIKO UNSO&ensp;<span class="hollow">SINCE 1964</span>&ensp;</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2枚看板（荷主さま／求職者） ============ -->
+<section class="sec" id="gateway">
+  <div class="wrap">
+    <div class="entry fu">
+      <a href="./生興運送_デザイン案B_荷物から探す.html" class="is-c1">
+        <p class="lead">荷主さま・ご発注担当の方</p>
+        <p class="en">For CLIENTS</p>
+        <p>定期便・スポット便・チャーターから、倉庫の保管・流通加工まで。輸配送・倉庫・整備を1社で担うから、品質もスピードもまとめてお引き受けできます。「運べるかどうか」からのご相談も歓迎です。</p>
+        <span class="go">SERVICE TOP<i></i></span>
+      </a>
+      <a href="./生興運送_デザイン案B_採用TOP.html" class="is-c2">
+        <p class="lead">求職者の方</p>
+        <p class="en">For CANDIDATES</p>
+        <p>大型ドライバー、整備士、倉庫リフトマン、物流センタースタッフ、運行管理者を募集中。AIドラレコと自社整備で「守られている」から、長く働ける会社です。見学だけでも歓迎します。</p>
+        <span class="go">RECRUIT TOP<i></i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT / 数字 ============ -->
+<section class="sec sec--light" id="about">
+  <div class="wrap">
+    <div class="hd hd--row fu">
+      <div>
+        <span class="tag">About us</span>
+        <p class="hd__en" style="margin-top:1.2rem;">WHO <em>WE ARE</em></p>
+        <p class="hd__jp">はじめに知る、生興運送</p>
+      </div>
+      <p class="hd__lead">1964年、岡山県井原市で創業。輸配送・倉庫管理・自動車整備の3事業をひとつの会社で担い、荷主さまの物流をまるごとお引き受けしています。走るのは荷物ですが、運んでいるのは信頼です。</p>
+    </div>
+    <ul class="nums fu">
+      <li><div class="v">1969</div><div class="l">設立（創業1964年）</div></li>
+      <li><div class="v">173<em>名</em></div><div class="l">従業員数</div></li>
+      <li><div class="v">23<em>億円</em></div><div class="l">年間売上高</div></li>
+      <li><div class="v">4<em>拠点</em></div><div class="l">岡山・福山・広島・関東</div></li>
+      <li><div class="v is-blue">75<em>%</em></div><div class="l">事故削減（AIドラレコ）</div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ STRENGTH ============ -->
+<section class="sec sec--paper" id="strength">
+  <div class="wrap">
+    <div class="hd fu">
+      <span class="tag">Our strength</span>
+      <p class="hd__en">SAFETY IS <em>SCIENCE</em></p>
+      <p class="hd__jp">安全を、科学する。</p>
+      <p class="hd__lead">感覚ではなく、データで。生興運送はAIとテクノロジーで安全と品質を追求し、荷主さまの信頼と、働く仲間の安心に変えています。</p>
+    </div>
+    <div class="st fu">
+      <article class="st__item">
+        <div class="st__item_media">
+          <span class="st__item_no">01</span>
+          <img src="./images/seikou-mechanic.jpg" alt="車両のホイールを点検する整備士">
+        </div>
+        <h3 class="st__item_ttl">AIドラレコで、<br>事故を75%減らした。</h3>
+        <p class="st__item_txt">危険をAIがリアルタイムに検知して警告し、運転のクセを数値でフィードバック。導入前を100とすると、事故はわずか25に。ドライバーを叱るためではなく、守るための仕組みです。</p>
+        <div class="st__item_kpi"><b>75%</b><span>事故削減（導入前後の比較）<br>車両の約1/3に導入・順次拡大中</span></div>
+      </article>
+      <article class="st__item">
+        <div class="st__item_media">
+          <span class="st__item_no">02</span>
+          <img src="./images/seikou-trucks-yard.jpg" alt="本社構内に並ぶ生興運送の車両">
+        </div>
+        <h3 class="st__item_ttl">ドライバーファースト<br>という文化。</h3>
+        <p class="st__item_txt">不穏を感じたら、上長の許可を待たず車を止めていい。体調異変にはすぐ代替便を。荷主さまへは会社から説明する。「守られている」という安心が、長く働ける理由になっています。</p>
+        <div class="st__item_kpi"><b>60<span style="font-family:var(--f-jp);font-size:1.8rem;">年</span></b><span>創業から積み上げた<br>荷主さまとの信頼関係</span></div>
+      </article>
+      <article class="st__item">
+        <div class="st__item_media">
+          <span class="st__item_no">03</span>
+          <img src="./images/seikou-mechanic-person.jpg" alt="自社整備工場で車両を整備する社員">
+        </div>
+        <h3 class="st__item_ttl">整備も、自分たちで。<br>だから品質が続く。</h3>
+        <p class="st__item_txt">車両整備を自社で行うから、コンディションを常に把握。「大事に荷物を運ぶ」を車両の状態管理から支えます。輸配送・倉庫・整備の三位一体が、生興運送の総合力です。</p>
+        <div class="st__item_kpi"><b>3<span style="font-family:var(--f-jp);font-size:1.8rem;">事業</span></b><span>輸配送 × 倉庫管理 × 自動車整備<br>指定自動車整備工場を自社保有</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 探し方 ============ -->
+<section class="sec sec--light" id="find">
+  <div class="wrap">
+    <div class="hd fu">
+      <span class="tag">Find your logistics</span>
+      <p class="hd__en">FIND <em>YOUR WAY</em></p>
+      <p class="hd__jp">「荷物」から、「相談内容」から。</p>
+      <p class="hd__lead">事業名からではなく、運びたいモノや、相談したいことから。いちばん近いサービスと、24時間受付の窓口へご案内します。</p>
+    </div>
+    <div class="find fu">
+      <div class="find__panel">
+        <p class="find__panel_en">Cargo</p>
+        <h3 class="find__panel_ttl">荷物から探す</h3>
+        <p class="find__panel_desc">得意な取扱貨物から選ぶ</p>
+        <div class="find__list">
+          <a href="./生興運送_デザイン案B_荷物から探す.html"><span class="no">01</span>プラスチック製品</a>
+          <a href="./生興運送_デザイン案B_荷物から探す.html"><span class="no">02</span>ペットボトル・飲料</a>
+          <a href="./生興運送_デザイン案B_荷物から探す.html"><span class="no">03</span>精密機械</a>
+          <a href="./生興運送_デザイン案B_荷物から探す.html"><span class="no">04</span>パレット貨物</a>
+          <a href="./生興運送_デザイン案B_荷物から探す.html"><span class="no">05</span>長尺物</a>
+          <a href="./生興運送_デザイン案B_荷物から探す.html"><span class="no">06</span>その他の一般貨物</a>
+        </div>
+      </div>
+      <div class="find__panel">
+        <p class="find__panel_en">Needs</p>
+        <h3 class="find__panel_ttl">相談内容から探す</h3>
+        <p class="find__panel_desc">目的・課題から選ぶ</p>
+        <div class="find__list">
+          <a href="./生興運送_デザイン案B_荷物から探す.html#needs">定期配送を依頼したい</a>
+          <a href="./生興運送_デザイン案B_荷物から探す.html#needs">スポット便を相談したい</a>
+          <a href="./生興運送_デザイン案B_荷物から探す.html#needs">岡山から関東・広島へ運びたい</a>
+          <a href="./生興運送_デザイン案B_荷物から探す.html#needs">倉庫と配送をまとめて依頼したい</a>
+          <a href="./生興運送_デザイン案B_荷物から探す.html#needs">安全・品質を重視して運びたい</a>
+          <a href="./生興運送_デザイン案B_荷物から探す.html#needs">物流コストを見直したい</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICE ============ -->
+<section class="sec sec--paper" id="service">
+  <div class="wrap">
+    <div class="hd fu">
+      <span class="tag">Business</span>
+      <p class="hd__en">TOTAL <em>LOGISTICS</em></p>
+      <p class="hd__jp">三位一体の、総合物流。</p>
+    </div>
+  </div>
+  <div class="svc fu">
+    <a href="./生興運送_デザイン案B_荷物から探す.html">
+      <div class="svc__media"><img src="./images/seikou-slide-fleet.jpg" alt="輸配送事業"></div>
+      <p class="en">Transport</p>
+      <h3 class="jp">輸配送事業</h3>
+      <p>定期便・スポット便・チャーター。岡山を起点に、関東・広島・全国へ。荷物の特性に合わせた車両と積付けでお届けします。</p>
+      <span class="go"><span class="arw"></span></span>
+    </a>
+    <a href="./生興運送_デザイン案B_荷物から探す.html">
+      <div class="svc__media"><img src="./images/seikou-warehouse-work.jpg" alt="倉庫管理事業"></div>
+      <p class="en">Warehouse</p>
+      <h3 class="jp">倉庫管理事業</h3>
+      <p>保管・流通加工・物流センター運営。関東拠点（群馬・板倉町）の自社倉庫を含め、倉庫と配送をまとめてご提供します。</p>
+      <span class="go"><span class="arw"></span></span>
+    </a>
+    <a href="./生興運送_デザイン案B_荷物から探す.html">
+      <div class="svc__media"><img src="./images/seikou-under-maintenance.jpg" alt="自動車整備事業"></div>
+      <p class="en">Maintenance</p>
+      <h3 class="jp">自動車整備事業</h3>
+      <p>指定自動車整備工場を自社保有。日々の点検から車検まで自社で行い、安全と定時運行の土台を支えています。</p>
+      <span class="go"><span class="arw"></span></span>
+    </a>
+  </div>
+</section>
+
+<!-- ============ NETWORK ============ -->
+<section class="sec sec--light" id="network">
+  <div class="wrap">
+    <div class="hd fu">
+      <span class="tag">Network</span>
+      <p class="hd__en">OKAYAMA <em>TO KANTO</em></p>
+      <p class="hd__jp">岡山を起点に、関東・広島へ。</p>
+      <p class="hd__lead">本社（岡山・井原）／福山営業所／広島／関東拠点（群馬・板倉町）の4拠点をつないで運行しています。記載以外のエリアもご相談ください。</p>
+    </div>
+    <ul class="net fu">
+      <li class="is-key">
+        <span class="net__dot"></span>
+        <p class="net__en">Okayama</p>
+        <p class="net__jp">本社（岡山・井原）</p>
+        <p class="net__t">配車・整備工場・物流センターを備えた中心拠点。ここから全方面へ運行します。</p>
+        <span class="net__tag">HEAD OFFICE</span>
+      </li>
+      <li>
+        <span class="net__dot"></span>
+        <p class="net__en">Fukuyama</p>
+        <p class="net__jp">福山営業所</p>
+        <p class="net__t">備後圏の地場配送・中距離輸送。本社と近接し、便の組み合わせが柔軟です。</p>
+        <span class="net__tag">BINGO AREA</span>
+      </li>
+      <li>
+        <span class="net__dot"></span>
+        <p class="net__en">Hiroshima</p>
+        <p class="net__jp">広島</p>
+        <p class="net__t">広島方面の輸送・保管に対応。山陽エリアをカバーします。</p>
+        <span class="net__tag">SANYO AREA</span>
+      </li>
+      <li class="is-key">
+        <span class="net__dot"></span>
+        <p class="net__en">Kanto</p>
+        <p class="net__jp">関東拠点（群馬・板倉町）</p>
+        <p class="net__t">2024年開設の自社倉庫。岡山からの長距離輸送と保管をワンストップで。</p>
+        <span class="net__tag">SINCE 2024 ／ OWN WAREHOUSE</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ RECRUIT ============ -->
+<section class="sec rec" id="recruit">
+  <div class="wrap rec__in">
+   <div class="rec__grid">
+    <div class="rec__photo fu"><img src="./images/seikou-forklift-man.jpg" alt="フォークリフトを操作する生興運送の社員"></div>
+    <div>
+    <div class="hd fu">
+      <span class="tag tag--lime">Recruit</span>
+      <p class="rec__big" style="margin-top:1.6rem;">DRIVE <em>WITH US</em></p>
+      <p class="hd__jp" style="margin-top:1.6rem;">人が、いちばんの財産です。</p>
+      <p class="hd__lead">社員・仕事・教育・入社後の姿まで、ぜんぶ見せます。大型ドライバー、整備士、倉庫・物流センター、運行管理まで幅広く募集中。「守られている」から、長く働ける会社です。</p>
+      <div class="rec__area"><span>本社・福山</span><span>広島</span><span>関東（群馬）</span></div>
+    </div>
+    <div class="rec__jobs fu">
+      <a href="./生興運送_デザイン案B_採用TOP.html"><p class="en">Driver</p><p class="jp">大型ドライバー</p><small>大型免許 取得支援あり</small></a>
+      <a href="./生興運送_デザイン案B_採用TOP.html"><p class="en">Mechanic</p><p class="jp">整備士</p><small>工場長候補も歓迎</small></a>
+      <a href="./生興運送_デザイン案B_採用TOP.html"><p class="en">Warehouse</p><p class="jp">倉庫・センター</p><small>フォークリフト 取得支援</small></a>
+      <a href="./生興運送_デザイン案B_採用TOP.html"><p class="en">Dispatcher</p><p class="jp">運行管理者</p><small>現場の司令塔</small></a>
+    </div>
+    <div class="fu" style="margin-top:3.2rem;">
+      <a href="./生興運送_デザイン案B_採用TOP.html" class="btn btn--fill">採用エントリー<span class="arw"></span></a>
+    </div>
+    </div>
+   </div>
+  </div>
+</section>
+
+<!-- ============ NEWS ============ -->
+<section class="sec sec--alt" id="news">
+  <div class="wrap">
+    <div class="hd hd--row fu">
+      <div>
+        <span class="tag">News &amp; Magazine</span>
+        <p class="hd__en" style="margin-top:1.2rem;">NEWS</p>
+        <p class="hd__jp">お知らせ・社内報</p>
+      </div>
+      <a href="#" class="btn" style="align-self:flex-end;">すべて見る<span class="arw"></span></a>
+    </div>
+    <ul class="news fu">
+      <li><a href="#"><span class="d">2026.08.03</span><span class="c">お知らせ</span><span class="t">関東拠点（群馬・板倉町）でドライバー・倉庫スタッフを増員募集します。</span><span class="arw"></span></a></li>
+      <li><a href="#"><span class="d">2026.07.22</span><span class="c is-blue">安全</span><span class="t">AIドライブレコーダーの導入を拡大、事故75%減の成果を確認しました。</span><span class="arw"></span></a></li>
+      <li><a href="#"><span class="d">2026.07.10</span><span class="c">採用</span><span class="t">整備工場長を募集。待遇を大きく改善しました。</span><span class="arw"></span></a></li>
+      <li><a href="#"><span class="d">2026.06.28</span><span class="c">お知らせ</span><span class="t">福利厚生・グループ会社フィットネスジムの利用補助について。</span><span class="arw"></span></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="sec cta">
+  <div class="wrap cta__in fu">
+    <span class="tag">Contact</span>
+    <p class="cta__en" style="margin-top:1.6rem;">LET'S <em>TALK</em></p>
+    <p class="cta__jp">新規のお取引も、ご応募も。24時間受付でお待ちしています。<br>「運べるかどうか」からのご相談も歓迎です。</p>
+    <div class="cta__btns">
+      <a href="./生興運送_デザイン案B_お問い合わせ.html" class="btn btn--fill">輸送のご相談・お見積り<span class="arw"></span></a>
+      <a href="./生興運送_デザイン案B_採用TOP.html" class="btn">採用エントリー<span class="arw"></span></a>
+    </div>
+    <p class="cta__tel">0866-65-0112<small>受付時間 8:30〜17:30（土日祝を除く）／FAX 0866-65-0113／配車 0866-65-0198</small></p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__top">
+      <div>
+        <div class="ftr__logo"><img src="./images/logo-seikou.png" alt="株式会社生興運送"></div>
+        <p class="ftr__addr">
+          〒715-0004 岡山県井原市木之子町3395<br>
+          TEL 0866-65-0112／FAX 0866-65-0113<br>
+          設立 1969年10月（創業 1964年4月）／従業員 173名
+        </p>
+      </div>
+      <div class="ftr__map">
+        <div><h4>About</h4><ul>
+          <li><a href="./生興運送_デザイン案B_会社概要.html">会社概要</a></li>
+          <li><a href="./生興運送_デザイン案B_会社概要.html#history">沿革</a></li>
+          <li><a href="./生興運送_デザイン案B_会社概要.html#philosophy">経営理念</a></li>
+          <li><a href="./生興運送_デザイン案B_会社概要.html#network">事業所紹介</a></li></ul></div>
+        <div><h4>Service</h4><ul>
+          <li><a href="./生興運送_デザイン案B_荷物から探す.html">荷物から探す</a></li>
+          <li><a href="./生興運送_デザイン案B_荷物から探す.html#needs">相談内容から探す</a></li>
+          <li><a href="./生興運送_デザイン案B_荷物から探す.html#safety">安全への取り組み</a></li></ul></div>
+        <div><h4>Recruit</h4><ul>
+          <li><a href="./生興運送_デザイン案B_採用TOP.html">採用トップ</a></li>
+          <li><a href="./生興運送_デザイン案B_採用TOP.html#area">エリア別 募集要項</a></li></ul></div>
+        <div><h4>Others</h4><ul>
+          <li><a href="#news">お知らせ・社内報</a></li>
+          <li><a href="./生興運送_デザイン案B_お問い合わせ.html">お問い合わせ</a></li></ul></div>
+      </div>
+    </div>
+    <div class="ftr__btm">
+      <span>© SEIKO UNSO CO., LTD. ALL RIGHTS RESERVED.</span>
+      <span>PRODUCED BY INFONET × ITLINE</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a href="./生興運送_デザイン案B_お問い合わせ.html" class="is-fill">輸送のご相談</a>
+  <a href="./生興運送_デザイン案B_採用TOP.html">採用エントリー</a>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+
+/* --vw を実ビューポート幅に同期（参考サイトと同じ可変rem方式） */
+(function(){function s(){document.documentElement.style.setProperty('--vw',document.documentElement.clientWidth+'px');}s();window.addEventListener('resize',s);})();
+
+/* MVの登場（保険を二重にかけ、JSが遅れても必ず表示される）
+   巨大英字は Archivo Expanded。フォント適用前にスライドインさせると、
+   適用された瞬間に字送りが変わって“一瞬動く”ため、フォント確定後に出す。
+   読み込みが遅い環境でも 1.6 秒／2.2 秒の保険で必ず表示される。 */
+(function(){
+ var mv=document.getElementById('mv'),done=false;
+ function open(){ if(done) return; done=true; mv.classList.add('is-in'); }
+ if(document.fonts&&document.fonts.ready&&document.fonts.ready.then){
+   document.fonts.ready.then(open)['catch'](open);
+   setTimeout(open,1600);                                  // フォントが来ない環境の保険
+ }else{ setTimeout(open,120); }
+ window.addEventListener('load',function(){setTimeout(open,60);});
+ setTimeout(open,2200);})();
+
+/* 背景動画：再生開始までは静止画を表示し、再生準備完了後にフェードイン */
+(function(){
+ var video=document.querySelector('.mv__bg video');
+ if(!video) return;
+ var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ if(reduce){video.removeAttribute('autoplay');video.pause();video.currentTime=0;return;}
+ var started=false,shown=false;
+ function showFirstDecodedFrame(){
+   if(shown) return; shown=true;
+   requestAnimationFrame(function(){requestAnimationFrame(function(){video.classList.add('is-ready');});});
+ }
+ function start(){
+   if(started) return; started=true;
+   video.currentTime=0;
+   if('requestVideoFrameCallback' in video){video.requestVideoFrameCallback(showFirstDecodedFrame);}
+   else{video.addEventListener('timeupdate',showFirstDecodedFrame,{once:true});}
+   var play=video.play();
+   if(play&&play.then){
+     play.then(function(){if(video.currentTime>0){showFirstDecodedFrame();}})
+         .catch(function(){started=false;});
+   }else{showFirstDecodedFrame();}
+ }
+ if(video.readyState>=3){start();}
+ else{video.addEventListener('canplay',start,{once:true});}
+})();
+
+/* ヘッダー：スクロールで背景を出す／下方向では退避 */
+(function(){var h=document.getElementById('hdr'),last=0;
+ window.addEventListener('scroll',function(){
+   var y=window.pageYOffset||document.documentElement.scrollTop;
+   if(y>40){h.classList.add('is-solid');}else{h.classList.remove('is-solid');}
+   if(y>200&&y>last){h.classList.add('is-hide');}else{h.classList.remove('is-hide');}
+   last=y;
+ },{passive:true});})();
+
+/* メニュー */
+(function(){var m=document.getElementById('menu');
+ document.getElementById('menuOpen').addEventListener('click',function(){m.classList.add('is-open');});
+ document.getElementById('menuClose').addEventListener('click',function(){m.classList.remove('is-open');});
+ Array.prototype.forEach.call(m.querySelectorAll('a'),function(a){a.addEventListener('click',function(){m.classList.remove('is-open');});});})();
+
+/* 1文字ずつの点滅（参考サイト .js_textAnimation の再現）
+   ・テキストノードを1文字ずつ <i class="ch"> に分解し、ランダムなdelayで色の点滅ループを与える
+   ・画面に入ってから分解（分解しなければ通常のテキストのまま＝JSが動かなくても読める） */
+(function(){
+  function splitChars(root){
+    var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null),n,list=[];
+    while((n=w.nextNode())){ if(n.nodeValue && n.nodeValue.trim()) list.push(n); }
+    list.forEach(function(tn){
+      var frag=document.createDocumentFragment();
+      tn.nodeValue.split('').forEach(function(c){
+        var i=document.createElement('i');
+        i.className='ch'; i.textContent=c;
+        var isMv=root.classList.contains('mv__en');
+        i.style.animationDelay=(isMv?(-Math.random()*5.2).toFixed(2):(Math.random()*4.4).toFixed(2))+'s';
+        frag.appendChild(i);
+      });
+      tn.parentNode.replaceChild(frag,tn);
+    });
+  }
+  var els=Array.prototype.slice.call(document.querySelectorAll('.js-chars'));
+  els.forEach(function(el){
+    var isMv=el.classList.contains('mv__en');
+    var start=function(){
+      if(el.getAttribute('data-split')) return;
+      el.setAttribute('data-split','1');
+      splitChars(el);                                   // 分解は即時＝表示中に字送りが変わらない
+      if(isMv){ setTimeout(function(){el.classList.add('is-glow');},1200); } // 点滅はスライドイン後
+      else{ el.classList.add('is-glow'); }
+    };
+    /* MV見出しはスライドインで隠れているうちに分解を済ませる（見えている状態で組み替えない） */
+    if(isMv){ start(); return; }
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){start();io.unobserve(e.target);}});},{threshold:.2});
+      io.observe(el);
+    }else{ start(); }
+  });
+
+  /* 日本語本文：スクロールに応じて頭から1文字ずつ opacity .2 → 1（参考サイト .js_top_message_text） */
+  Array.prototype.forEach.call(document.querySelectorAll('.js-reveal'),function(el){
+    var chars=[];
+    var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null),n,list=[];
+    while((n=w.nextNode())){ if(n.nodeValue && n.nodeValue.trim()) list.push(n); }
+    list.forEach(function(tn){
+      var frag=document.createDocumentFragment();
+      tn.nodeValue.split('').forEach(function(c){
+        var i=document.createElement('i'); i.className='rv-ch'; i.textContent=c;
+        frag.appendChild(i); chars.push(i);
+      });
+      tn.parentNode.replaceChild(frag,tn);
+    });
+    if(!chars.length) return;
+    function update(){
+      var r=el.getBoundingClientRect(), vh=window.innerHeight||document.documentElement.clientHeight;
+      var p=(vh*0.88 - r.top)/(vh*0.55);
+      p=Math.max(0,Math.min(1,p));
+      var lit=Math.round(p*chars.length);
+      for(var i=0;i<chars.length;i++){ chars[i].classList.toggle('is-lit', i<lit); }
+    }
+    window.addEventListener('scroll',update,{passive:true});
+    window.addEventListener('resize',update);
+    update();
+    /* 保険：スクロールしなくても、画面内にあれば読める状態にする */
+    window.addEventListener('load',function(){setTimeout(update,400);});
+  });
+})();
+
+/* fade-up（非対応/未発火でも必ず表示） */
+(function(){var els=Array.prototype.slice.call(document.querySelectorAll('.fu'));
+ function showAll(){els.forEach(function(e){e.classList.add('is-in');});}
+ if('IntersectionObserver' in window){
+   var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target);}});},{threshold:.1});
+   els.forEach(function(e){io.observe(e);});
+   window.addEventListener('load',function(){setTimeout(showAll,1800);});
+ }else{showAll();}})();
+</script>
+</body>
+</html>

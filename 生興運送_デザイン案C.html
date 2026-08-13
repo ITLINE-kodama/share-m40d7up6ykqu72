@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="岡山県井原市の総合物流会社・株式会社生興運送。輸配送、倉庫管理、自動車整備を通じて、人とAIで安全を極める物流を実現します。">
+<title>株式会社生興運送｜走る、を、科学する。</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#22252b;
+  --charcoal:#14161a;
+  --charcoal-2:#202329;
+  --ivory:#f6f3ee;
+  --paper:#fffdf9;
+  --vermilion:#e8532b;
+  --vermilion-dark:#c83f1d;
+  --teal:#0c5551;
+  --gray:#6e7681;
+  --line:rgba(34,37,43,.18);
+  --white:#fff;
+  --wrap:1320px;
+  --font-heading:"Murecho",sans-serif;
+  --font-body:"IBM Plex Sans JP",sans-serif;
+  --font-en:"Space Grotesk",sans-serif;
+  --font-number:"Dela Gothic One",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.9;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font:inherit}
+.wrap{width:min(calc(100% - 64px),var(--wrap));margin-inline:auto}
+.skip-link{position:fixed;top:8px;left:8px;z-index:999;transform:translateY(-140%);padding:10px 16px;background:var(--white);color:var(--ink)}
+.skip-link:focus{transform:none}
+.design-label{position:fixed;right:0;top:50%;z-index:90;transform:translateY(-50%);padding:13px 8px;background:var(--vermilion);color:#fff;font:600 10px/1 var(--font-en);letter-spacing:.16em;writing-mode:vertical-rl}
+
+/* header */
+.site-header{position:absolute;inset:0 0 auto;z-index:80;height:92px;color:#fff;border-bottom:1px solid rgba(255,255,255,.18)}
+.site-header.is-fixed{position:fixed;height:74px;background:rgba(20,22,26,.96);box-shadow:0 8px 32px rgba(0,0,0,.12);animation:headerIn .35s ease both}
+@keyframes headerIn{from{transform:translateY(-100%)}to{transform:none}}
+.header-inner{height:100%;display:flex;align-items:center;gap:34px}
+.logo{display:flex;align-items:center;gap:13px;min-width:max-content}
+.logo-mark{position:relative;width:33px;height:24px;border-block:4px solid var(--vermilion);transform:skewX(-13deg)}
+.logo-mark::after{content:"";position:absolute;left:5px;right:-5px;top:7px;height:4px;background:#fff}
+.logo-text{font-family:var(--font-heading);font-size:21px;font-weight:800;letter-spacing:.07em;line-height:1}
+.logo-text small{display:block;margin-top:6px;font:500 8px/1 var(--font-en);letter-spacing:.22em;color:rgba(255,255,255,.62)}
+.global-nav{display:flex;align-items:center;gap:25px;margin-left:auto}
+.global-nav a{position:relative;font-family:var(--font-heading);font-size:12px;font-weight:600;letter-spacing:.06em;white-space:nowrap}
+.global-nav a::after{content:"";position:absolute;left:0;right:100%;bottom:-9px;height:2px;background:var(--vermilion);transition:right .3s ease}
+.global-nav a:hover::after,.global-nav a:focus-visible::after{right:0}
+.header-ctas{display:flex;align-items:stretch;height:44px}
+.header-ctas a{display:flex;align-items:center;padding:0 18px;font-family:var(--font-heading);font-size:12px;font-weight:700}
+.header-ctas .business{background:#fff;color:var(--ink)}
+.header-ctas .recruit{background:var(--vermilion);color:#fff}
+.menu-button{display:none;margin-left:auto;width:46px;height:42px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;cursor:pointer}
+.menu-button span,.menu-button::before,.menu-button::after{content:"";display:block;width:20px;height:2px;margin:5px auto;background:currentColor;transition:.25s}
+.menu-button.is-open span{opacity:0}
+.menu-button.is-open::before{transform:translateY(7px) rotate(45deg)}
+.menu-button.is-open::after{transform:translateY(-7px) rotate(-45deg)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:116px 0 28px;background:var(--charcoal);color:#fff}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(105deg,transparent 56%,rgba(232,83,43,.09) 56.2%,transparent 56.5%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.76fr) minmax(318px,.74fr);grid-template-rows:1.25fr .75fr;gap:12px;min-height:652px}
+.hero-main{position:relative;grid-row:1/3;overflow:hidden;background:#292c31}
+.hero-main>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:58% center}
+.hero-main::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,17,20,.92) 0%,rgba(15,17,20,.7) 38%,rgba(15,17,20,.12) 70%),linear-gradient(0deg,rgba(15,17,20,.68),transparent 56%)}
+.hero-copy{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(35px,5vw,76px)}
+.eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:22px;font:600 11px/1 var(--font-en);letter-spacing:.22em;text-transform:uppercase}
+.eyebrow::before{content:"";width:44px;height:3px;background:var(--vermilion);transform:skewX(-15deg)}
+.hero h1{max-width:730px;margin:0;font-family:var(--font-heading);font-size:clamp(48px,6.2vw,94px);font-weight:800;line-height:1.06;letter-spacing:-.055em}
+.hero h1 .accent{position:relative;color:var(--ivory)}
+.hero h1 .accent::after{content:"";position:absolute;left:2%;right:-4%;bottom:.03em;z-index:-1;height:.16em;background:var(--vermilion);transform:skewX(-12deg)}
+.hero-sub{margin:23px 0 0;font-family:var(--font-heading);font-size:clamp(17px,1.65vw,24px);font-weight:600;letter-spacing:.04em}
+.hero-lead{max-width:570px;margin:16px 0 0;color:rgba(255,255,255,.72);font-size:13px;line-height:1.9}
+.scroll-cue{position:absolute;right:22px;bottom:24px;z-index:2;display:flex;align-items:center;gap:10px;font:500 9px/1 var(--font-en);letter-spacing:.18em;writing-mode:vertical-rl}
+.scroll-cue::after{content:"";width:1px;height:48px;background:linear-gradient(var(--vermilion) 50%,rgba(255,255,255,.3) 50%);background-size:100% 200%;animation:scrollCue 1.8s linear infinite}
+@keyframes scrollCue{to{background-position:0 -200%}}
+.kpi-tile{position:relative;overflow:hidden;padding:34px 34px 28px;background:var(--paper);color:var(--ink)}
+.kpi-tile::after{content:"";position:absolute;top:-90px;right:-96px;width:230px;height:230px;border:1px solid rgba(232,83,43,.25);border-radius:50%;box-shadow:0 0 0 24px rgba(232,83,43,.05),0 0 0 50px rgba(232,83,43,.035)}
+.tile-label{font:700 10px/1 var(--font-en);letter-spacing:.18em;text-transform:uppercase;color:var(--gray)}
+.status{display:flex;align-items:center;gap:8px;margin-top:18px;color:var(--teal);font-size:11px;font-weight:600}
+.status::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 5px rgba(12,85,81,.1)}
+.kpi-number{position:relative;z-index:1;margin-top:22px;font-family:var(--font-number);font-size:clamp(58px,7vw,102px);line-height:.94;letter-spacing:-.08em;color:var(--vermilion)}
+.kpi-number small{margin-left:8px;font:700 .25em/1 var(--font-heading);letter-spacing:0;color:var(--ink)}
+.kpi-copy{margin:12px 0 0;font-family:var(--font-heading);font-size:16px;font-weight:700}
+.kpi-scale{display:flex;align-items:center;gap:12px;margin-top:22px;font:600 11px/1 var(--font-en);letter-spacing:.06em;color:var(--gray)}
+.kpi-scale i{position:relative;flex:1;height:4px;background:rgba(34,37,43,.12);transform:skewX(-20deg)}
+.kpi-scale i::after{content:"";position:absolute;inset:0 75% 0 0;background:var(--vermilion)}
+.hero-routes{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.route-tile{position:relative;display:flex;flex-direction:column;justify-content:space-between;min-width:0;padding:27px;background:var(--charcoal-2);border:1px solid rgba(255,255,255,.12);transition:background .3s,transform .3s}
+.route-tile::before{content:"";position:absolute;left:27px;bottom:0;width:48px;height:4px;background:var(--vermilion);transform:skewX(-18deg);transition:width .3s}
+.route-tile:nth-child(2)::before{background:var(--teal)}
+.route-tile:hover{background:#292d33;transform:translateY(-3px)}
+.route-tile:hover::before{width:calc(100% - 54px)}
+.route-tile small{font:600 9px/1 var(--font-en);letter-spacing:.18em;color:rgba(255,255,255,.48)}
+.route-tile strong{display:block;margin-top:30px;font-family:var(--font-heading);font-size:16px;line-height:1.45}
+.route-tile b{align-self:flex-end;margin-top:13px;font:500 22px/1 var(--font-en);color:var(--vermilion)}
+.route-tile:nth-child(2) b{color:#58a9a3}
+.hero-band{position:relative;display:flex;align-items:center;gap:24px;overflow:hidden;margin-top:12px;padding:15px 22px;background:var(--vermilion);color:#fff;font:600 10px/1 var(--font-en);letter-spacing:.2em;white-space:nowrap}
+.hero-band span{opacity:.75}
+.hero-band b{font-weight:700}
+
+/* shared sections */
+.section{position:relative;padding:clamp(90px,10vw,154px) 0}
+.section-head{display:grid;grid-template-columns:minmax(170px,.42fr) minmax(0,1.58fr);gap:40px;align-items:start;margin-bottom:58px}
+.section-index{font:600 11px/1 var(--font-en);letter-spacing:.2em;text-transform:uppercase;color:var(--gray)}
+.section-index b{display:block;margin-bottom:16px;font-size:36px;letter-spacing:-.05em;color:var(--vermilion)}
+.section-title{margin:0;font-family:var(--font-heading);font-size:clamp(37px,5vw,68px);font-weight:800;line-height:1.2;letter-spacing:-.045em}
+.section-title .slash{color:var(--vermilion)}
+.section-description{max-width:640px;margin:22px 0 0;color:#565c65;font-size:14px}
+.text-link{display:inline-flex;align-items:center;gap:15px;margin-top:24px;padding-bottom:5px;border-bottom:1px solid currentColor;font:700 11px/1 var(--font-en);letter-spacing:.13em;text-transform:uppercase}
+.text-link span{color:var(--vermilion);transition:transform .25s}
+.text-link:hover span{transform:translateX(6px)}
+
+/* find */
+.find-section{background:var(--paper)}
+.find-section::before{content:"";position:absolute;top:0;left:0;width:35%;height:5px;background:var(--vermilion);transform:skewX(-14deg);transform-origin:left}
+.find-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.finder{position:relative;padding:42px 42px 22px;border:1px solid var(--line);background:var(--ivory)}
+.finder:nth-child(2){background:#eef2ef}
+.finder-head{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.finder-type{font:700 10px/1 var(--font-en);letter-spacing:.18em;color:var(--vermilion)}
+.finder:nth-child(2) .finder-type{color:var(--teal)}
+.finder h3{margin:10px 0 0;font-family:var(--font-heading);font-size:clamp(25px,3vw,36px);font-weight:800;line-height:1.25}
+.finder-head .char{font:700 70px/.8 var(--font-en);color:rgba(34,37,43,.08)}
+.finder-list{list-style:none;margin:0;padding:0}
+.finder-list a{display:grid;grid-template-columns:34px 1fr auto;gap:12px;align-items:center;padding:17px 2px;border-bottom:1px solid var(--line);font-family:var(--font-heading);font-size:14px;font-weight:600;transition:padding .25s,color .25s}
+.finder-list a:hover{padding-left:10px;color:var(--vermilion)}
+.finder:nth-child(2) .finder-list a:hover{color:var(--teal)}
+.finder-list .num{font:600 9px/1 var(--font-en);color:var(--gray)}
+.finder-list .arrow{font:500 18px/1 var(--font-en)}
+
+/* strength */
+.strength-section{overflow:hidden;background:var(--charcoal);color:#fff}
+.strength-section::before,.strength-section::after{content:"";position:absolute;height:1px;background:rgba(232,83,43,.55);transform:rotate(-9deg);transform-origin:left}
+.strength-section::before{top:20%;left:-5%;width:62%}
+.strength-section::after{bottom:12%;right:-8%;width:43%;background:rgba(88,169,163,.35)}
+.strength-section .section-index,.strength-section .section-description{color:rgba(255,255,255,.58)}
+.safety-story{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.safety-visual{position:relative;min-height:484px;padding:50px;background:var(--charcoal-2);border:1px solid rgba(255,255,255,.12)}
+.safety-visual::before{content:"AI SAFETY";position:absolute;right:22px;top:22px;font:700 10px/1 var(--font-en);letter-spacing:.2em;color:rgba(255,255,255,.25)}
+.reduction{display:flex;align-items:flex-end;gap:24px;margin-top:35px}
+.reduction .before,.reduction .after{font-family:var(--font-number);line-height:.88;letter-spacing:-.06em}
+.reduction .before{font-size:clamp(50px,7vw,92px);color:rgba(255,255,255,.22);text-decoration:line-through;text-decoration-thickness:3px;text-decoration-color:var(--vermilion)}
+.reduction .after{font-size:clamp(85px,12vw,160px);color:var(--vermilion)}
+.reduction .to{align-self:center;font:500 28px/1 var(--font-en);color:rgba(255,255,255,.55)}
+.deployment{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;margin-top:35px}
+.deployment .label{padding-bottom:13px;font:600 12px/1.4 var(--font-heading);letter-spacing:.08em;color:rgba(255,255,255,.52)}
+.deployment strong{font:600 clamp(68px,7vw,104px)/.9 var(--font-number);letter-spacing:-.05em;color:var(--vermilion)}
+.deployment .note{margin-bottom:8px;padding:8px 12px;border:1px solid rgba(255,255,255,.22);font:600 10px/1 var(--font-heading);letter-spacing:.08em;color:rgba(255,255,255,.72)}
+.safety-visual h3{max-width:620px;margin:36px 0 0;font-family:var(--font-heading);font-size:clamp(24px,3vw,38px);font-weight:800;line-height:1.45}
+.safety-visual p{max-width:600px;margin:18px 0 0;color:rgba(255,255,255,.58);font-size:13px}
+.story-list{display:grid;gap:18px}
+.story-card{position:relative;display:grid;grid-template-columns:68px 1fr;gap:25px;padding:34px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);transition:background .3s,transform .3s}
+.story-card:hover{background:rgba(255,255,255,.09);transform:translateX(-5px)}
+.story-card .num{font:700 34px/1 var(--font-en);color:var(--vermilion)}
+.story-card:nth-child(2) .num,.story-card:nth-child(2)::after{color:#65aaa4}
+.story-card::after{content:"";position:absolute;top:0;right:22px;width:34px;height:5px;background:currentColor;transform:skewX(-18deg)}
+.story-card small{font:600 9px/1 var(--font-en);letter-spacing:.17em;color:rgba(255,255,255,.38)}
+.story-card h3{margin:11px 0 0;font-family:var(--font-heading);font-size:22px;font-weight:700;line-height:1.45}
+.story-card p{margin:12px 0 0;color:rgba(255,255,255,.56);font-size:12.5px;line-height:1.9}
+
+/* figures */
+.figures-section{padding:0;background:var(--vermilion);color:#fff}
+.figures-grid{display:grid;grid-template-columns:repeat(5,1fr)}
+.figure{min-height:200px;padding:34px 26px;border-right:1px solid rgba(255,255,255,.26)}
+.figure:first-child{border-left:1px solid rgba(255,255,255,.26)}
+.figure .value{font:400 clamp(37px,4.7vw,70px)/1 var(--font-number);letter-spacing:-.07em}
+.figure .value small{font:700 .3em/1 var(--font-heading);letter-spacing:0}
+.figure .label{margin-top:22px;font-family:var(--font-heading);font-size:13px;font-weight:700}
+.figure .en{margin-top:5px;font:500 8px/1 var(--font-en);letter-spacing:.16em;color:rgba(255,255,255,.58)}
+
+/* services */
+.services-section{background:var(--ivory)}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.service-card{position:relative;min-height:510px;overflow:hidden;background:var(--charcoal);color:#fff}
+.service-card:first-child>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:67% center;filter:saturate(.72) contrast(1.03)}
+.service-card:first-child::before{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(0deg,rgba(20,22,26,.95),rgba(20,22,26,.08) 68%)}
+.service-card:nth-child(2){background:var(--teal)}
+.service-card:nth-child(3){background:#262a30}
+.service-card:nth-child(2)::before,.service-card:nth-child(3)::before{content:attr(data-letter);position:absolute;right:-12px;top:4px;font:700 260px/.8 var(--font-en);color:rgba(255,255,255,.055)}
+.service-card:nth-child(2)::after,.service-card:nth-child(3)::after{content:"";position:absolute;left:-20%;right:-20%;top:45%;height:1px;background:rgba(255,255,255,.22);transform:rotate(-10deg)}
+.service-content{position:absolute;z-index:2;inset:auto 0 0;padding:38px}
+.service-num{font:700 10px/1 var(--font-en);letter-spacing:.18em;color:var(--vermilion)}
+.service-card:nth-child(2) .service-num{color:#f6b7a6}
+.service-card h3{margin:14px 0 0;font-family:var(--font-heading);font-size:29px;font-weight:800}
+.service-card p{margin:14px 0 0;color:rgba(255,255,255,.65);font-size:12.5px}
+.service-card .text-link{color:#fff}
+
+/* recruitment */
+.recruit-section{overflow:hidden;background:var(--paper)}
+.recruit-intro{display:grid;grid-template-columns:.87fr 1.13fr;gap:70px;align-items:start}
+.recruit-kicker{font:700 12px/1 var(--font-en);letter-spacing:.21em;color:var(--vermilion)}
+.recruit-title{margin:25px 0 0;font-family:var(--font-heading);font-size:clamp(46px,7vw,96px);font-weight:800;line-height:1.08;letter-spacing:-.055em}
+.recruit-title em{position:relative;font-style:normal;color:var(--vermilion)}
+.recruit-title em::after{content:"";position:absolute;left:0;right:-12%;bottom:.03em;height:.13em;background:var(--ink);transform:skewX(-15deg)}
+.recruit-copy{margin:30px 0 0;color:#555b63;font-size:14px}
+.job-board{border-top:5px solid var(--ink)}
+.job-row{display:grid;grid-template-columns:68px 1fr auto;gap:18px;align-items:center;padding:24px 5px;border-bottom:1px solid var(--line);transition:padding .25s,background .25s}
+.job-row:hover{padding-left:16px;background:var(--ivory)}
+.job-row .num{font:700 12px/1 var(--font-en);color:var(--vermilion)}
+.job-row strong{font-family:var(--font-heading);font-size:18px}
+.job-row small{font-size:11px;color:var(--gray)}
+.job-row .arrow{font:500 22px/1 var(--font-en)}
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:76px}
+.benefit{position:relative;min-height:210px;padding:30px;background:var(--ivory);border-top:4px solid var(--vermilion)}
+.benefit:nth-child(2){border-color:var(--teal)}
+.benefit:nth-child(3){border-color:var(--ink)}
+.benefit small{font:600 9px/1 var(--font-en);letter-spacing:.16em;color:var(--gray)}
+.benefit h3{margin:22px 0 0;font-family:var(--font-heading);font-size:20px;line-height:1.55}
+.benefit p{margin:13px 0 0;color:#60666e;font-size:12px;line-height:1.8}
+.area-entry{display:grid;grid-template-columns:.78fr 1.22fr;gap:12px;margin-top:12px}
+.area-lead{display:flex;flex-direction:column;justify-content:space-between;min-height:280px;padding:38px;background:var(--vermilion);color:#fff}
+.area-lead small{font:600 10px/1 var(--font-en);letter-spacing:.19em}
+.area-lead h3{margin:22px 0;font-family:var(--font-heading);font-size:30px;line-height:1.4}
+.area-lead span{font:600 11px/1 var(--font-en);letter-spacing:.12em}
+.areas{display:grid;grid-template-columns:repeat(3,1fr);background:var(--charcoal);color:#fff}
+.area{display:flex;flex-direction:column;justify-content:flex-end;min-height:280px;padding:30px;border-left:1px solid rgba(255,255,255,.14);transition:background .25s}
+.area:hover{background:var(--charcoal-2)}
+.area small{font:600 9px/1 var(--font-en);letter-spacing:.17em;color:rgba(255,255,255,.42)}
+.area strong{margin-top:12px;font-family:var(--font-heading);font-size:20px}
+.area span{margin-top:22px;color:var(--vermilion);font:500 22px/1 var(--font-en)}
+
+/* magazine + network */
+.magazine-section{background:var(--ivory)}
+.mag-grid{display:grid;grid-template-columns:1.25fr .75fr .75fr;gap:14px}
+.mag-card{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:350px;padding:34px;background:var(--paper);border:1px solid var(--line);overflow:hidden}
+.mag-card:first-child{min-height:480px;background:var(--charcoal);color:#fff}
+.mag-card:first-child::before{content:"PEOPLE";position:absolute;top:28px;right:-20px;font:700 98px/1 var(--font-en);color:rgba(255,255,255,.055);transform:rotate(90deg);transform-origin:center}
+.mag-card:nth-child(2)::before,.mag-card:nth-child(3)::before{content:"";position:absolute;top:34px;left:34px;width:62px;height:5px;background:var(--vermilion);transform:skewX(-18deg)}
+.mag-card:nth-child(3)::before{background:var(--teal)}
+.mag-meta{display:flex;gap:14px;font:600 9px/1 var(--font-en);letter-spacing:.13em;color:var(--gray)}
+.mag-card:first-child .mag-meta{color:rgba(255,255,255,.45)}
+.mag-card h3{margin:20px 0 0;font-family:var(--font-heading);font-size:clamp(20px,2.5vw,31px);font-weight:700;line-height:1.55}
+.mag-card p{margin:14px 0 0;color:var(--gray);font-size:12px}
+.mag-card:first-child p{color:rgba(255,255,255,.55)}
+.network{margin-top:110px;padding-top:58px;border-top:1px solid var(--line)}
+.network-head{display:flex;justify-content:space-between;gap:30px;align-items:end}
+.network-head h3{margin:0;font-family:var(--font-heading);font-size:clamp(28px,4vw,46px);font-weight:800}
+.network-head p{max-width:480px;margin:0;color:var(--gray);font-size:13px}
+.route-map{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:62px;padding-top:8px}
+.route-map::before{content:"";position:absolute;left:8%;right:8%;top:13px;height:2px;background:linear-gradient(90deg,var(--vermilion),var(--teal));transform:skewX(-18deg)}
+.map-point{position:relative;text-align:center}
+.map-point::before{content:"";position:relative;z-index:1;display:block;width:12px;height:12px;margin:0 auto 22px;border:3px solid var(--ivory);border-radius:50%;background:var(--vermilion);box-shadow:0 0 0 1px var(--vermilion)}
+.map-point:last-child::before{background:var(--teal);box-shadow:0 0 0 1px var(--teal)}
+.map-point small{font:600 9px/1 var(--font-en);letter-spacing:.12em;color:var(--gray)}
+.map-point strong{display:block;margin-top:8px;font-family:var(--font-heading);font-size:16px}
+
+/* contact */
+.contact-section{padding:0;background:var(--charcoal);color:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr}
+.contact-card{position:relative;min-height:420px;padding:70px;overflow:hidden}
+.contact-card:first-child{background:var(--vermilion)}
+.contact-card:last-child{background:var(--charcoal-2)}
+.contact-card::after{content:"↗";position:absolute;right:48px;bottom:42px;font:500 44px/1 var(--font-en);transition:transform .3s}
+.contact-card:hover::after{transform:translate(7px,-7px)}
+.contact-card small{font:600 10px/1 var(--font-en);letter-spacing:.2em;color:rgba(255,255,255,.65)}
+.contact-card h2{max-width:480px;margin:30px 0 0;font-family:var(--font-heading);font-size:clamp(33px,4vw,54px);font-weight:800;line-height:1.35}
+.contact-card p{max-width:470px;margin:22px 0 0;color:rgba(255,255,255,.68);font-size:13px}
+.contact-card .availability{display:inline-block;margin-top:34px;padding:9px 14px;border:1px solid rgba(255,255,255,.42);font-size:11px;font-weight:600}
+
+/* footer */
+.footer{padding:72px 0 24px;background:#0d0f12;color:#fff}
+.footer-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:50px}
+.footer .logo{display:inline-flex}
+.company-data{margin:28px 0 0;color:rgba(255,255,255,.45);font-size:11px;line-height:2}
+.footer h3{margin:0 0 20px;font:600 10px/1 var(--font-en);letter-spacing:.17em;color:rgba(255,255,255,.4)}
+.footer ul{list-style:none;margin:0;padding:0}
+.footer li+li{margin-top:9px}
+.footer li a{font-family:var(--font-heading);font-size:12px;color:rgba(255,255,255,.72)}
+.footer li a:hover{color:var(--vermilion)}
+.footer-bottom{display:flex;justify-content:space-between;gap:30px;margin-top:62px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font:500 8px/1.7 var(--font-en);letter-spacing:.12em;color:rgba(255,255,255,.3)}
+
+/* reveal + mobile */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.is-visible{opacity:1;transform:none}
+.mobile-bar{display:none}
+@media(max-width:1080px){
+  .global-nav,.header-ctas{display:none}
+  .menu-button{display:block}
+  .global-nav.is-open{position:fixed;inset:74px 0 0;display:flex;flex-direction:column;align-items:stretch;gap:0;padding:35px 32px 120px;background:var(--charcoal);overflow:auto}
+  .global-nav.is-open a{padding:18px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:16px}
+  .hero-grid{grid-template-columns:1.45fr .75fr;min-height:620px}
+  .hero-main{min-height:620px}
+  .hero-routes{grid-template-columns:1fr}
+  .route-tile{padding:21px}
+  .route-tile strong{margin-top:12px}
+  .route-tile:nth-child(2){display:none}
+  .safety-story{grid-template-columns:1fr}
+  .story-list{grid-template-columns:1fr 1fr}
+  .story-card{grid-template-columns:55px 1fr}
+  .figures-grid{grid-template-columns:repeat(3,1fr)}
+  .figure:nth-child(n+4){border-top:1px solid rgba(255,255,255,.26)}
+  .service-card{min-height:450px}
+  .recruit-intro{grid-template-columns:1fr;gap:55px}
+}
+@media(max-width:760px){
+  body{font-size:14px;padding-bottom:58px}
+  .wrap{width:min(calc(100% - 36px),var(--wrap))}
+  .design-label{display:none}
+  .site-header{height:72px}
+  .site-header.is-fixed{height:64px}
+  .logo-mark{width:28px;height:21px}
+  .logo-text{font-size:17px}
+  .logo-text small{font-size:7px}
+  .hero{padding-top:84px}
+  .hero-grid{display:block;min-height:auto}
+  .hero-main{min-height:560px}
+  .hero-main>img{object-position:62% center}
+  .hero-main::after{background:linear-gradient(0deg,rgba(15,17,20,.95),rgba(15,17,20,.3) 75%),linear-gradient(90deg,rgba(15,17,20,.45),transparent)}
+  .hero-copy{padding:28px 24px 34px}
+  .hero h1{font-size:clamp(42px,14vw,65px)}
+  .hero-lead{display:none}
+  .scroll-cue{display:none}
+  .kpi-tile{margin-top:10px;padding:28px}
+  .kpi-number{font-size:72px}
+  .hero-routes{grid-template-columns:1fr 1fr;margin-top:10px}
+  .route-tile{min-height:150px;padding:20px}
+  .route-tile:nth-child(2){display:flex}
+  .route-tile::before{left:20px}
+  .route-tile strong{font-size:14px}
+  .hero-band{margin-top:10px}
+  .section{padding:90px 0}
+  .section-head{display:block;margin-bottom:38px}
+  .section-index{margin-bottom:25px}
+  .section-index b{display:inline;margin-right:13px;font-size:24px}
+  .section-title{font-size:38px}
+  .find-grid{grid-template-columns:1fr}
+  .finder{padding:30px 24px 15px}
+  .finder-list a{grid-template-columns:28px 1fr auto;padding:15px 0;font-size:13px}
+  .safety-visual{min-height:auto;padding:34px 25px 40px}
+  .reduction{gap:10px}
+  .reduction .before{font-size:44px}
+  .reduction .after{font-size:88px}
+  .story-list{grid-template-columns:1fr}
+  .story-card{padding:28px 23px}
+  .figures-grid{grid-template-columns:1fr 1fr}
+  .figure{min-height:165px;padding:27px 20px;border-top:1px solid rgba(255,255,255,.26)}
+  .figure .value{font-size:44px}
+  .service-grid{grid-template-columns:1fr}
+  .service-card{min-height:390px}
+  .recruit-title{font-size:54px}
+  .job-row{grid-template-columns:45px 1fr auto}
+  .job-row small{display:none}
+  .benefits{grid-template-columns:1fr;margin-top:56px}
+  .benefit{min-height:180px}
+  .area-entry{grid-template-columns:1fr}
+  .area-lead{min-height:230px}
+  .areas{grid-template-columns:1fr}
+  .area{min-height:145px;border-left:0;border-top:1px solid rgba(255,255,255,.14)}
+  .mag-grid{grid-template-columns:1fr}
+  .mag-card,.mag-card:first-child{min-height:340px}
+  .network{margin-top:75px}
+  .network-head{display:block}
+  .network-head p{margin-top:18px}
+  .route-map{grid-template-columns:1fr;gap:0;margin-top:38px;padding-left:12px}
+  .route-map::before{left:17px;right:auto;top:8%;bottom:8%;width:2px;height:auto;background:linear-gradient(var(--vermilion),var(--teal));transform:none}
+  .map-point{display:grid;grid-template-columns:24px 1fr;text-align:left;padding:15px 0}
+  .map-point::before{grid-row:1/3;margin:3px 0 0}
+  .map-point small,.map-point strong{grid-column:2}
+  .map-point strong{margin-top:5px}
+  .contact-grid{grid-template-columns:1fr}
+  .contact-card{min-height:360px;padding:48px 28px}
+  .contact-card::after{right:28px;bottom:28px}
+  .footer{padding-top:58px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:40px 25px}
+  .footer-grid>div:first-child{grid-column:1/-1}
+  .footer-bottom{display:block;line-height:2}
+  .footer-bottom span{display:block}
+  .mobile-bar{position:fixed;z-index:85;inset:auto 0 0;display:grid;grid-template-columns:1fr 1fr;height:58px;box-shadow:0 -4px 20px rgba(0,0,0,.14)}
+  .mobile-bar a{display:flex;align-items:center;justify-content:center;background:var(--paper);font-family:var(--font-heading);font-size:12px;font-weight:700}
+  .mobile-bar a:last-child{background:var(--vermilion);color:#fff}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .js .reveal{opacity:1;transform:none}
+}
+
+/* Design C refinement — spacing, type and color rhythm inspired by SUBARU corporate site */
+:root{
+  --ink:#333333;
+  --charcoal:#00205b;
+  --charcoal-2:#1d252c;
+  --ivory:#f9f9fa;
+  --paper:#ffffff;
+  --vermilion:#1971d4;
+  --vermilion-dark:#0049d6;
+  --teal:#00205b;
+  --gray:#737373;
+  --line:#e2e5e8;
+  --wrap:1060px;
+  --font-heading:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+  --font-body:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+  --font-en:Arial,"Helvetica Neue",sans-serif;
+  --font-number:Arial,"Helvetica Neue",sans-serif;
+}
+body{background:#fff;color:var(--ink);font-family:var(--font-body);font-size:14px;font-weight:400;line-height:1.75;letter-spacing:.08em}
+.wrap{width:min(calc(100% - 64px),var(--wrap))}
+.design-label{padding:14px 9px;background:var(--navy,#00205b);font-size:9px;letter-spacing:.12em}
+
+/* calm, white two-level corporate header */
+.site-header{position:sticky;top:0;height:84px;background:#fff;color:#222;border-bottom:1px solid #edf0f2}
+.site-header.is-fixed{position:sticky;top:0;height:84px;background:rgba(255,255,255,.98);color:#222;box-shadow:0 4px 18px rgba(0,32,91,.08);animation:none;transform:none;transition:background-color .25s ease,box-shadow .25s ease}
+.header-inner{gap:28px;padding:0}
+.logo-mark{width:31px;height:22px;border-color:var(--vermilion)}
+.logo-mark::after{background:var(--charcoal)}
+.logo-text{font-size:18px;font-weight:700;letter-spacing:.05em;color:#222}
+.logo-text small{margin-top:5px;font-size:7px;letter-spacing:.13em;color:#737373}
+.global-nav{gap:0;align-self:center;margin-left:auto}
+.global-nav a{padding:0 14px 5px;font-size:13px;font-weight:600;letter-spacing:.02em;color:#222}
+.global-nav a::before{content:"＋";margin-right:7px;color:var(--vermilion);font-family:Arial,sans-serif;font-weight:400}
+.global-nav a::after{bottom:-6px;height:2px}
+.header-ctas{align-self:center;height:38px;margin-bottom:0;border-left:1px solid #dfe3e7}
+.header-ctas a{padding:0 13px;background:#fff!important;color:#222!important;font-size:11px;font-weight:600;border-right:1px solid #dfe3e7}
+.header-ctas a::before{content:"＋";margin-right:5px;color:var(--vermilion)}
+.menu-button{color:#00205b;border-color:#ccd5df}
+
+/* wide single-image hero with compact information rail */
+.hero{padding:0;background:#fff;color:#fff}
+.hero::before{display:none}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto;gap:0;min-height:0}
+.hero-main{grid-column:1/-1;grid-row:1;min-height:clamp(520px,60vw,690px);background:#d9e0e7}
+.hero-main>img{object-position:58% center;filter:saturate(.9) contrast(.98) brightness(1.03)}
+.hero-main::after{background:linear-gradient(0deg,rgba(5,21,37,.72) 0%,rgba(5,21,37,.16) 48%,transparent 72%)}
+.hero-copy{justify-content:flex-end;padding:54px 44px}
+.eyebrow{margin-bottom:14px;font-size:10px;letter-spacing:.12em}
+.eyebrow::before{width:28px;height:2px;background:#fff}
+.hero h1{max-width:760px;font-size:clamp(40px,5vw,58px);font-weight:600;line-height:1.3;letter-spacing:.015em}
+.hero h1 .accent{color:#fff}
+.hero h1 .accent::after{display:none}
+.hero-sub{margin-top:10px;font-size:18px;font-weight:500;letter-spacing:.04em}
+.hero-lead{max-width:650px;margin-top:13px;color:rgba(255,255,255,.9);font-size:14px;line-height:1.85}
+.scroll-cue{display:none}
+.kpi-tile{grid-column:1;grid-row:2;min-height:210px;padding:31px 34px;background:#fff;border:1px solid var(--line);border-top:0;color:#333}
+.kpi-tile::after{display:none}
+.tile-label{font-size:10px;letter-spacing:.1em;color:#737373}
+.status{margin-top:12px;color:#1971d4;font-size:10px}
+.status::before{background:#1971d4;box-shadow:0 0 0 4px rgba(25,113,212,.1)}
+.kpi-number{margin-top:13px;font-size:55px;font-weight:600;letter-spacing:-.04em;color:#1971d4}
+.kpi-number small{font-size:.28em;font-weight:600;color:#333}
+.kpi-copy{margin-top:8px;font-size:13px;font-weight:500}
+.kpi-scale{margin-top:14px}
+.kpi-scale i::after{background:#1971d4}
+.hero-routes{grid-column:2/4;grid-row:2;display:grid;grid-template-columns:1fr 1fr;gap:0}
+.route-tile{min-height:210px;padding:31px 34px;background:#fff;color:#222;border:1px solid var(--line);border-left:0;transform:none!important}
+.route-tile::before{left:34px;bottom:26px;width:32px;height:2px;background:#1971d4!important}
+.route-tile small{font-size:9px;letter-spacing:.1em;color:#737373}
+.route-tile strong{margin-top:27px;font-size:20px;font-weight:600;line-height:1.55}
+.route-tile b,.route-tile:nth-child(2) b{margin-top:15px;color:#1971d4;font-size:18px}
+.route-tile:hover{background:#f7f9fb}
+.route-tile:hover::before{width:calc(100% - 68px)}
+.hero-band{margin-top:0;padding:13px 22px;background:#00205b;color:#fff;font-size:9px;letter-spacing:.12em}
+
+/* measured section rhythm: 28px headings, 16px lead, generous white space */
+.section{padding:104px 0 118px}
+.section-head{display:block;margin-bottom:56px}
+.section-index{margin-bottom:22px;font-size:10px;letter-spacing:.12em;color:#737373}
+.section-index b{display:inline;margin:0 10px 0 0;font-size:10px;font-weight:600;letter-spacing:.06em;color:#1971d4}
+.section-title{max-width:800px;padding-left:20px;border-left:4px solid #1971d4;font-size:28px;font-weight:600;line-height:1.5;letter-spacing:.02em}
+.section-title .slash{color:#1971d4}
+.section-description{max-width:700px;margin:24px 0 0;padding-left:24px;color:#555;font-size:16px;font-weight:300;line-height:2;letter-spacing:.04em}
+.text-link{gap:12px;margin-top:23px;padding-bottom:4px;font-size:10px;letter-spacing:.08em}
+.text-link span{color:#1971d4}
+
+/* service finder */
+.find-section{background:#f9f9fa}
+.find-section::before{display:none}
+.find-grid{gap:28px}
+.finder,.finder:nth-child(2){padding:36px 36px 20px;background:#fff;border:0;box-shadow:0 1px 0 #e2e5e8}
+.finder-head{padding-bottom:23px}
+.finder-type,.finder:nth-child(2) .finder-type{font-size:9px;letter-spacing:.1em;color:#1971d4}
+.finder h3{margin-top:8px;font-size:21px;font-weight:600;letter-spacing:.02em}
+.finder-head .char{font-size:54px;font-weight:300;color:#e7edf4}
+.finder-list a{padding:16px 0;font-size:14px;font-weight:400;line-height:1.6}
+.finder-list a:hover,.finder:nth-child(2) .finder-list a:hover{padding-left:7px;color:#0049d6}
+.finder-list .num{font-size:9px;color:#737373}
+
+/* one deep feature band, as on the reference site's people section */
+.strength-section{background:#1d252c}
+.strength-section::before,.strength-section::after{display:none}
+.strength-section .section-title{border-left-color:#58a3e7}
+.strength-section .section-description{color:rgba(255,255,255,.72)}
+.safety-story{gap:24px}
+.safety-visual{min-height:450px;padding:44px;background:#252e36;border:0}
+.safety-visual::before{font-size:9px;letter-spacing:.1em}
+.reduction{gap:18px;margin-top:30px}
+.reduction .before{font-size:62px;font-weight:300;text-decoration-color:#58a3e7}
+.reduction .after{font-size:104px;font-weight:600;color:#58a3e7}
+.reduction .to{font-size:22px}
+.safety-visual h3{margin-top:30px;font-size:27px;font-weight:600;line-height:1.65;letter-spacing:.02em}
+.safety-visual p{margin-top:15px;font-size:13px;line-height:2}
+.story-list{gap:12px}
+.story-card{grid-template-columns:52px 1fr;gap:20px;padding:29px;background:rgba(255,255,255,.045);border-color:rgba(255,255,255,.1)}
+.story-card::after{width:28px;height:2px;color:#58a3e7}
+.story-card .num,.story-card:nth-child(2) .num{font-size:24px;font-weight:400;color:#58a3e7}
+.story-card small{font-size:8px;letter-spacing:.1em}
+.story-card h3{margin-top:9px;font-size:18px;font-weight:500;line-height:1.65}
+.story-card p{margin-top:8px;font-size:12px;line-height:1.9}
+
+/* restrained numeric strip */
+.figures-section{background:#1971d4}
+.figure{min-height:175px;padding:29px 22px}
+.figure .value{font-size:45px;font-weight:500;letter-spacing:-.03em}
+.figure .label{margin-top:18px;font-size:12px;font-weight:500}
+.figure .en{font-size:8px;letter-spacing:.1em}
+
+/* content cards */
+.services-section{background:#fff}
+.service-grid{gap:24px}
+.service-card{min-height:430px}
+.service-card:nth-child(2){background:#1971d4}
+.service-card:nth-child(3){background:#1d252c}
+.service-card:nth-child(2)::before,.service-card:nth-child(3)::before{font-size:210px;font-weight:300}
+.service-content{padding:31px}
+.service-num,.service-card:nth-child(2) .service-num{font-size:9px;letter-spacing:.1em;color:#fff}
+.service-card h3{margin-top:10px;font-size:23px;font-weight:600}
+.service-card p{margin-top:11px;font-size:12px;line-height:1.9}
+
+.recruit-section{background:#f9f9fa}
+.recruit-intro{grid-template-columns:.8fr 1.2fr;gap:70px}
+.recruit-kicker{font-size:10px;letter-spacing:.12em;color:#1971d4}
+.recruit-title{margin-top:22px;font-size:48px;font-weight:600;line-height:1.4;letter-spacing:.02em}
+.recruit-title em{color:#1971d4}
+.recruit-title em::after{display:none}
+.recruit-copy{margin-top:23px;font-size:15px;font-weight:300;line-height:2}
+.job-board{border-top:3px solid #1971d4}
+.job-row{padding:21px 4px}
+.job-row .num{font-size:10px;color:#1971d4}
+.job-row strong{font-size:16px;font-weight:500}
+.benefits{gap:20px;margin-top:70px}
+.benefit{min-height:200px;padding:27px;background:#fff;border-top:3px solid #1971d4}
+.benefit:nth-child(2){border-color:#58a3e7}
+.benefit:nth-child(3){border-color:#00205b}
+.benefit h3{margin-top:18px;font-size:18px;font-weight:500}
+.area-entry{gap:0;margin-top:20px}
+.area-lead{min-height:255px;padding:34px;background:#1971d4}
+.area-lead h3{font-size:25px;font-weight:500}
+.areas{background:#00205b}
+.area{min-height:255px;padding:27px}
+.area strong{font-size:17px;font-weight:500}
+.area span{color:#58a3e7}
+
+.magazine-section{background:#fff}
+.mag-grid{gap:24px}
+.mag-card{min-height:320px;padding:29px;background:#f9f9fa;border:0}
+.mag-card:first-child{min-height:430px;background:#1d252c}
+.mag-card:nth-child(2)::before,.mag-card:nth-child(3)::before{top:29px;left:29px;width:40px;height:2px;background:#1971d4}
+.mag-card h3{margin-top:16px;font-size:20px;font-weight:500;line-height:1.7}
+.network{margin-top:100px;padding-top:50px}
+.network-head h3{font-size:28px;font-weight:600}
+.network-head p{font-size:14px;font-weight:300;line-height:2}
+.route-map::before{background:linear-gradient(90deg,#1971d4,#00205b)}
+.map-point::before{background:#1971d4;box-shadow:0 0 0 1px #1971d4}
+.map-point strong{font-size:14px;font-weight:500}
+
+.contact-card{min-height:360px;padding:58px 64px}
+.contact-card:first-child{background:#1971d4}
+.contact-card:last-child{background:#00205b}
+.contact-card h2{margin-top:23px;font-size:36px;font-weight:600;line-height:1.5}
+.contact-card p{margin-top:16px;font-size:13px;line-height:1.9}
+.contact-card::after{font-size:34px}
+
+.footer{padding:66px 0 23px;background:#fff;color:#222;border-top:1px solid #e2e5e8}
+.footer .logo-mark::after{background:#00205b}
+.footer .logo-text,.footer li a{color:#222}
+.footer .logo-text small,.company-data,.footer h3{color:#737373}
+.footer li a{font-size:11px;font-weight:400}
+.footer li a:hover{color:#1971d4}
+.footer-bottom{border-top-color:#e2e5e8;color:#8a8a8a}
+
+@media(max-width:1080px){
+  .hero-grid{grid-template-columns:1fr 1fr 1fr;min-height:0}
+  .hero-main{min-height:570px}
+  .hero-routes{grid-template-columns:1fr 1fr}
+  .route-tile:nth-child(2){display:flex}
+}
+@media(max-width:760px){
+  body{font-size:13px;letter-spacing:.05em}
+  .wrap{width:min(calc(100% - 36px),var(--wrap))}
+  .site-header{height:68px}
+  .site-header.is-fixed{height:68px}
+  .hero{padding-top:0}
+  .hero-grid{display:block}
+  .hero-main{min-height:520px}
+  .hero-copy{padding:30px 24px}
+  .hero h1{font-size:39px;line-height:1.4}
+  .hero-sub{font-size:15px}
+  .kpi-tile{margin-top:0;min-height:190px;padding:27px 24px}
+  .hero-routes{margin-top:0}
+  .route-tile{min-height:165px;padding:25px 22px;border-left:1px solid var(--line)}
+  .route-tile::before{left:22px;bottom:20px}
+  .route-tile strong{font-size:16px}
+  .section{padding:78px 0 88px}
+  .section-head{margin-bottom:40px}
+  .section-title{padding-left:14px;font-size:23px;line-height:1.55}
+  .section-description{margin-top:20px;padding-left:18px;font-size:14px;line-height:1.9}
+  .finder{padding:28px 23px 15px}
+  .safety-visual{padding:32px 24px}
+  .reduction .after{font-size:78px}
+  .deployment{gap:10px;margin-top:25px}
+  .deployment .label{width:100%;padding-bottom:0}
+  .deployment strong{font-size:72px}
+  .deployment .note{margin-bottom:2px}
+  .safety-visual h3{font-size:22px}
+  .figure .value{font-size:36px}
+  .service-card{min-height:380px}
+  .recruit-title{font-size:39px}
+  .recruit-copy{font-size:14px}
+  .benefits{margin-top:50px}
+  .contact-card{min-height:320px;padding:43px 27px}
+  .contact-card h2{font-size:28px}
+  .footer{padding-top:54px}
+  .mobile-bar a:last-child{background:#1971d4}
+}
+
+/* Full-bleed refinement and authentic Seikou Unso assets */
+.header-inner{width:calc(100% - 72px);max-width:none}
+.logo{min-width:0}
+.logo img{width:190px;height:auto;object-fit:contain}
+.hero>.wrap{width:100%;max-width:none}
+.hero-main{height:calc(100vh - 84px);min-height:640px;max-height:920px}
+.hero-copy{padding-right:clamp(40px,4vw,76px);padding-left:clamp(40px,4vw,76px)}
+.service-card{display:flex;min-height:0!important;flex-direction:column;background:#fff!important;color:#222;border:1px solid var(--line)}
+.service-card::before,.service-card::after{display:none!important}
+.service-card>img,.service-card:first-child>img{position:relative;inset:auto;width:100%;height:225px;object-fit:cover;object-position:center;filter:none}
+.service-content{position:relative;inset:auto;display:flex;flex:1;flex-direction:column;padding:28px 30px 32px}
+.service-num,.service-card:nth-child(2) .service-num{color:#1971d4}
+.service-card h3{color:#222}
+.service-card p{color:#555}
+.service-card .text-link{margin-top:auto;padding-top:22px;color:#00205b}
+.recruit-photo{position:relative;margin:70px 0 0;overflow:hidden;background:#e8edf2}
+.recruit-photo img{width:100%;aspect-ratio:15/8;object-fit:cover}
+.footer .logo img{width:190px}
+
+@media(max-width:760px){
+  .header-inner{width:calc(100% - 36px)}
+  .logo img{width:150px}
+  .hero-main{height:calc(100svh - 68px);min-height:520px;max-height:760px}
+  .service-card{min-height:0!important}
+  .service-card>img,.service-card:first-child>img{height:220px}
+  .recruit-photo{margin-top:48px}
+  .recruit-photo img{aspect-ratio:4/3}
+  .footer .logo img{width:175px}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">本文へ移動</a>
+<div class="design-label">DESIGN C / QUIET VELOCITY</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top" aria-label="株式会社生興運送 トップへ">
+      <img src="./images/logo-seikou.png" alt="株式会社生興運送">
+    </a>
+    <nav class="global-nav" id="globalNav" aria-label="グローバルナビゲーション">
+      <a href="#find">輸送サービス</a>
+      <a href="#strength">安全・品質</a>
+      <a href="#service">事業案内</a>
+      <a href="./生興運送_デザイン案C_会社概要.html">会社案内</a>
+      <a href="#magazine">お知らせ</a>
+    </nav>
+    <div class="header-ctas">
+      <a class="business" href="./生興運送_デザイン案C_お問い合わせ.html">輸送のご相談</a>
+      <a class="recruit" href="./生興運送_デザイン案C_採用TOP.html">採用情報</a>
+    </div>
+    <button class="menu-button" id="menuButton" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="globalNav"><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-main">
+          <img src="./images/hero-design-c-seikou-v2.png" alt="岡山の高速道路を走る生興運送の大型トラック">
+          <div class="hero-copy">
+            <div class="eyebrow">Logistics / Safety / People</div>
+            <h1>走る、を、<br><span class="accent">科学する。</span></h1>
+            <p class="hero-sub">人とAIで、安全を極める物流。</p>
+            <p class="hero-lead">岡山から関東・広島へ。輸配送、倉庫、整備をひとつにつなぎ、荷物にも、ドライバーにも、まっすぐ向き合います。</p>
+          </div>
+          <span class="scroll-cue">Scroll</span>
+        </div>
+        <div class="kpi-tile">
+          <div class="tile-label">AI safety support / 01</div>
+          <div class="status">AIドライブレコーダー運用中</div>
+          <div class="kpi-number">約1/3<small>導入</small></div>
+          <p class="kpi-copy">車両の約3分の1に導入（ヒアリング時点）。</p>
+          <div class="kpi-scale"><span>導入済</span><i></i><span>順次拡大計画</span></div>
+        </div>
+        <div class="hero-routes">
+          <a class="route-tile" href="./生興運送_デザイン案C_荷物から探す.html"><small>SEARCH BY CARGO</small><strong>荷物から<br>探す</strong><b>↗</b></a>
+          <a class="route-tile" href="#find"><small>SEARCH BY NEEDS</small><strong>相談内容から<br>探す</strong><b>↗</b></a>
+        </div>
+      </div>
+      <div class="hero-band"><b>SEIKO UNSO</b><span>/</span><b>SINCE 1969</b><span>/</span><b>OKAYAMA → KANTO・HIROSHIMA</b><span>/</span><b>DRIVER FIRST</b></div>
+    </div>
+  </section>
+
+  <section class="section find-section" id="find">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-index"><b>01</b>Find your way</div>
+        <div><h2 class="section-title">運びたい、から始まる。<br><span class="slash">2</span>つの探し方。</h2><p class="section-description">サービス名を知らなくても大丈夫です。荷物の種類、または今抱えている物流の課題から、最適な輸送・保管方法へご案内します。</p></div>
+      </div>
+      <div class="find-grid">
+        <article class="finder reveal">
+          <div class="finder-head"><div><span class="finder-type">TYPE 01 / CARGO</span><h3>荷物から探す</h3></div><span class="char">A</span></div>
+          <ul class="finder-list">
+            <li><a href="./生興運送_デザイン案C_荷物から探す.html"><span class="num">01</span><span>プラスチック製品</span><span class="arrow">→</span></a></li>
+            <li><a href="./生興運送_デザイン案C_荷物から探す.html"><span class="num">02</span><span>ペットボトル・飲料</span><span class="arrow">→</span></a></li>
+            <li><a href="./生興運送_デザイン案C_荷物から探す.html"><span class="num">03</span><span>精密機械</span><span class="arrow">→</span></a></li>
+            <li><a href="./生興運送_デザイン案C_荷物から探す.html"><span class="num">04</span><span>パレット貨物</span><span class="arrow">→</span></a></li>
+            <li><a href="./生興運送_デザイン案C_荷物から探す.html"><span class="num">05</span><span>長尺物</span><span class="arrow">→</span></a></li>
+            <li><a href="./生興運送_デザイン案C_荷物から探す.html"><span class="num">06</span><span>その他の一般貨物</span><span class="arrow">→</span></a></li>
+          </ul>
+        </article>
+        <article class="finder reveal">
+          <div class="finder-head"><div><span class="finder-type">TYPE 02 / NEEDS</span><h3>相談内容から探す</h3></div><span class="char">B</span></div>
+          <ul class="finder-list">
+            <li><a href="./生興運送_デザイン案C_荷物から探す.html#needs"><span class="num">A</span><span>定期配送を依頼したい</span><span class="arrow">→</span></a></li>
+            <li><a href="./生興運送_デザイン案C_荷物から探す.html#needs"><span class="num">B</span><span>スポット便を相談したい</span><span class="arrow">→</span></a></li>
+            <li><a href="./生興運送_デザイン案C_荷物から探す.html#needs"><span class="num">C</span><span>岡山から関東・広島方面へ運びたい</span><span class="arrow">→</span></a></li>
+            <li><a href="./生興運送_デザイン案C_荷物から探す.html#needs"><span class="num">D</span><span>倉庫と配送をまとめて依頼したい</span><span class="arrow">→</span></a></li>
+            <li><a href="./生興運送_デザイン案C_荷物から探す.html#needs"><span class="num">E</span><span>安全・品質を重視して運びたい</span><span class="arrow">→</span></a></li>
+            <li><a href="./生興運送_デザイン案C_荷物から探す.html#needs"><span class="num">F</span><span>現在の物流コストを見直したい</span><span class="arrow">→</span></a></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section strength-section" id="strength">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-index"><b>02</b>Safety science</div>
+        <div><h2 class="section-title">選ばれる理由は、<br>安全を<span class="slash">仕組み</span>にしたこと。</h2><p class="section-description">テクノロジーだけでも、心がけだけでもない。データ、現場判断、自社整備の三つをつなぎ、人と荷物を守る文化に変えています。</p></div>
+      </div>
+      <div class="safety-story">
+        <article class="safety-visual reveal">
+          <div class="tile-label">INTRODUCTION → FEEDBACK → EXPANSION</div>
+          <div class="deployment"><span class="label">AIドラレコ導入車両</span><strong>約1/3</strong><span class="note">ヒアリング時点</span></div>
+          <h3>AIが危険の兆しを捉え、<br>安全運転を継続的に支援。</h3>
+          <p>AIドライブレコーダーが運転傾向を可視化し、リアルタイムの警告と具体的なフィードバックにつなげます。車両の約3分の1を少し超える規模で導入し、残りも順次切り替える計画と伺っています（ヒアリング時点）。</p>
+        </article>
+        <div class="story-list">
+          <article class="story-card reveal"><div class="num">01</div><div><small>DATA / AI DRIVE RECORDER</small><h3>危険を感覚で終わらせない。</h3><p>データに基づく指導で、一人ひとりの安全運転を支えます。ドライバーを監視するためではなく、守るためのAIです。</p></div></article>
+          <article class="story-card reveal"><div class="num">02</div><div><small>CULTURE / DRIVER FIRST</small><h3>止まる勇気を、会社が支える。</h3><p>ドライバーファースト文化のもと、現場が危険と判断すれば安全な場所に車を止められる。遅延時の説明は会社が担い、無理のない運行を守ります。</p></div></article>
+          <article class="story-card reveal"><div class="num">03</div><div><small>QUALITY / MAINTENANCE</small><h3>走る前から、安全をつくる。</h3><p>自社の指定整備工場で、車両の状態を継続管理。予防整備でトラブルを未然に防ぎ、品質と定時運行を支えます。</p></div></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="figures-section" aria-label="数字で見る生興運送">
+    <div class="wrap figures-grid reveal">
+      <div class="figure"><div class="value">1969</div><div class="label">設立</div><div class="en">ESTABLISHED</div></div>
+      <div class="figure"><div class="value">173<small>名</small></div><div class="label">従業員数</div><div class="en">EMPLOYEES / 2026.07</div></div>
+      <div class="figure"><div class="value">23<small>億円</small></div><div class="label">売上高</div><div class="en">ANNUAL SALES</div></div>
+      <div class="figure"><div class="value">4<small>拠点</small></div><div class="label">物流ネットワーク</div><div class="en">LOGISTICS BASES</div></div>
+      <div class="figure"><div class="value">75<small>%減</small></div><div class="label">事故削減率</div><div class="en">ACCIDENT REDUCTION</div></div>
+    </div>
+  </section>
+
+  <section class="section services-section" id="service">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-index"><b>03</b>Our service</div>
+        <div><h2 class="section-title">運ぶ。預かる。<br>走り続ける。</h2><p class="section-description">輸配送、倉庫管理、自動車整備。三つの機能を一社でつなぎ、お客様の物流全体を止めない体制をつくります。</p></div>
+      </div>
+      <div class="service-grid">
+        <article class="service-card reveal"><img src="./images/official-fleet.jpg" alt="生興運送の大型トラック車列"><div class="service-content"><div class="service-num">01 / TRANSPORT</div><h3>輸配送事業</h3><p>定期便、スポット便、チャーター便。岡山を起点に、関東・広島・全国へ最適な運び方をご提案します。</p><a class="text-link" href="./生興運送_デザイン案C_荷物から探す.html">View service <span>→</span></a></div></article>
+        <article class="service-card reveal"><img src="./images/official-warehouse.jpg" alt="生興運送が管理する倉庫内部"><div class="service-content"><div class="service-num">02 / WAREHOUSE</div><h3>倉庫管理事業</h3><p>保管、流通加工、物流センター運営。配送と倉庫をまとめ、コストとリードタイムを整えます。</p><a class="text-link" href="#contact">View service <span>→</span></a></div></article>
+        <article class="service-card reveal"><img src="./images/official-maintenance.jpg" alt="生興運送の整備工場とトラック"><div class="service-content"><div class="service-num">03 / MAINTENANCE</div><h3>自動車整備事業</h3><p>指定自動車整備工場による点検・整備。走る品質を自分たちで管理し、安全な運行を根から支えます。</p><a class="text-link" href="#contact">View service <span>→</span></a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section recruit-section" id="recruit">
+    <div class="wrap">
+      <div class="recruit-intro">
+        <div class="reveal"><div class="recruit-kicker">04 / RECRUITMENT</div><h2 class="recruit-title">守られて、<br><em>挑める。</em></h2><p class="recruit-copy">安全を優先できる。必要な資格を取れる。地域に根を張りながら、仕事の幅を広げられる。生興運送は、走る人の人生にもまっすぐです。</p><a class="text-link" href="./生興運送_デザイン案C_採用TOP.html">採用サイトを見る <span>→</span></a></div>
+        <div class="job-board reveal">
+          <a class="job-row" href="./生興運送_デザイン案C_採用TOP.html"><span class="num">01</span><strong>大型ドライバー</strong><small>中途・新卒</small><span class="arrow">↗</span></a>
+          <a class="job-row" href="./生興運送_デザイン案C_採用TOP.html"><span class="num">02</span><strong>整備士・工場長</strong><small>経験者歓迎</small><span class="arrow">↗</span></a>
+          <a class="job-row" href="./生興運送_デザイン案C_採用TOP.html"><span class="num">03</span><strong>倉庫リフトマン</strong><small>資格取得支援</small><span class="arrow">↗</span></a>
+          <a class="job-row" href="./生興運送_デザイン案C_採用TOP.html"><span class="num">04</span><strong>物流センタースタッフ</strong><small>未経験可</small><span class="arrow">↗</span></a>
+          <a class="job-row" href="./生興運送_デザイン案C_採用TOP.html"><span class="num">05</span><strong>運行管理者</strong><small>キャリア採用</small><span class="arrow">↗</span></a>
+        </div>
+      </div>
+      <figure class="recruit-photo reveal"><img src="./images/official-recruit.jpg" alt="生興運送で働く社員と物流の現場"></figure>
+      <div class="benefits">
+        <article class="benefit reveal"><small>LICENSE & CAREER</small><h3>免許・資格取得を<br>会社が支援</h3><p>大型免許、フォークリフトなど、仕事に必要な資格取得とキャリア形成を後押しします。</p></article>
+        <article class="benefit reveal"><small>WELLNESS</small><h3>働く毎日の<br>健康を支える</h3><p>グループ会社のフィットネスジム利用補助など、長く健やかに働ける制度を整えています。</p></article>
+        <article class="benefit reveal"><small>LOCAL FUTURE</small><h3>岡山へ戻る一歩を<br>支援する</h3><p>奨学金返還支援制度などを通じて、地域で新しいキャリアを始める人を応援します。</p></article>
+      </div>
+      <div class="area-entry reveal">
+        <a class="area-lead" href="./生興運送_デザイン案C_採用TOP.html"><small>ENTRY BY AREA</small><h3>働きたい場所から、<br>仕事を探す。</h3><span>募集要項一覧 →</span></a>
+        <div class="areas">
+          <a class="area" href="./生興運送_デザイン案C_採用TOP.html"><small>AREA 01</small><strong>本社・福山</strong><span>↗</span></a>
+          <a class="area" href="./生興運送_デザイン案C_採用TOP.html"><small>AREA 02</small><strong>広島</strong><span>↗</span></a>
+          <a class="area" href="./生興運送_デザイン案C_採用TOP.html"><small>AREA 03</small><strong>関東・群馬</strong><span>↗</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section magazine-section" id="magazine">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-index"><b>05</b>News & magazine</div>
+        <div><h2 class="section-title">人が見える、<br>物流が見える。</h2><p class="section-description">安全への取り組みだけでなく、現場で働く人、岡山の地域、日々の仕事を発信。入社後の姿が見える会社へ。</p></div>
+      </div>
+      <div class="mag-grid">
+        <a class="mag-card reveal" href="#"><div class="mag-meta"><span>MAGAZINE</span><time datetime="2026-07-18">2026.07.18</time></div><h3>「止まっていい」と言える会社。<br>大型ドライバーが語る、安全の現場。</h3><p>社員インタビュー / 本社・福山</p></a>
+        <a class="mag-card reveal" href="#"><div class="mag-meta"><span>SAFETY</span><time datetime="2026-07-05">2026.07.05</time></div><h3>AIドラレコ導入拡大。データで支える安全運転。</h3><p>安全への取り組み</p></a>
+        <a class="mag-card reveal" href="#"><div class="mag-meta"><span>RECRUIT</span><time datetime="2026-06-22">2026.06.22</time></div><h3>整備士・工場長候補の採用情報を更新しました。</h3><p>採用のお知らせ</p></a>
+      </div>
+      <div class="network reveal">
+        <div class="network-head"><h3>岡山から、地域をつなぐ。</h3><p>本社を起点に福山・広島・関東へ。輸配送と倉庫のネットワークで、お客様の荷物を確実につなぎます。</p></div>
+        <div class="route-map" aria-label="物流拠点ネットワーク">
+          <div class="map-point"><small>HEAD OFFICE</small><strong>岡山・井原</strong></div>
+          <div class="map-point"><small>SALES OFFICE</small><strong>福山</strong></div>
+          <div class="map-point"><small>LOGISTICS BASE</small><strong>広島</strong></div>
+          <div class="map-point"><small>KANTO BASE</small><strong>群馬・板倉</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="contact-grid">
+      <a class="contact-card" href="./生興運送_デザイン案C_お問い合わせ.html"><small>FOR BUSINESS / 24H CONTACT</small><h2>その物流課題、<br>一緒に解きます。</h2><p>定期配送、スポット便、倉庫活用、コスト見直しまで。荷物のことを、まずはお聞かせください。</p><span class="availability">24時間フォーム受付</span></a>
+      <a class="contact-card" href="./生興運送_デザイン案C_採用TOP.html"><small>FOR CANDIDATES / RECRUIT</small><h2>安全を大切にできる<br>仕事を選ぼう。</h2><p>ドライバー、整備、倉庫、運行管理。あなたの経験とこれからに合う働き方を探せます。</p><span class="availability">採用エントリー</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><a class="logo" href="#top"><img src="./images/logo-seikou.png" alt="株式会社生興運送"></a><p class="company-data">株式会社生興運送<br>〒715-0004 岡山県井原市木之子町3395<br>TEL 0866-65-0112</p></div>
+      <div><h3>COMPANY</h3><ul><li><a href="./生興運送_デザイン案C_会社概要.html">会社案内</a></li><li><a href="#strength">生興運送の強み</a></li><li><a href="#magazine">お知らせ・社内報</a></li></ul></div>
+      <div><h3>SERVICE</h3><ul><li><a href="./生興運送_デザイン案C_荷物から探す.html">荷物から探す</a></li><li><a href="./生興運送_デザイン案C_荷物から探す.html#needs">相談内容から探す</a></li><li><a href="#service">輸配送・倉庫・整備</a></li></ul></div>
+      <div><h3>RECRUIT</h3><ul><li><a href="./生興運送_デザイン案C_採用TOP.html">採用TOP</a></li><li><a href="./生興運送_デザイン案C_採用TOP.html">仕事・社員を知る</a></li><li><a href="./生興運送_デザイン案C_採用TOP.html">エリア別募集要項</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© SEIKO UNSO CO., LTD.</span><span>PRIVACY POLICY / SITE MAP　｜　DESIGN PROPOSAL C</span></div>
+  </div>
+</footer>
+
+<div class="mobile-bar"><a href="./生興運送_デザイン案C_お問い合わせ.html">輸送のご相談</a><a href="./生興運送_デザイン案C_採用TOP.html">採用情報</a></div>
+
+<script>
+document.documentElement.classList.add('js');
+const header=document.getElementById('siteHeader');
+const menuButton=document.getElementById('menuButton');
+const globalNav=document.getElementById('globalNav');
+function updateHeader(){header.classList.toggle('is-fixed',window.scrollY>110)}
+window.addEventListener('scroll',updateHeader,{passive:true});updateHeader();
+menuButton.addEventListener('click',()=>{
+  const open=!globalNav.classList.contains('is-open');
+  globalNav.classList.toggle('is-open',open);menuButton.classList.toggle('is-open',open);
+  menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'メニューを閉じる':'メニューを開く');
+});
+globalNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{globalNav.classList.remove('is-open');menuButton.classList.remove('is-open');menuButton.setAttribute('aria-expanded','false')}));
+const reveals=[...document.querySelectorAll('.reveal')];
+if('IntersectionObserver' in window){
+  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}}),{threshold:.08,rootMargin:'0px 0px -40px'});
+  reveals.forEach(el=>observer.observe(el));
+}else{reveals.forEach(el=>el.classList.add('is-visible'))}
+</script>
+</body>
+</html>
