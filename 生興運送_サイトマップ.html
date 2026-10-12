@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社生興運送 コーポレート／採用サイト リニューアル サイトマップ</title>
+<style>
+  :root{
+    --navy:#132a45; --navy2:#1f4068; --accent:#0aa4c4; --accent2:#12b886;
+    --recruit:#e8590c; --ink:#1c2430; --sub:#5b6673; --line:#d9e0e7;
+    --bg:#f4f7fa; --card:#ffffff; --new:#e8590c; --exist:#5b6673;
+    --plastic:#0aa4c4;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:"Noto Sans JP","Yu Gothic",YuGothic,"Hiragino Sans",Meiryo,sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px 80px;}
+  header.doc{background:linear-gradient(120deg,var(--navy) 0%,var(--navy2) 60%,#26557f 100%);color:#fff;
+    padding:44px 0 38px;margin-bottom:0;}
+  header.doc .wrap{padding-bottom:0;}
+  .eyebrow{font-size:12px;letter-spacing:.28em;color:#8fd6e8;font-weight:700;margin:0 0 10px;}
+  header.doc h1{font-size:27px;margin:0 0 6px;font-weight:800;letter-spacing:.01em;}
+  header.doc .sub{font-size:14px;color:#c9d8e6;margin:0;}
+  header.doc .meta{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px 22px;font-size:12.5px;color:#dbe6f0;}
+  header.doc .meta b{color:#fff;font-weight:700;}
+  /* legend / overview */
+  .band{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 26px;margin:26px 0;
+    box-shadow:0 2px 14px rgba(19,42,69,.05);}
+  .band h2{font-size:16px;margin:0 0 14px;padding-left:12px;border-left:5px solid var(--accent);}
+  .legend{display:flex;flex-wrap:wrap;gap:10px 20px;font-size:13px;align-items:center;}
+  .tag{display:inline-block;font-size:11px;font-weight:700;border-radius:20px;padding:2px 11px;line-height:1.7;}
+  .tag.new{background:#fff0e6;color:var(--new);border:1px solid #ffc59e;}
+  .tag.exist{background:#eef1f4;color:var(--exist);border:1px solid #d3dae1;}
+  .tag.hub{background:#e5f7fb;color:#0883a0;border:1px solid #a9e2ee;}
+  .tag.tmpl{background:#eefaf3;color:#0b8a54;border:1px solid #aee5c9;}
+  .kpis{display:flex;flex-wrap:wrap;gap:14px;margin-top:6px;}
+  .kpi{flex:1 1 150px;background:linear-gradient(160deg,#fbfdff,#eef4f9);border:1px solid var(--line);
+    border-radius:12px;padding:14px 16px;min-width:150px;}
+  .kpi .n{font-size:26px;font-weight:800;color:var(--navy);line-height:1.1;}
+  .kpi .n small{font-size:13px;color:var(--sub);font-weight:600;}
+  .kpi .l{font-size:12px;color:var(--sub);margin-top:2px;}
+  .kpi.hot .n{color:var(--new);}
+  /* site block */
+  .site{margin-top:34px;}
+  .site-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+    padding:14px 20px;border-radius:12px 12px 0 0;color:#fff;}
+  .site-head.corp{background:linear-gradient(90deg,var(--navy),var(--navy2));}
+  .site-head.rec{background:linear-gradient(90deg,#c2410c,var(--recruit));}
+  .site-head .ico{font-size:22px;}
+  .site-head h2{margin:0;font-size:18px;font-weight:800;}
+  .site-head .url{font-size:12px;opacity:.85;font-family:ui-monospace,Menlo,Consolas,monospace;}
+  .site-head .ratio{margin-left:auto;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);
+    border-radius:20px;padding:4px 14px;font-size:12px;font-weight:700;}
+  .site-body{background:var(--card);border:1px solid var(--line);border-top:none;border-radius:0 0 12px 12px;
+    padding:10px 8px 20px;}
+  /* nav group */
+  .navgrp{margin:14px 6px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;}
+  .navgrp>.gh{display:flex;align-items:center;gap:10px;background:#f0f5f9;padding:9px 16px;border-bottom:1px solid var(--line);}
+  .navgrp.rec>.gh{background:#fdf1ea;}
+  .gh .gn{font-weight:800;font-size:14.5px;color:var(--navy);}
+  .navgrp.rec .gh .gn{color:#b2410a;}
+  .gh .gd{font-size:11.5px;color:var(--sub);}
+  .gh .cnt{margin-left:auto;font-size:11px;color:var(--sub);}
+  /* tree */
+  ul.tree{list-style:none;margin:8px 0 6px;padding-left:6px;}
+  ul.tree ul{list-style:none;margin:0;padding-left:26px;position:relative;}
+  ul.tree li{position:relative;padding:3px 0;}
+  ul.tree ul li::before{content:"";position:absolute;left:-14px;top:0;bottom:0;border-left:1px solid #c3ccd6;}
+  ul.tree ul li:last-child::before{bottom:auto;height:17px;}
+  ul.tree ul li::after{content:"";position:absolute;left:-14px;top:17px;width:12px;border-top:1px solid #c3ccd6;}
+  .node{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px;padding:5px 10px;border-radius:8px;}
+  .node:hover{background:#f6fafc;}
+  .node .name{font-weight:700;font-size:14px;}
+  .node.l1 .name{font-size:15.5px;color:var(--navy);}
+  .navgrp.rec .node.l1 .name{color:#b2410a;}
+  .node .slug{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11.5px;color:#0883a0;background:#eef8fb;
+    border:1px solid #d3edf3;border-radius:5px;padding:0 7px;}
+  .navgrp.rec .node .slug{color:#b2410a;background:#fdf1ea;border-color:#f6d3bf;}
+  .node .role{flex:1 1 260px;font-size:12.5px;color:var(--sub);min-width:200px;}
+  .node .marks{display:flex;gap:5px;flex-wrap:wrap;}
+  .star{color:var(--new);font-weight:900;}
+  /* common elements */
+  .common-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .common-grid .col{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 18px;}
+  .common-grid h3{margin:0 0 8px;font-size:13.5px;color:var(--navy);border-bottom:1px solid var(--line);padding-bottom:6px;}
+  .common-grid ul{margin:0;padding-left:18px;font-size:12.8px;color:#3a4553;}
+  .common-grid li{margin:3px 0;}
+  /* table */
+  table.pl{width:100%;border-collapse:collapse;font-size:12.3px;margin-top:12px;background:#fff;}
+  table.pl th,table.pl td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top;}
+  table.pl th{background:var(--navy);color:#fff;font-weight:700;position:sticky;top:0;}
+  table.pl tr.grp td{background:#eef4f9;font-weight:800;color:var(--navy);}
+  table.pl tr.grp.rec td{background:#fdf1ea;color:#b2410a;}
+  table.pl td.c{text-align:center;white-space:nowrap;}
+  table.pl .mnew{color:var(--new);font-weight:800;}
+  table.pl .mex{color:var(--sub);}
+  .note{font-size:12px;color:var(--sub);background:#fbfdff;border:1px dashed #c7d3de;border-radius:10px;
+    padding:12px 16px;margin-top:14px;}
+  .note b{color:var(--navy);}
+  footer.doc{margin-top:40px;padding:22px 0;border-top:2px solid var(--navy);font-size:11.5px;color:var(--sub);text-align:center;}
+  h2.sec{font-size:18px;margin:38px 0 4px;padding-left:12px;border-left:6px solid var(--navy);}
+  @media(max-width:720px){
+    .common-grid{grid-template-columns:1fr;}
+    .node .role{flex-basis:100%;}
+    header.doc h1{font-size:21px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="doc">
+  <div class="wrap">
+    <p class="eyebrow">SITE MAP ／ サイト構成図</p>
+    <h1>株式会社生興運送　コーポレート＆採用サイト リニューアル</h1>
+    <p class="sub">サイトマップ（サイト構成図） ― 後工程（ワイヤーフレーム・デザイン・お見積り・ご提案書）の土台となる確定版</p>
+    <div class="meta">
+      <span><b>エンド</b>：株式会社生興運送</span>
+      <span><b>制作体制</b>：株式会社インフォネット（元請）＋株式会社ITLINE（制作パートナー）</span>
+      <span><b>現サイト</b>：https://www.seikounet.co.jp/（WordPress → CMS刷新）</span>
+      <span><b>Webターゲット比率</b>：求職者 6 ／ 新規顧客 4</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- 方針・凡例 -->
+  <div class="band">
+    <h2>設計方針とサイト全体像</h2>
+    <p style="font-size:13.5px;margin:0 0 14px;">
+      「採用（求職者6割）」を主軸に、「営業＝新規顧客獲得（4割）」を両立する<b>2サイト構成</b>。
+      営業面は事業名からではなく<b>「荷物から探す」「相談内容から探す」という顧客起点の導線</b>（クライアント指示・最重要）を新設。
+      採用面は<b>エリア別求人・募集要項・数字で見る・座談会</b>など、社員／仕事／教育／入社後の姿が具体的に伝わる構成（ホンダ運送型）に再編する。
+      全体構成はOkaSyo、営業導線は豊通物流・シモハナ物流、トーンは嵯峨運輸・カワキタエクスプレスを参照。
+    </p>
+    <div class="legend">
+      <span><span class="tag new">★ 新規</span> 今回リニューアルで新設するページ</span>
+      <span><span class="tag exist">既存</span> 現サイトから移行・リニューアル（内容を刷新）</span>
+      <span><span class="tag hub">ハブ</span> 下層への入口となる集約ページ</span>
+      <span><span class="tag tmpl">テンプレ</span> CMSテンプレートへ流し込み（低コスト量産）</span>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="n">2<small> サイト</small></div><div class="l">コーポレート＋採用</div></div>
+      <div class="kpi"><div class="n">55<small> ページ</small></div><div class="l">制作対象（システム標準ページ除く）</div></div>
+      <div class="kpi hot"><div class="n">22<small> ページ</small></div><div class="l">うち ★新規ページ</div></div>
+      <div class="kpi"><div class="n">33 / 22</div><div class="l">コーポレート / 採用</div></div>
+      <div class="kpi"><div class="n">6<small> ページ</small></div><div class="l">CMS標準（404等・別掲）</div></div>
+    </div>
+  </div>
+
+  <!-- ============ A. コーポレートサイト ============ -->
+  <div class="site">
+    <div class="site-head corp">
+      <span class="ico">🏢</span>
+      <div>
+        <h2>A. コーポレートサイト</h2>
+        <div class="url">https://www.seikounet.co.jp/　（新規顧客・取引先・IR/採用の入口）</div>
+      </div>
+      <span class="ratio">営業（新規顧客獲得）4割 ＋ 企業ブランディング</span>
+    </div>
+    <div class="site-body">
+
+      <!-- A0 TOP -->
+      <div class="navgrp">
+        <div class="gh"><span class="gn">A. ホーム（TOP）</span><span class="gd">全体の玄関口・誰向けかが一目で分かるゲートウェイ</span><span class="cnt">1ページ</span></div>
+        <ul class="tree">
+          <li><div class="node l1">
+            <span class="name">A. ホーム</span>
+            <span class="slug">/</span>
+            <span class="role">MV（制服刷新後に写真差替）／「荷物から探す・相談内容から探す」入口／お知らせ／採用バナー／AIドラレコ等の強み／24h問い合わせCTAを上下配置</span>
+            <span class="marks"><span class="tag exist">既存</span><span class="tag new">★刷新</span></span>
+          </div></li>
+        </ul>
+      </div>
+
+      <!-- A1 会社案内 -->
+      <div class="navgrp">
+        <div class="gh"><span class="gn">A.1　私たちについて（会社案内）</span><span class="gd">企業信頼・地域性・安定感の訴求</span><span class="cnt">7ページ</span></div>
+        <ul class="tree"><li>
+          <div class="node l1"><span class="name">A.1 会社案内トップ</span><span class="slug">/about</span>
+            <span class="role">会社の全体像を集約するハブ。各下層への回遊起点</span>
+            <span class="marks"><span class="tag hub">ハブ</span><span class="tag exist">既存</span></span></div>
+          <ul>
+            <li><div class="node"><span class="name">A.1.1 社長挨拶</span><span class="slug">/about/message</span><span class="role">経営トップの想い・ドライバーファーストの理念</span><span class="marks"><span class="tag exist">既存</span></span></div></li>
+            <li><div class="node"><span class="name">A.1.2 会社概要</span><span class="slug">/about/company</span><span class="role">商号・設立1969年・資本金・売上23億・従業員173名・許認可等</span><span class="marks"><span class="tag exist">既存</span></span></div></li>
+            <li><div class="node"><span class="name">A.1.3 沿革</span><span class="slug">/about/history</span><span class="role">創業60年以上の歩み・関東拠点開設（2024）等</span><span class="marks"><span class="tag exist">既存</span></span></div></li>
+            <li><div class="node"><span class="name">A.1.4 経営理念・ビジョン</span><span class="slug">/about/philosophy</span><span class="role">安全・品質・人を軸にした価値観の明文化</span><span class="marks"><span class="star">★</span><span class="tag new">新規</span></span></div></li>
+            <li><div class="node"><span class="name">A.1.5 事業所紹介</span><span class="slug">/about/network</span><span class="role">本社（岡山・井原）／福山／広島／関東（群馬・板倉町）の拠点マップ</span><span class="marks"><span class="tag exist">既存</span></span></div></li>
+            <li><div class="node"><span class="name">A.1.6 SDGs・環境への取り組み</span><span class="slug">/about/sustainability</span><span class="role">循環型物流・環境配慮・地域貢献</span><span class="marks"><span class="tag exist">既存</span></span></div></li>
+          </ul>
+        </li></ul>
+      </div>
+
+      <!-- A2 強み -->
+      <div class="navgrp">
+        <div class="gh"><span class="gn">A.2　選ばれる理由・生興運送の強み</span><span class="gd">採用・営業 両面に効く差別化の核</span><span class="cnt">3ページ</span></div>
+        <ul class="tree"><li>
+          <div class="node l1"><span class="name">A.2 選ばれる理由（強み）</span><span class="slug">/strength</span>
+            <span class="role">強みを集約するハブ。安全・品質・DX・人へ誘導</span>
+            <span class="marks"><span class="tag hub">ハブ</span><span class="tag exist">既存</span></span></div>
+          <ul>
+            <li><div class="node"><span class="name">A.2.1 安全への取り組み（AIドラレコ）</span><span class="slug">/strength/safety</span><span class="role"><b>事故75%減</b>（AIレコーダー）・ドライバーファースト文化。最注力の訴求</span><span class="marks"><span class="tag exist">既存</span><span class="tag new">★強化</span></span></div></li>
+            <li><div class="node"><span class="name">A.2.2 品質・DXの取り組み</span><span class="slug">/strength/dx</span><span class="role">AIドラレコのデータ活用・運転手の質向上・DX推進を数字で可視化</span><span class="marks"><span class="star">★</span><span class="tag new">新規</span></span></div></li>
+          </ul>
+        </li></ul>
+      </div>
+
+      <!-- A3 サービス -->
+      <div class="navgrp">
+        <div class="gh"><span class="gn">A.3　サービス・事業案内（営業導線）</span><span class="gd">顧客起点「荷物から探す／相談内容から探す」を新設</span><span class="cnt">14ページ</span></div>
+        <ul class="tree"><li>
+          <div class="node l1"><span class="name">A.3 事業案内トップ</span><span class="slug">/service</span>
+            <span class="role">3事業＋2つの探し方への入口ハブ。豊通/シモハナ型の目的起点導線</span>
+            <span class="marks"><span class="tag hub">ハブ</span><span class="tag exist">既存</span></span></div>
+          <ul>
+            <li><div class="node"><span class="name">A.3.1 輸配送事業</span><span class="slug">/service/transport</span><span class="role">定期・スポット・チャーター等の輸送サービス</span><span class="marks"><span class="tag exist">既存</span></span></div></li>
+            <li><div class="node"><span class="name">A.3.2 倉庫管理事業</span><span class="slug">/service/warehouse</span><span class="role">保管・流通加工・物流センター運営（倉庫＋配送の一括）</span><span class="marks"><span class="tag exist">既存</span></span></div></li>
+            <li><div class="node"><span class="name">A.3.3 自動車整備事業</span><span class="slug">/service/maintenance</span><span class="role">車両整備・メンテナンス。安全・品質の裏付け</span><span class="marks"><span class="tag exist">既存</span></span></div></li>
+            <li><div class="node"><span class="name">A.3.4 車両情報</span><span class="slug">/service/fleet</span><span class="role">保有車両・設備の紹介</span><span class="marks"><span class="tag exist">既存</span></span></div></li>
+
+            <li><div class="node"><span class="name">A.3.5 荷物から探す（ハブ）</span><span class="slug">/service/cargo</span><span class="role"><b>顧客起点導線①</b>。取扱得意分野を6品目のカードで提示（★最重要）</span><span class="marks"><span class="star">★</span><span class="tag hub">ハブ</span><span class="tag new">新規</span></span></div>
+              <ul>
+                <li><div class="node"><span class="name">プラスチック製品</span><span class="slug">/service/cargo/plastic</span><span class="role">品目別の実績・強み・相談導線（テンプレ流し込み）</span><span class="marks"><span class="star">★</span><span class="tag tmpl">テンプレ</span></span></div></li>
+                <li><div class="node"><span class="name">ペットボトル・飲料</span><span class="slug">/service/cargo/beverage</span><span class="role">CP化成等 食品トレー/飲料系の取扱実績</span><span class="marks"><span class="star">★</span><span class="tag tmpl">テンプレ</span></span></div></li>
+                <li><div class="node"><span class="name">精密機械</span><span class="slug">/service/cargo/precision</span><span class="role">丁寧な取扱い・品質管理の訴求</span><span class="marks"><span class="star">★</span><span class="tag tmpl">テンプレ</span></span></div></li>
+                <li><div class="node"><span class="name">パレット貨物</span><span class="slug">/service/cargo/pallet</span><span class="role">パレット単位の輸送・保管</span><span class="marks"><span class="star">★</span><span class="tag tmpl">テンプレ</span></span></div></li>
+                <li><div class="node"><span class="name">長尺物</span><span class="slug">/service/cargo/long</span><span class="role">長尺・特殊形状貨物の対応力</span><span class="marks"><span class="star">★</span><span class="tag tmpl">テンプレ</span></span></div></li>
+                <li><div class="node"><span class="name">その他の一般貨物</span><span class="slug">/service/cargo/general</span><span class="role">上記以外の相談も広く受ける受け皿</span><span class="marks"><span class="star">★</span><span class="tag tmpl">テンプレ</span></span></div></li>
+              </ul>
+            </li>
+
+            <li><div class="node"><span class="name">A.3.6 相談内容から探す（ハブ）</span><span class="slug">/service/needs</span><span class="role"><b>顧客起点導線②</b>。6つの相談を1ページ内カード＋アンカーで集約し各サービス/問い合わせへ誘導（費用圧縮のため個別ページ化せず）</span><span class="marks"><span class="star">★</span><span class="tag hub">ハブ</span><span class="tag new">新規</span></span></div>
+              <ul>
+                <li><div class="node"><span class="name">└ 6相談（同ページ内セクション）</span><span class="slug">/service/needs#…</span><span class="role">定期配送／スポット便／岡山→関東・広島／倉庫＋配送の一括／安全・品質重視／物流コスト見直し</span><span class="marks"><span class="tag hub">内包</span></span></div></li>
+              </ul>
+            </li>
+          </ul>
+        </li></ul>
+      </div>
+
+      <!-- A4 お知らせ・お問い合わせ -->
+      <div class="navgrp">
+        <div class="gh"><span class="gn">A.4　お知らせ・お問い合わせ・共通</span><span class="gd">24時間受付・新規顧客の受け皿を強化</span><span class="cnt">9ページ</span></div>
+        <ul class="tree">
+          <li><div class="node l1"><span class="name">A.4.1 お知らせ一覧</span><span class="slug">/news</span><span class="role">CMS標準の新着情報。社内で容易に更新（プレビュー付）</span><span class="marks"><span class="tag exist">既存</span></span></div>
+            <ul><li><div class="node"><span class="name">お知らせ詳細</span><span class="slug">/news/(記事)</span><span class="role">記事テンプレへ流し込み</span><span class="marks"><span class="tag tmpl">テンプレ</span></span></div></li></ul>
+          </li>
+          <li><div class="node l1"><span class="name">A.4.2 社内報 MAGAZINE</span><span class="slug">/magazine</span><span class="role">現場の人間味・地域性を発信（カワキタ型のオウンド要素）</span><span class="marks"><span class="tag exist">既存</span></span></div>
+            <ul><li><div class="node"><span class="name">社内報 詳細</span><span class="slug">/magazine/(記事)</span><span class="role">記事テンプレへ流し込み</span><span class="marks"><span class="tag tmpl">テンプレ</span></span></div></li></ul>
+          </li>
+          <li><div class="node l1"><span class="name">A.4.3 お問い合わせ（総合）</span><span class="slug">/contact</span><span class="role">導線を上部＋各所へ。24時間受付フォーム化（現行課題の解消）</span><span class="marks"><span class="tag exist">既存</span><span class="tag new">★改修</span></span></div>
+            <ul>
+              <li><div class="node"><span class="name">輸送のご相談・お見積り</span><span class="slug">/contact/quote</span><span class="role">新規顧客向けの相談・概算見積フォーム（営業CTAの着地点）</span><span class="marks"><span class="star">★</span><span class="tag new">新規</span></span></div></li>
+              <li><div class="node"><span class="name">送信完了</span><span class="slug">/contact/thanks</span><span class="role">サンクスページ（CV計測ポイント）</span><span class="marks"><span class="star">★</span><span class="tag new">新規</span></span></div></li>
+            </ul>
+          </li>
+          <li><div class="node l1"><span class="name">A.4.4 プライバシーポリシー</span><span class="slug">/privacy</span><span class="role">個人情報保護方針</span><span class="marks"><span class="tag exist">既存</span></span></div></li>
+          <li><div class="node l1"><span class="name">A.4.5 サイトマップ（HTML）</span><span class="slug">/sitemap</span><span class="role">全ページ一覧・回遊補助</span><span class="marks"><span class="tag exist">既存</span></span></div></li>
+        </ul>
+      </div>
+
+    </div><!--/site-body-->
+  </div><!--/site A-->
+
+  <!-- ============ B. 採用サイト ============ -->
+  <div class="site">
+    <div class="site-head rec">
+      <span class="ico">🚚</span>
+      <div>
+        <h2>B. 採用サイト（RECRUIT）</h2>
+        <div class="url">https://www.seikounet.co.jp/recruit/　（求職者＝本サイトの主軸）</div>
+      </div>
+      <span class="ratio">求職者（採用）6割 ＝ 最優先</span>
+    </div>
+    <div class="site-body">
+
+      <!-- B0 -->
+      <div class="navgrp rec">
+        <div class="gh"><span class="gn">B. 採用トップ</span><span class="gd">「求職者が主語」の共感型メッセージで再設計</span><span class="cnt">2ページ</span></div>
+        <ul class="tree">
+          <li><div class="node l1"><span class="name">B. 採用トップ</span><span class="slug">/recruit</span><span class="role">MV／求職者主語のコンセプト（現「No.1のドライバーファースト企業」を共感型へ再設計）／各コンテンツへの回遊</span><span class="marks"><span class="tag exist">既存</span><span class="tag new">★刷新</span></span></div>
+            <ul><li><div class="node"><span class="name">B.0 数字で見る生興運送</span><span class="slug">/recruit/data</span><span class="role">従業員数・平均勤続年数・有給取得率・車両台数・<b>事故75%減</b>等をインフォグラフィックで可視化</span><span class="marks"><span class="star">★</span><span class="tag new">新規</span></span></div></li></ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- B1 仕事を知る -->
+      <div class="navgrp rec">
+        <div class="gh"><span class="gn">B.1　仕事を知る（職種紹介）</span><span class="gd">幅広い職種・大型ドライバー優先の求人ニーズに対応</span><span class="cnt">6ページ</span></div>
+        <ul class="tree"><li>
+          <div class="node l1"><span class="name">B.1 仕事を知る（職種ハブ）</span><span class="slug">/recruit/work</span><span class="role">職種一覧のハブ。募集要項・社員インタビューへクロスリンク</span><span class="marks"><span class="tag hub">ハブ</span><span class="tag exist">既存</span></span></div>
+          <ul>
+            <li><div class="node"><span class="name">ドライバー（大型/中型/小型）</span><span class="slug">/recruit/work/driver</span><span class="role">最需要職種。大型を目指すキャリアも訴求</span><span class="marks"><span class="tag exist">既存</span></span></div></li>
+            <li><div class="node"><span class="name">整備士（工場長含む）</span><span class="slug">/recruit/work/mechanic</span><span class="role">待遇改善済・工場長採用の訴求</span><span class="marks"><span class="tag exist">既存</span></span></div></li>
+            <li><div class="node"><span class="name">倉庫・物流センタースタッフ</span><span class="slug">/recruit/work/logistics</span><span class="role">欠員補充ニーズの高い職種</span><span class="marks"><span class="tag exist">既存</span></span></div></li>
+            <li><div class="node"><span class="name">運行管理者</span><span class="slug">/recruit/work/manager</span><span class="role">安全を司る現場判断のキーマン</span><span class="marks"><span class="tag exist">既存</span></span></div></li>
+            <li><div class="node"><span class="name">事務・管理部門</span><span class="slug">/recruit/work/office</span><span class="role">総務・経営企画等のバックオフィス</span><span class="marks"><span class="tag exist">既存</span></span></div></li>
+          </ul>
+        </li></ul>
+      </div>
+
+      <!-- B2 社員を知る -->
+      <div class="navgrp rec">
+        <div class="gh"><span class="gn">B.2　社員を知る（人を知る）</span><span class="gd">既存インタビュー資産を座談会・ストーリーへ拡張</span><span class="cnt">4ページ</span></div>
+        <ul class="tree"><li>
+          <div class="node l1"><span class="name">B.2 社員を知る（ハブ）</span><span class="slug">/recruit/people</span><span class="role">人・現場の雰囲気を伝えるハブ</span><span class="marks"><span class="tag hub">ハブ</span><span class="tag exist">既存</span></span></div>
+          <ul>
+            <li><div class="node"><span class="name">社員インタビュー</span><span class="slug">/recruit/people/interview</span><span class="role">職種別の既存インタビューを再編集（写真＝制服刷新後差替）</span><span class="marks"><span class="tag exist">既存</span></span></div></li>
+            <li><div class="node"><span class="name">座談会</span><span class="slug">/recruit/people/talk</span><span class="role">同職種 複数名の座談会形式（HR診断の改善提案）</span><span class="marks"><span class="star">★</span><span class="tag new">新規</span></span></div></li>
+            <li><div class="node"><span class="name">一日の流れ・プロジェクトストーリー</span><span class="slug">/recruit/people/story</span><span class="role">仕事の一日/流れを追う密着型で解像度UP</span><span class="marks"><span class="star">★</span><span class="tag new">新規</span></span></div></li>
+          </ul>
+        </li></ul>
+      </div>
+
+      <!-- B3 教育・環境 -->
+      <div class="navgrp rec">
+        <div class="gh"><span class="gn">B.3　教育・キャリア／働く環境</span><span class="gd">ホンダ運送型＝教育・入社後の姿を具体化</span><span class="cnt">2ページ</span></div>
+        <ul class="tree">
+          <li><div class="node l1"><span class="name">B.3.1 教育・キャリア</span><span class="slug">/recruit/career</span><span class="role">研修制度・免許取得支援（大型/フォークリフト）・キャリアパス・入社後の成長像</span><span class="marks"><span class="star">★</span><span class="tag new">新規</span></span></div></li>
+          <li><div class="node l1"><span class="name">B.3.2 働く環境・福利厚生</span><span class="slug">/recruit/environment</span><span class="role">フィットネスジム補助・奨学金返還支援・資格支援・<b>AIドラレコでドライバーを守る</b>安全文化</span><span class="marks"><span class="tag exist">既存</span><span class="tag new">★強化</span></span></div></li>
+        </ul>
+      </div>
+
+      <!-- B4 募集・エントリー -->
+      <div class="navgrp rec">
+        <div class="gh"><span class="gn">B.4　募集要項・選考・エントリー</span><span class="gd">エリア別入口＋エンゲージ動線の改善（最重要要件）</span><span class="cnt">7ページ</span></div>
+        <ul class="tree"><li>
+          <div class="node l1"><span class="name">B.4 募集要項（エリア別ハブ）</span><span class="slug">/recruit/requirements</span><span class="role">給与・休日・条件を一元化。エリア別に入口を分割（現行の情報混在を解消）</span><span class="marks"><span class="tag exist">既存</span><span class="tag new">★エリア別化</span></span></div>
+          <ul>
+            <li><div class="node"><span class="name">本社・福山エリア 求人</span><span class="slug">/recruit/requirements/honsha</span><span class="role">岡山（井原・本社）／福山の募集</span><span class="marks"><span class="star">★</span><span class="tag new">新規</span></span></div></li>
+            <li><div class="node"><span class="name">広島エリア 求人</span><span class="slug">/recruit/requirements/hiroshima</span><span class="role">広島の募集</span><span class="marks"><span class="star">★</span><span class="tag new">新規</span></span></div></li>
+            <li><div class="node"><span class="name">関東エリア 求人</span><span class="slug">/recruit/requirements/kanto</span><span class="role">関東拠点（群馬・板倉町）の募集。ドライバー拡充ニーズ</span><span class="marks"><span class="star">★</span><span class="tag new">新規</span></span></div></li>
+          </ul>
+        </li>
+          <li><div class="node l1"><span class="name">B.4.5 選考フロー</span><span class="slug">/recruit/flow</span><span class="role">応募〜内定のステップ数を明示し安心感を醸成</span><span class="marks"><span class="star">★</span><span class="tag new">新規</span></span></div></li>
+          <li><div class="node l1"><span class="name">B.4.6 エントリー／応募</span><span class="slug">/recruit/entry</span><span class="role">エンゲージ<b>募集要項へ直接ディープリンク</b>（現状トップ着地の手間を解消）または自社フォーム。※提案書で①エンゲージ改善／②内製フォームを比較提示</span><span class="marks"><span class="tag exist">既存</span><span class="tag new">★改修</span></span></div></li>
+          <li><div class="node l1"><span class="name">B.4.7 採用FAQ</span><span class="slug">/recruit/faq</span><span class="role">よくある質問で応募ハードルを下げる</span><span class="marks"><span class="star">★</span><span class="tag new">新規</span></span></div></li>
+        </ul>
+      </div>
+
+      <!-- B5 メディア -->
+      <div class="navgrp rec">
+        <div class="gh"><span class="gn">B.5　採用メディア（オウンド／SNS）</span><span class="gd">検索行動（Instagram/YouTube検索）への対応</span><span class="cnt">1ページ</span></div>
+        <ul class="tree">
+          <li><div class="node l1"><span class="name">B.5 採用note・SNS</span><span class="slug">/recruit/media</span><span class="role">YouTube・Instagramに加えnote開設。日常・やりがいを定期発信する体制（更新代行と連動）</span><span class="marks"><span class="star">★</span><span class="tag new">新規</span></span></div></li>
+        </ul>
+      </div>
+
+    </div><!--/site-body-->
+  </div><!--/site B-->
+
+  <!-- 共通要素 -->
+  <h2 class="sec">ヘッダー／フッター・共通要素</h2>
+  <div class="common-grid" style="margin-top:16px;">
+    <div class="col">
+      <h3>ヘッダー（全ページ共通）</h3>
+      <ul>
+        <li>ロゴ（生興運送）／グローバルナビ：私たちについて・強み・サービス・お知らせ・採用</li>
+        <li>常時表示の <b>2大CTA</b>：「輸送のご相談・お見積り（24h受付）」／「採用エントリー」</li>
+        <li>電話番号（0866-65-0112）・営業時間</li>
+        <li>サイト内検索（CMSプラン次第。ライトプランは非対応の場合あり）</li>
+        <li>SPはハンバーガーメニュー＋固定CTAバー</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>フッター（全ページ共通・サイトマップ全展開型）</h3>
+      <ul>
+        <li>会社案内・サービス・採用・お知らせの主要リンクを全展開</li>
+        <li>事業所所在地（本社／福山／広島／関東）・電話・地図</li>
+        <li>SNS：YouTube／Instagram／note（採用連携）</li>
+        <li>お問い合わせ／プライバシーポリシー／サイトマップ</li>
+        <li>コピーライト（© SEIKO UNSO Co., Ltd.）</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>サイト共通機能・計測</h3>
+      <ul>
+        <li><b>GA4 設定は必須</b>（全ページ計測タグ）＋インフォネット提供のGA連携レポート（月間閲覧数・ページ別・検索クエリを可視化）</li>
+        <li>お問い合わせ／エントリーのCV計測（thanksページ着地）</li>
+        <li>プレビュー機能付きCMS（社内で写真差替・簡易更新を安全に）</li>
+        <li>レスポンシブ（PC／SP）。表示崩れ・視認性を担保</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>CMS標準ページ（別掲・6ページ）</h3>
+      <ul>
+        <li>404 / 403 エラーページ</li>
+        <li>メンテナンスページ / ソーリーページ</li>
+        <li>サイト内検索 結果ページ（プラン次第）</li>
+        <li>sitemap.xml（検索エンジン向け）</li>
+        <li>※CMSはWordPress以外の直感操作CMS（LENSAhub等）を提案。標準ページは制作対象55には含めず</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ページ一覧表 -->
+  <h2 class="sec">ページ一覧表</h2>
+  <table class="pl">
+    <thead><tr><th style="width:34px;">No.</th><th>ページ名</th><th style="width:210px;">URL（スラッグ）</th><th style="width:64px;" class="c">階層</th><th style="width:88px;" class="c">新規/既存</th><th>備考</th></tr></thead>
+    <tbody>
+      <tr class="grp"><td colspan="6">A. コーポレートサイト（33ページ）</td></tr>
+      <tr><td>1</td><td>ホーム</td><td>/</td><td class="c">1</td><td class="c mex">既存(刷新)</td><td>MV差替・2つの探し方入口・強み・24hCTA</td></tr>
+      <tr><td>2</td><td>会社案内トップ</td><td>/about</td><td class="c">1</td><td class="c mex">既存</td><td>ハブ</td></tr>
+      <tr><td>3</td><td>社長挨拶</td><td>/about/message</td><td class="c">2</td><td class="c mex">既存</td><td></td></tr>
+      <tr><td>4</td><td>会社概要</td><td>/about/company</td><td class="c">2</td><td class="c mex">既存</td><td></td></tr>
+      <tr><td>5</td><td>沿革</td><td>/about/history</td><td class="c">2</td><td class="c mex">既存</td><td></td></tr>
+      <tr><td>6</td><td>経営理念・ビジョン</td><td>/about/philosophy</td><td class="c">2</td><td class="c mnew">★新規</td><td>価値観の明文化</td></tr>
+      <tr><td>7</td><td>事業所紹介</td><td>/about/network</td><td class="c">2</td><td class="c mex">既存</td><td>4拠点</td></tr>
+      <tr><td>8</td><td>SDGs・環境への取り組み</td><td>/about/sustainability</td><td class="c">2</td><td class="c mex">既存</td><td></td></tr>
+      <tr><td>9</td><td>選ばれる理由（強み）</td><td>/strength</td><td class="c">1</td><td class="c mex">既存</td><td>ハブ</td></tr>
+      <tr><td>10</td><td>安全への取り組み（AIドラレコ）</td><td>/strength/safety</td><td class="c">2</td><td class="c mex">既存(強化)</td><td>事故75%減・最注力</td></tr>
+      <tr><td>11</td><td>品質・DXの取り組み</td><td>/strength/dx</td><td class="c">2</td><td class="c mnew">★新規</td><td>データ活用・運転手の質</td></tr>
+      <tr><td>12</td><td>事業案内トップ</td><td>/service</td><td class="c">1</td><td class="c mex">既存</td><td>ハブ</td></tr>
+      <tr><td>13</td><td>輸配送事業</td><td>/service/transport</td><td class="c">2</td><td class="c mex">既存</td><td></td></tr>
+      <tr><td>14</td><td>倉庫管理事業</td><td>/service/warehouse</td><td class="c">2</td><td class="c mex">既存</td><td>倉庫＋配送の一括</td></tr>
+      <tr><td>15</td><td>自動車整備事業</td><td>/service/maintenance</td><td class="c">2</td><td class="c mex">既存</td><td></td></tr>
+      <tr><td>16</td><td>車両情報</td><td>/service/fleet</td><td class="c">2</td><td class="c mex">既存</td><td></td></tr>
+      <tr><td>17</td><td>荷物から探す（ハブ）</td><td>/service/cargo</td><td class="c">2</td><td class="c mnew">★新規</td><td>顧客起点導線①・最重要</td></tr>
+      <tr><td>18</td><td>プラスチック製品</td><td>/service/cargo/plastic</td><td class="c">3</td><td class="c mnew">★新規</td><td>テンプレ流し込み</td></tr>
+      <tr><td>19</td><td>ペットボトル・飲料</td><td>/service/cargo/beverage</td><td class="c">3</td><td class="c mnew">★新規</td><td>テンプレ流し込み</td></tr>
+      <tr><td>20</td><td>精密機械</td><td>/service/cargo/precision</td><td class="c">3</td><td class="c mnew">★新規</td><td>テンプレ流し込み</td></tr>
+      <tr><td>21</td><td>パレット貨物</td><td>/service/cargo/pallet</td><td class="c">3</td><td class="c mnew">★新規</td><td>テンプレ流し込み</td></tr>
+      <tr><td>22</td><td>長尺物</td><td>/service/cargo/long</td><td class="c">3</td><td class="c mnew">★新規</td><td>テンプレ流し込み</td></tr>
+      <tr><td>23</td><td>その他の一般貨物</td><td>/service/cargo/general</td><td class="c">3</td><td class="c mnew">★新規</td><td>テンプレ流し込み</td></tr>
+      <tr><td>24</td><td>相談内容から探す（ハブ）</td><td>/service/needs</td><td class="c">2</td><td class="c mnew">★新規</td><td>顧客起点導線②・6相談を1ページに内包</td></tr>
+      <tr><td>25</td><td>お知らせ一覧</td><td>/news</td><td class="c">1</td><td class="c mex">既存</td><td>CMS標準・社内更新</td></tr>
+      <tr><td>26</td><td>お知らせ詳細</td><td>/news/(記事)</td><td class="c">2</td><td class="c mex">既存</td><td>テンプレ流し込み</td></tr>
+      <tr><td>27</td><td>社内報 MAGAZINE 一覧</td><td>/magazine</td><td class="c">1</td><td class="c mex">既存</td><td>人間味・地域性</td></tr>
+      <tr><td>28</td><td>社内報 詳細</td><td>/magazine/(記事)</td><td class="c">2</td><td class="c mex">既存</td><td>テンプレ流し込み</td></tr>
+      <tr><td>29</td><td>お問い合わせ（総合）</td><td>/contact</td><td class="c">1</td><td class="c mex">既存(改修)</td><td>24h受付・導線強化</td></tr>
+      <tr><td>30</td><td>輸送のご相談・お見積り</td><td>/contact/quote</td><td class="c">2</td><td class="c mnew">★新規</td><td>営業CTA着地</td></tr>
+      <tr><td>31</td><td>送信完了（サンクス）</td><td>/contact/thanks</td><td class="c">2</td><td class="c mnew">★新規</td><td>CV計測</td></tr>
+      <tr><td>32</td><td>プライバシーポリシー</td><td>/privacy</td><td class="c">1</td><td class="c mex">既存</td><td></td></tr>
+      <tr><td>33</td><td>サイトマップ（HTML）</td><td>/sitemap</td><td class="c">1</td><td class="c mex">既存</td><td></td></tr>
+
+      <tr class="grp rec"><td colspan="6">B. 採用サイト（22ページ）</td></tr>
+      <tr><td>34</td><td>採用トップ</td><td>/recruit</td><td class="c">1</td><td class="c mex">既存(刷新)</td><td>共感型コンセプト再設計</td></tr>
+      <tr><td>35</td><td>数字で見る生興運送</td><td>/recruit/data</td><td class="c">2</td><td class="c mnew">★新規</td><td>インフォグラフィック</td></tr>
+      <tr><td>36</td><td>仕事を知る（職種ハブ）</td><td>/recruit/work</td><td class="c">1</td><td class="c mex">既存</td><td>ハブ</td></tr>
+      <tr><td>37</td><td>ドライバー</td><td>/recruit/work/driver</td><td class="c">2</td><td class="c mex">既存</td><td>最需要・大型優先</td></tr>
+      <tr><td>38</td><td>整備士</td><td>/recruit/work/mechanic</td><td class="c">2</td><td class="c mex">既存</td><td>工場長採用</td></tr>
+      <tr><td>39</td><td>倉庫・物流センタースタッフ</td><td>/recruit/work/logistics</td><td class="c">2</td><td class="c mex">既存</td><td></td></tr>
+      <tr><td>40</td><td>運行管理者</td><td>/recruit/work/manager</td><td class="c">2</td><td class="c mex">既存</td><td></td></tr>
+      <tr><td>41</td><td>事務・管理部門</td><td>/recruit/work/office</td><td class="c">2</td><td class="c mex">既存</td><td></td></tr>
+      <tr><td>42</td><td>社員を知る（ハブ）</td><td>/recruit/people</td><td class="c">1</td><td class="c mex">既存</td><td>ハブ</td></tr>
+      <tr><td>43</td><td>社員インタビュー</td><td>/recruit/people/interview</td><td class="c">2</td><td class="c mex">既存</td><td>再編集</td></tr>
+      <tr><td>44</td><td>座談会</td><td>/recruit/people/talk</td><td class="c">2</td><td class="c mnew">★新規</td><td>HR診断改善提案</td></tr>
+      <tr><td>45</td><td>一日の流れ・ストーリー</td><td>/recruit/people/story</td><td class="c">2</td><td class="c mnew">★新規</td><td>密着型</td></tr>
+      <tr><td>46</td><td>教育・キャリア</td><td>/recruit/career</td><td class="c">1</td><td class="c mnew">★新規</td><td>ホンダ運送型・入社後の姿</td></tr>
+      <tr><td>47</td><td>働く環境・福利厚生</td><td>/recruit/environment</td><td class="c">1</td><td class="c mex">既存(強化)</td><td>ジム補助・奨学金・資格・AIで守る</td></tr>
+      <tr><td>48</td><td>募集要項（エリア別ハブ）</td><td>/recruit/requirements</td><td class="c">1</td><td class="c mex">既存(改修)</td><td>条件一元化・エリア別化</td></tr>
+      <tr><td>49</td><td>本社・福山エリア 求人</td><td>/recruit/requirements/honsha</td><td class="c">2</td><td class="c mnew">★新規</td><td>エリア別入口</td></tr>
+      <tr><td>50</td><td>広島エリア 求人</td><td>/recruit/requirements/hiroshima</td><td class="c">2</td><td class="c mnew">★新規</td><td>エリア別入口</td></tr>
+      <tr><td>51</td><td>関東エリア 求人</td><td>/recruit/requirements/kanto</td><td class="c">2</td><td class="c mnew">★新規</td><td>群馬・板倉町・拡充ニーズ</td></tr>
+      <tr><td>52</td><td>選考フロー</td><td>/recruit/flow</td><td class="c">1</td><td class="c mnew">★新規</td><td>ステップ明示</td></tr>
+      <tr><td>53</td><td>エントリー／応募</td><td>/recruit/entry</td><td class="c">1</td><td class="c mex">既存(改修)</td><td>エンゲージ改善/内製の2案</td></tr>
+      <tr><td>54</td><td>採用note・SNS</td><td>/recruit/media</td><td class="c">1</td><td class="c mnew">★新規</td><td>note開設・検索行動対応</td></tr>
+      <tr><td>55</td><td>採用FAQ</td><td>/recruit/faq</td><td class="c">1</td><td class="c mnew">★新規</td><td>応募ハードル低減</td></tr>
+
+      <tr class="grp"><td colspan="6">CMS標準ページ（制作対象55には含まず・別掲）</td></tr>
+      <tr><td>S1</td><td>404 / 403 エラーページ</td><td>/404 ・ /403</td><td class="c">―</td><td class="c mex">標準</td><td>CMS標準</td></tr>
+      <tr><td>S2</td><td>メンテナンス / ソーリーページ</td><td>―</td><td class="c">―</td><td class="c mex">標準</td><td>CMS標準</td></tr>
+      <tr><td>S3</td><td>サイト内検索 結果</td><td>/search</td><td class="c">―</td><td class="c mex">標準</td><td>プラン次第</td></tr>
+      <tr><td>S4</td><td>sitemap.xml</td><td>/sitemap.xml</td><td class="c">―</td><td class="c mex">標準</td><td>検索エンジン向け</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    <b>ページ数確定の根拠（後工程が覆さないための注記）</b><br>
+    ・<b>制作対象＝55ページ（コーポレート33／採用22）、うち★新規22ページ</b>。CMS標準6ページは別掲で見積・制作数に含めない。<br>
+    ・費用配慮（クライアント「ページ数を増やすと費用がかさむ・チープにならない範囲で」）に対応し、<b>「相談内容から探す」は6相談を1ページに内包</b>（個別ページ化せず）。一方、SEO・営業価値の高い<b>「荷物から探す」6品目はテンプレ流し込みで低コストに個別ページ化</b>。<br>
+    ・お知らせ／社内報／荷物品目はCMSテンプレートへの流し込み（量産コスト小）。撮影写真は<b>2026年3月の制服刷新後に差し替え</b>る前提（先行公開）。<br>
+    ・採用の階層を厚くし、求職者6割:新規顧客4割の方針をページ配分に反映。<br>
+    ・本サイトマップの55ページ・階層を、<b>お見積り（ページ数根拠）／ワイヤーフレーム／デザイン案／ご提案書の共通の土台</b>とする。
+  </div>
+
+  <footer class="doc">
+    株式会社インフォネット ＋ 株式会社ITLINE（制作パートナー）　|　株式会社生興運送 御中　コーポレート＆採用サイト リニューアル サイトマップ　|　社外秘
+  </footer>
+
+</div><!--/wrap-->
+</body>
+</html>
